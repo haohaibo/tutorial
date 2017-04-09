@@ -6,7 +6,7 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-04-08 18:49:11
-* Last Modified: 2017-04-08 19:20:03
+* Last Modified: 2017-04-08 22:41:00
 **/
 #include <iostream>
 #include "Sales_item.h"
