@@ -11,10 +11,27 @@ int main()
     scanf("%d",&data[2]);
     for(int i = 0; i < 2; ++i)
     {
-        if(data[i] < data[i+1])
+        for(int j = i+1; j < 3; ++j)
         {
-            int temp;
-            
+
+            if(data[i] > data[j])
+            {
+                int temp;
+                temp = data[i];
+                data[i] = data[j];
+                data[j] = temp;
+            }
         }
     }
+    for(int i= 0; i < 3; ++i)
+    {
+        if(i < 2)
+        {
+            printf("%d->",data[i]);
+        }else
+        {
+            printf("%d\n",data[i]);
+        }
+    }
+    return 0;
 }
