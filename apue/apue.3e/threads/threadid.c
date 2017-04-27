@@ -31,6 +31,6 @@ main(void)
 	if (err != 0)
 		err_exit(err, "can't create thread");
 	printids("main thread:");
-	sleep(1);
+	sleep(10);
 	exit(0);
 }
