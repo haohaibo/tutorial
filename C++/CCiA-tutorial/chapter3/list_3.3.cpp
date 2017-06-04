@@ -6,12 +6,13 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-06-01 10:17:03
-* Last Modified: 2017-06-01 10:42:48
+* Last Modified: 2017-06-01 16:17:26
 **/
 #include <iostream>
 #include <queue>
 #include <deque>
 
+// deque双端队列
 template<typename T, typename Container=std::deque<T> >
 class stack
 {
