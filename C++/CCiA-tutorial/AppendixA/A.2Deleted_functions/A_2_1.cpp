@@ -6,7 +6,7 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: Deleted functions 
 *        Create: 2017-06-05 13:42:18
-* Last Modified: 2017-06-05 15:03:34
+* Last Modified: 2017-06-05 15:16:47
 **/
 #include <iostream>
 

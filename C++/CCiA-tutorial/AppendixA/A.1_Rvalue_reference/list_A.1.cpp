@@ -6,7 +6,7 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-06-04 17:09:21
-* Last Modified: 2017-06-04 19:57:24
+* Last Modified: 2017-06-04 20:44:33
 **/
 #include <iostream>
 
@@ -32,6 +32,9 @@ class X
             std::copy(other.data, other.data + 1000000, data);
         }
 
+        // move constructor
+        // just copy the pointer to the data and leave the other instance 
+        // with a null pointer
         X(X && other):data(other.data)
         {
             other.data = nullptr;
