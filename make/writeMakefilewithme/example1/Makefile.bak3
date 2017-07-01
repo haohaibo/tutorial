@@ -1,4 +1,3 @@
-# objects 可以理解为类似于C语言的宏
 objects = main.o kbd.o command.o display.o \
 	insert.o search.o files.o utils.o 
 edit : $(objects) 
@@ -8,15 +7,21 @@ edit : $(objects)
 # 只要make看到[.o]文件，它就会自动的把[.c]文件加在依赖关系中
 # 例如 如果make找到一个whatever.o,那么whatever.c就会是whatever.o的依赖文件
 # cc -c whatever.c 也会被推导出来
+main.o : defs.h
 
+kbd.o : defs.h command.h
 
-# 这样写 文件依赖关系就显得有点凌乱
-# 文件依赖关系看不清楚
-$(objects) : defs.h
+command.o : defs.h command.h
 
-kbd.o command.o files.o :  command.h
+display.o : defs.h buffer.h
 
-display.o insert.o search.o files.o : buffer.h
+insert.o : defs.h buffer.h
+
+search.o : defs.h buffer.h
+
+files.o : defs.h buffer.h command.h
+
+utils.o : defs.h
 
 # .PHONY 表示clean为伪目标文件
 .PHONY : clean
