@@ -3,30 +3,28 @@ objects = main.o kbd.o command.o display.o \
 edit : $(objects) 
 	cc -o edit $(objects) 
 # \ 是换行符的意思
-main.o : main.c defs.h
-	cc -c main.c
+# 让make自动推导
+# 只要make看到[.o]文件，它就会自动的把[.c]文件加在依赖关系中
+# 例如 如果make找到一个whatever.o,那么whatever.c就会是whatever.o的依赖文件
+# cc -c whatever.c 也会被推导出来
+main.o : defs.h
 
-kbd.o : kbd.c defs.h command.h
-	cc -c kbd.c
+kbd.o : defs.h command.h
 
-command.o : command.c defs.h command.h
-	cc -c command.c
+command.o : defs.h command.h
 
-display.o : display.c defs.h buffer.h
-	cc -c display.c
+display.o : defs.h buffer.h
 
-insert.o : insert.c defs.h buffer.h
-	cc -c insert.c
+insert.o : defs.h buffer.h
 
-search.o : search.c defs.h buffer.h
-	cc -c search.c
+search.o : defs.h buffer.h
 
-files.o : files.c defs.h buffer.h command.h
-	cc -c files.c
+files.o : defs.h buffer.h command.h
 
-utils.o : utils.c defs.h
-	cc -c utils.c
+utils.o : defs.h
 
+# .PHONY 表示clean为伪目标文件
+.PHONY : clean
 clean : 
 	rm edit $(objects) 
 # just a test for Makefile label
