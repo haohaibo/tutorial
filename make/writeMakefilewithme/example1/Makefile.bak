@@ -1,7 +1,7 @@
-objects = main.o kbd.o command.o display.o \
+edit : main.o kbd.o command.o display.o \
 	insert.o search.o files.o utils.o 
-edit : $(objects) 
-	cc -o edit $(objects) 
+	cc -o edit main.o kbd.o command.o display.o \
+	insert.o search.o files.o utils.o
 # \ 是换行符的意思
 main.o : main.c defs.h
 	cc -c main.c
@@ -28,7 +28,9 @@ utils.o : utils.c defs.h
 	cc -c utils.c
 
 clean : 
-	rm edit $(objects) 
+	rm edit main.o kbd.o command.o display.o \
+	insert.o search.o files.o utils.o
 # just a test for Makefile label
 byeworld : 
-	rm edit $(objects) 
+	rm edit main.o kbd.o command.o display.o \
+	insert.o search.o files.o utils.o
