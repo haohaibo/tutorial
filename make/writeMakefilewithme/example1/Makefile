@@ -2,7 +2,7 @@ edit : main.o kbd.o command.o display.o \
 	insert.o search.o files.o utils.o 
 	cc -o edit main.o kbd.o command.o display.o \
 	insert.o search.o files.o utils.o
-
+# \ 是换行符的意思
 main.o : main.c defs.h
 	cc -c main.c
 
