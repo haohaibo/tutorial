@@ -30,3 +30,7 @@ utils.o : utils.c defs.h
 clean : 
 	rm edit main.o kbd.o command.o display.o \
 	insert.o search.o files.o utils.o
+# just a test for Makefile label
+byeworld : 
+	rm edit main.o kbd.o command.o display.o \
+	insert.o search.o files.o utils.o
