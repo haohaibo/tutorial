@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 {
     pair<string, string> anon; //holds two strings
     pair<string, int> word_count; //holds a string and a int
-    pair<string, vector<int>> line; //holds a string and vector<int>
+    pair<string, vector<int> > line; //holds a string and vector<int>
 
     pair<string, string> author("Haibo", "Hao");
     

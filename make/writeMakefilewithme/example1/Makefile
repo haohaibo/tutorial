@@ -21,7 +21,8 @@ display.o insert.o search.o files.o : buffer.h
 # .PHONY 表示clean为伪目标文件
 .PHONY : clean
 clean : 
-	rm edit $(objects) 
+	# - 的意思是，也许某些文件出现问题，但不要管，继续做后面的事
+	-rm edit $(objects) 
 # just a test for Makefile label
 byeworld : 
 	rm edit $(objects) 
