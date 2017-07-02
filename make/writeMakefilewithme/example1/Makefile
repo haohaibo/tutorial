@@ -26,3 +26,5 @@ clean :
 # just a test for Makefile label
 byeworld : 
 	rm edit $(objects) 
+a : 
+	echo $(objects)
