@@ -6,7 +6,7 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: A naive parallel version of std::accumulate 
 *        Create: 2017-05-30 20:46:02
-* Last Modified: 2017-05-31 09:56:47
+* Last Modified: 2017-06-14 09:07:29
 **/
 #include <thread>
 #include <numeric>
