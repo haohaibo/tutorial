@@ -39,5 +39,7 @@ int main()
 #endif
 
 #endif
+    std::cout << "[INFO]  " << "OK" << std::endl; 
+    std::cerr << "[!FATAL!]  " << "ERROR" << std::endl;
 }
 
