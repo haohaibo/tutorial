@@ -4,7 +4,7 @@ Author : Haibo Hao
 
 Email  : haohaibo@ncic.ac.cn
 
-###note:
+### note:
 
 
 header &lt;regex&gt; is now implemented and released in GCC 4.9.0, it can work with compiler GCC version >= 4.9.0
