@@ -15,7 +15,8 @@
 #define A
 #define B
 
-
+#define FATAL(msg) {std::cerr << "[!FATAL!]  " << msg << std::endl; exit(EXIT_FAILURE);} while(0) 
+#define INFO(msg) std::cout << "[INFO]  " << msg << std::endl;
 
 int main()
 {
@@ -39,7 +40,8 @@ int main()
 #endif
 
 #endif
-    std::cout << "[INFO]  " << "OK" << std::endl; 
-    std::cerr << "[!FATAL!]  " << "ERROR" << std::endl;
+
+   INFO("OK");
+   FATAL("ERROR");
 }
 
