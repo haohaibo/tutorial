@@ -6,7 +6,8 @@ Email  : haohaibo@ncic.ac.cn
 
 ###note:
 
-&lt;regex&gt; is now implemented and released in GCC 4.9.0, it can work with compiler GCC version >= 4.9.0
+
+header &lt;regex&gt; is now implemented and released in GCC 4.9.0, it can work with compiler GCC version >= 4.9.0
 
 so for GCC version lower than GCC 4.9.0, we cannot use &lt;regex&gt;
 
