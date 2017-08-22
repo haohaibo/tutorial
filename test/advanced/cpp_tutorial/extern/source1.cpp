@@ -6,9 +6,10 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-08-22 09:57:08
-* Last Modified: 2017-08-22 10:13:56
+* Last Modified: 2017-08-22 10:55:13
 **/
 
+//ref : https://stackoverflow.com/questions/10422034/when-to-use-extern-in-c
 #include "header.h"
 
 // it needs to be defined somewhere
