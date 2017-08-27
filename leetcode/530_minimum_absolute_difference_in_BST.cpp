@@ -14,7 +14,7 @@ public:
         Inorder(root, keys);
         return min;
     }
-    int min=1000000;
+    int min=INT_MAX;
     void Inorder(TreeNode* root, vector<int>& keys){
         if(root == NULL){
             return ;
