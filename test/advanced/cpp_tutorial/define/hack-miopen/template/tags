@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	./template.cpp	/^        class A{$/;"	c	namespace:ns	file:
+GUARD_MIOPENGEMM_SETABCW_HPP	./set_abcw.hpp	12;"	d
+data1	./template.cpp	/^            T1 data1;$/;"	m	class:ns::A	file:
+data2	./template.cpp	/^            T2 data2;$/;"	m	class:ns::A	file:
+is_void	./full_template_speci.cpp	/^        struct is_void : std::false_type {$/;"	s	namespace:ns	file:
+is_void	./full_template_speci.cpp	/^        struct is_void<void> : std::true_type {$/;"	s	namespace:ns	file:
+main	./full_template_speci.cpp	/^int main(int argc, char* argv[]){$/;"	f
+main	./main.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	./template.cpp	/^int main(int argc, char* argv[])$/;"	f
+max	./template.cpp	/^        T max(const T lhs, const T rhs){$/;"	f	namespace:ns
+ns	./full_template_speci.cpp	/^namespace ns{$/;"	n	file:
+ns	./template.cpp	/^namespace ns{$/;"	n	file:
+set_abc	./set_abcw.cpp	/^            void set_abc(std::vector<TFloat>& v_a,$/;"	f
+set_abcw	./set_abcw.cpp	/^            void set_abcw(std::vector<TFloat>& v_a,$/;"	f
+set_multigeom_abc	./set_abcw.cpp	/^            void set_multigeom_abc(std::vector<TFloat>& v_a,$/;"	f
+test	./set_abcw.cpp	/^            void test(TFloat& a)$/;"	f
