@@ -4,4 +4,4 @@
 
 ### To record my learning step
 
-Content includes but is not limited to MPI, OpenMP, SIMD,  leetcode, PAT code, C++(C++11 multithread), cmake & make
+Content includes but is not limited to MPI, OpenMP, SIMD,  leetcode, PAT code, C++(C++11 multithread)
