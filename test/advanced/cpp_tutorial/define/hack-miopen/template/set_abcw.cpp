@@ -6,7 +6,7 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-08-27 22:45:37
-* Last Modified: 2017-08-28 09:25:42
+* Last Modified: 2017-09-02 14:44:01
 **/
 #include <iostream>
 #include <vector>
@@ -28,7 +28,14 @@ namespace MIOpenGEMM {
                     std::vector<TFloat>& v_b,
                     std::vector<TFloat>& v_c)
             {
-
+                size_t n_a{0};
+                size_t n_b{0};
+                size_t n_c{0};
+                std::cout << "set_multigeom_abc ..." << std::endl; 
+                std::cout << "n_a = " << n_a
+                    << "\tn_b = " << n_b
+                    << "\tn_c = " << n_c
+                    << std::endl;
             }
 
         template <typename TFloat>
@@ -58,6 +65,13 @@ namespace MIOpenGEMM {
 
         template void print<double>();
         template void print<float>();
+
+        template void set_multigeom_abc(std::vector<double>& v_a,
+                    std::vector<double>& v_b,
+                    std::vector<double>& v_c);
+        template void set_multigeom_abc(std::vector<float>& v_a,
+                    std::vector<float>& v_b,
+                    std::vector<float>& v_c);
    }
 }
 
