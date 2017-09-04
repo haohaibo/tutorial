@@ -6,10 +6,12 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-09-04 15:55:25
-* Last Modified: 2017-09-04 16:26:05
+* Last Modified: 2017-09-04 16:30:14
 **/
 #include <iostream>
 #include <cstdio>
+
+#define cl_mem void*
 
 namespace ns {
     class A {
@@ -49,6 +51,8 @@ int main(){
    std::cout << *pc << std::endl;
    std::cout << **ppc << std::endl;
 
+   cl_mem mtx_a = nullptr;
+   std::cout << a << std::endl;
    return 0;
 }
 
