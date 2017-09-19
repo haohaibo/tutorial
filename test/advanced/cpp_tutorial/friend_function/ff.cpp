@@ -6,7 +6,7 @@
 *        Email : haohaibo@ncic.ac.cn
 *   Description: ---
 *        Create: 2017-09-19 21:35:09
-* Last Modified: 2017-09-19 21:52:58
+* Last Modified: 2017-09-19 22:31:46
 **/
 #include<iostream>
 #include<cstdio>
@@ -14,6 +14,7 @@
 
 namespace ns{
     class Point{
+        // friend function 可以访问类的私有成员和保护成员
         friend void ChangePrivate(Point &);
         public:
             Point(void) : m_i(0) {}
@@ -28,7 +29,6 @@ namespace ns{
 
     };
 
-    // friend function 可以访问和修改类的对象中的私有成员
     void ChangePrivate(Point &i){
         i.m_i++;
     }
