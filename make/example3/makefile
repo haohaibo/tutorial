@@ -4,6 +4,7 @@ FILE2 = $(pwd)file2.txt
 
 RELEASE = abc
 
+# 这里$(warning RELEASE defined) 前面是两个空格
 ifdef RELEASE
   $(warning RELEASE defined)
 else
