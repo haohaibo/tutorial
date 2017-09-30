@@ -3,9 +3,9 @@
 
 ```flow
 op1=>operation: 预处理
-op1=>operation: 预处理
-op1=>operation: 预处理
-op1=>operation: 预处理
+op1=>operation: 编译 
+op1=>operation: 汇编 
+op1=>operation: 链接 
 
 op1->op2->op3->op4
 
