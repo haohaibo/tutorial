@@ -12,4 +12,4 @@ $(TARGET):$(OBJS)
 	$(CC) -o $@ $^
 
 clean:
-	rm -rf test test.o
+	rm -rf *.o $(TARGET) 
