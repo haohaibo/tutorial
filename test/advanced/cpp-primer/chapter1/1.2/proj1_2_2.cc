@@ -15,6 +15,8 @@ int main()
     std::cerr << "cerr: standard error" << std::endl;
     std::clog << "clog: log info" << std::endl;
 
+    // 前缀std::指出名字cout 和endl是定义在名为std的命名空间(namespace)中的。
+    // 命令空间可以帮助我们避免名字冲突
     std::cout << "test";
     // 在C++中，一个表达式产生一个运算结果，它由一个或多个运算对象和(通常)一个运算符组成
     // << 为输出运算符
