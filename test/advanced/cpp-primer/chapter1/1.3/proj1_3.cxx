@@ -13,6 +13,10 @@
 int main()
 {
     //prompt user to enter two numbers
+    /*
+     * 简单主函数：
+     * 读取两个数，求它们的和
+     */
     std::cout << "Enter two numbers:" << std::endl;
     int v1, v2; //uninitialized
     std::cin >> v1 >> v2; // read input

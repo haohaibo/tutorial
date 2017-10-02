@@ -10,6 +10,9 @@ int main()
     std::cout << "Enter two numbers: " << std::endl;
     int v1, v2;
     std::cin >> v1 >> v2;
+
+    // 标准库定义了不同版本的输入输出运算符，来处理
+    // 这些不同的运算对象
     std::cout << "The sum of " << v1 << " and "
               << v2 << " is " << v1 + v2 << std::endl;
     std::cerr << "cerr: standard error" << std::endl;
@@ -17,6 +20,7 @@ int main()
 
     // 前缀std::指出名字cout 和endl是定义在名为std的命名空间(namespace)中的。
     // 命令空间可以帮助我们避免名字冲突
+    // ::表示作用域运算符
     std::cout << "test";
     // 在C++中，一个表达式产生一个运算结果，它由一个或多个运算对象和(通常)一个运算符组成
     // << 为输出运算符
