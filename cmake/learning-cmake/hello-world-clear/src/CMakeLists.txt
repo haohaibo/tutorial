@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8.4)
+
+add_executable(hello main.c)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+MESSAGE(STATUS "This is EXECUTABLE_OUTPUT_PATH " ${EXECUTABLE_OUTPUT_PATH})
+
+install(TARGETS hello RUNTIME DESTINATION bin)
