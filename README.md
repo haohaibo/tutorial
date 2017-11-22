@@ -4,4 +4,4 @@
 
 ### ABOUT 
 
-This repo includes but not limited to MPI, OpenMP, SIMD, C++(C++11 multithread), leetcode, PAT, hiho
+Repo includes but not limited to MPI, OpenMP, SIMD, C++(C++11 multithread), leetcode, PAT, hiho
