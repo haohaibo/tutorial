@@ -9,4 +9,5 @@ sub bar{
 sub blat{
     print "world $_[0]\n";
 }
+our $i = 9;
 1;

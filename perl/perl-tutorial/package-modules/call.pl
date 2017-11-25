@@ -11,3 +11,5 @@ Foo::blat('ncic');
 
 Module::bar('ict');
 Module::blat('ncic');
+
+print "$Foo::i\n";
