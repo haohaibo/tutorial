@@ -131,3 +131,9 @@ print "var 的值为 = $var\n";
 
 @list = (5,4,3,2,1)[1..3];
 print "list 的值 = @list\n";
+
+@arr = (4,7,21,111);
+print "befor: @arr\n";
+$ele = shift @arr;
+print "\$ele = $ele\n";
+print "after: @arr\n";
