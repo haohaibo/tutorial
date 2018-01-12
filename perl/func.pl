@@ -17,13 +17,16 @@ sub add2 {
 
 # shift function is a stack, shift return(remove) the first element of a array
 sub add3 {
+    # first parameter
     my $na = shift;
+    # second parameter
     my $nb = shift;
-    my $result = $na + $nb;
-    print "\$na = $na\n";
-    print "\$nb = $nb\n";
-    print "The result was: $result\n";
-    return $result;
+    my $sum = shift;
+    my $sum = $na + $nb;
+    #print "\$na = $na\n";
+    #print "\$nb = $nb\n";
+    #print "The result was: $result\n";
+    return $sum;
 }
 
 sub display_hash {
@@ -39,7 +42,13 @@ message;
 
 add(1,2);
 add2(2,3);
-print add3(2,231),"\n";
+print "add3";
+print "\n";
+my $para1 = 1;
+my $para2 = 231;
+my $para3;
+$para3 = add3($para1,$para2,$para3);
+print $para1, " + ","$para2"," = ",$para3, "\n";
 
 my @arr = ("Haibo Hao","ict","apple","red");
 print @arr,"\n";
