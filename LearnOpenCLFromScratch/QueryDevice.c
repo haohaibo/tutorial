@@ -1,8 +1,8 @@
 /*
-* Author: Haibo Hao
-* Email : haohaibo@ncic.ac.cn
-* Copyright (C) 2017 NCIC
-**/
+ * Author: Haibo Hao
+ * Email : haohaibo@ncic.ac.cn
+ * Copyright (C) 2017 NCIC
+ **/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,81 +14,178 @@ int main(void)
     cl_int err;
     // Find the number of OpenCL platforms
     cl_uint num_platforms;
-    err = clGetPlatformIDs(0, NULL, &num_platforms);
+    err = clGetPlatformIDs(
+            0,
+            NULL,
+            &num_platforms
+            );
     printf("[INFO]  Number of OpenCL platforms: %d\n", num_platforms);
 
     // Create a list of platform IDs
     cl_platform_id platform[num_platforms];
-    err = clGetPlatformIDs(num_platforms, platform, NULL);
+    err = clGetPlatformIDs(
+            num_platforms,
+            platform,
+            NULL
+            );
 
     // Investigate each platform
     for(int i = 0; i < num_platforms; ++i)
     {
+        printf("\n---------------------------------------------\n");
+        printf("[INFO]  Platform: %d\n",i);
         cl_char string[10240] = {0};
         // Print out the platform name
-        err = clGetPlatformInfo(platform[i], CL_PLATFORM_NAME, sizeof(string), &string, NULL);
+        err = clGetPlatformInfo(
+                platform[i],
+                CL_PLATFORM_NAME,
+                sizeof(string),
+                &string,
+                NULL
+                );
         printf("[INFO]  Platform name: %s\n", string); 
         //printf("[INFO]  Platform ID: %d\n", platform[i]); 
-        
+
         // Print out the platform vendor
-        err = clGetPlatformInfo(platform[i], CL_PLATFORM_VENDOR, sizeof(string), &string, NULL);
+        err = clGetPlatformInfo(
+                platform[i],
+                CL_PLATFORM_VENDOR,
+                sizeof(string),
+                &string,
+                NULL
+                );
         printf("[INFO]  Platform vendor: %s\n", string); 
 
         // Print out the platform OpenCL version 
-        err = clGetPlatformInfo(platform[i], CL_PLATFORM_VERSION, sizeof(string), &string, NULL);
+        err = clGetPlatformInfo(
+                platform[i],
+                CL_PLATFORM_VERSION,
+                sizeof(string),
+                &string,
+                NULL
+                );
         printf("[INFO]  Platform version: %s\n", string); 
 
         // Count the number of devices in the platform
         cl_uint num_devices;
-        err = clGetDeviceIDs(platform[i], CL_DEVICE_TYPE_ALL, 0, NULL, &num_devices);
+        err = clGetDeviceIDs(
+                platform[i],
+                CL_DEVICE_TYPE_ALL,
+                0,
+                NULL,
+                &num_devices
+                );
         printf("[INFO]  Number of devices: %d\n", num_devices); 
         // Get the device IDs
         cl_device_id device[num_devices];
-        err = clGetDeviceIDs(platform[i], CL_DEVICE_TYPE_ALL,num_devices, device, NULL);
+        err = clGetDeviceIDs(
+                platform[i],
+                CL_DEVICE_TYPE_ALL,
+                num_devices,
+                device,
+                NULL
+                );
 
         // Investigate each device
         for (int j = 0; j < num_devices; ++j)
         {
+            printf("\n----------------------------------------\n");
+            printf("[INFO]  Device ID: %d\n",j);
             // Get device name
-            err = clGetDeviceInfo(device[j], CL_DEVICE_NAME, sizeof(string), &string, NULL);
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_NAME,
+                    sizeof(string),
+                    &string,
+                    NULL
+                    );
             printf("[INFO]  Device name: %s\n", string); 
 
             // Get device OpenCL C version 
-            err = clGetDeviceInfo(device[j], CL_DEVICE_OPENCL_C_VERSION, sizeof(string), &string, NULL);
-            printf("[INFO]  Device OpenCL version: %s\n", string); 
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_OPENCL_C_VERSION,
+                    sizeof(string),
+                    &string,
+                    NULL
+                    );
+            printf("[INFO]  Device OpenCL C version: %s\n", string); 
             // Get Max. Compute Unit 
             cl_uint num_compute_units;
-            err = clGetDeviceInfo(device[j], CL_DEVICE_MAX_COMPUTE_UNITS, sizeof(cl_uint), &num_compute_units, NULL);
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_MAX_COMPUTE_UNITS,
+                    sizeof(cl_uint),
+                    &num_compute_units,
+                    NULL
+                    );
             printf("[INFO]  Device max compute units: %d\n", num_compute_units); 
 
             // Get local memory size(Local Data Share)
             cl_ulong local_mem_size;
-            err = clGetDeviceInfo(device[j], CL_DEVICE_LOCAL_MEM_SIZE, sizeof(cl_ulong), &local_mem_size, NULL);
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_LOCAL_MEM_SIZE,
+                    sizeof(cl_ulong),
+                    &local_mem_size,
+                    NULL
+                    );
             printf("[INFO]  Device local memory size: %lu KB\n", local_mem_size/1024); 
 
             // Get global memory size(Device memory)
             cl_ulong global_mem_size;
-            err = clGetDeviceInfo(device[j], CL_DEVICE_GLOBAL_MEM_SIZE, sizeof(cl_ulong), &global_mem_size, NULL);
-            printf("[INFO]  Device global memory size: %lu MB\n", global_mem_size/(1024*1024)); 
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_GLOBAL_MEM_SIZE,
+                    sizeof(cl_ulong),
+                    &global_mem_size,
+                    NULL
+                    );
+            printf("[INFO]  Device global memory size: %lu GB\n", global_mem_size/(1024*1024*1024)); 
 
             // Get max buffer alloc. size
             cl_ulong max_buffer_alloc;
-            err = clGetDeviceInfo(device[j], CL_DEVICE_MAX_MEM_ALLOC_SIZE, sizeof(cl_ulong), &max_buffer_alloc, NULL);
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_MAX_MEM_ALLOC_SIZE,
+                    sizeof(cl_ulong),
+                    &max_buffer_alloc,
+                    NULL
+                    );
             printf("[INFO]  Device Max Memory Alloc. Size: %lu MB\n", max_buffer_alloc/(1024*1024)); 
 
             // Get work-group size information 
             size_t work_group_size;
-            err = clGetDeviceInfo(device[j], CL_DEVICE_MAX_WORK_GROUP_SIZE, sizeof(size_t), &work_group_size, NULL);
-            printf("[INFO]  Device Max Workgroup Size(max number of work-items in a workgroup): %ld\n", work_group_size); 
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_MAX_WORK_GROUP_SIZE,
+                    sizeof(size_t),
+                    &work_group_size,
+                    NULL
+                    );
+            printf("[INFO]  Device Max Workgroup Size"
+                    "(max number of work-items in a workgroup): %ld\n", work_group_size); 
 
             // Find the maximum dimensions of the work-groups
             size_t max_dim_workgroup;
-            err = clGetDeviceInfo(device[j], CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS, sizeof(cl_uint), &max_dim_workgroup, NULL);
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS,
+                    sizeof(cl_uint),
+                    &max_dim_workgroup,
+                    NULL
+                    );
             printf("[INFO]  Device Max work-item dims: %ld\n", max_dim_workgroup); 
 
             // Get the max. dims of the work-groups
             size_t dims[max_dim_workgroup];
-            err = clGetDeviceInfo(device[j], CL_DEVICE_MAX_WORK_ITEM_SIZES, sizeof(dims), &dims, NULL);
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_MAX_WORK_ITEM_SIZES,
+                    sizeof(dims),
+                    &dims,
+                    NULL
+                    );
 
             printf("[INFO]  Max Work-group Dims: ( ");
             for (size_t k = 0; k < max_dim_workgroup; ++k)
@@ -96,8 +193,9 @@ int main(void)
                 printf("%ld ",dims[k]);
             }
             printf(")\n");
+            printf("\n----------------------------------------\n");
         }
-
+        printf("\n---------------------------------------------\n");
     }
 
     return 0;
