@@ -1,4 +1,4 @@
-CC=gcc
+CC=g++
 CFLAGS=-DMACRO
 CSRCS := $(shell find . -name '*.c')
 COBJS := $(subst .c,.o,$(CSRCS))
