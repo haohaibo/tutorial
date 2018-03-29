@@ -14,6 +14,17 @@ int main(void)
     cl_int err;
     // Find the number of OpenCL platforms
     cl_uint num_platforms;
+
+    /* clGetPlatformIDs function description
+     *
+     cl_int
+     clGetPlatformIDs(
+     cl_uint num_entries,
+     cl_platform_id *platforms,
+     cl_uint *num_platforms)
+     *
+     */
+
     err = clGetPlatformIDs(
             0,
             NULL,
@@ -35,6 +46,16 @@ int main(void)
         printf("\n---------------------------------------------\n");
         printf("[INFO]  Platform: %d\n",i);
         cl_char string[10240] = {0};
+
+        /*
+           cl_int clGetPlatformInfo(
+           cl_platform_id platform,
+           cl_platform_info param_name,
+           size_t param_value_size,
+           void *param_value,
+           size_t *param_value_size_ret)
+           */
+
         // Print out the platform name
         err = clGetPlatformInfo(
                 platform[i],
@@ -66,6 +87,16 @@ int main(void)
                 );
         printf("[INFO]  Platform version: %s\n", string); 
 
+        /*
+           cl_int
+           clGetDeviceIDs(
+           cl_platform_id platform,
+           cl_device_type device_type,
+           cl_uint num_entries,
+           cl_device_id *devices,
+           cl_uint *num_devices)
+           */
+
         // Count the number of devices in the platform
         cl_uint num_devices;
         err = clGetDeviceIDs(
@@ -91,6 +122,16 @@ int main(void)
         {
             printf("\n----------------------------------------\n");
             printf("[INFO]  Device ID: %d\n",j);
+
+            /*
+               cl_int clGetDeviceInfo (
+               cl_device_id  device ,
+               cl_device_info  param_name ,
+               size_t  param_value_size ,
+               void  *param_value ,
+               size_t  *param_value_size_ret )
+               */
+
             // Get device name
             err = clGetDeviceInfo(
                     device[j],
@@ -100,6 +141,17 @@ int main(void)
                     NULL
                     );
             printf("[INFO]  Device name: %s\n", string); 
+
+            cl_uint max_clock_frequency;
+            // Get device max clock frequency 
+            err = clGetDeviceInfo(
+                    device[j],
+                    CL_DEVICE_MAX_CLOCK_FREQUENCY,
+                    sizeof(cl_uint),
+                    &max_clock_frequency,
+                    NULL
+                    );
+            printf("[INFO]  Device max clock frequency: %d MHz\n", max_clock_frequency); 
 
             // Get device OpenCL C version 
             err = clGetDeviceInfo(
