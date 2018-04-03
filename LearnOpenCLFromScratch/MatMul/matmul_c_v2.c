@@ -78,19 +78,34 @@ const char *MatMult_kernel_source =
 " const int K\n"
 " )\n"
 "{\n"
-"  // Thread identifiers
+"  // Thread identifiers\n"
 "  const int row = get_local_id(0); // Local row ID (max: TS)\n"
 "  const int col = get_local_id(1); // Local col ID (max: TS)\n"
-"  cont int globalRow = get_group_id(0)*TS + row; // Row ID of C (0..M)\n"
-"  cont int globalCol = get_group_id(1)*TS + col; // Col ID of C (0..N)\n"
-"  // local momory to fit a tile of TS*TS elements of A and B\n"
+"  const int TS = 8;\n"
+"  const int globalRow = get_group_id(0)*TS + row; // Row ID of C (0..M)\n"
+"  const int globalCol = get_group_id(1)*TS + col; // Col ID of C (0..N)\n"
+"  // Local memory to fit a tile of A and B\n"
 "  __local float Asub[TS][TS];\n"
 "  __local float Bsub[TS][TS];\n"
+"  // Loop over all tiles\n"
+"  const int numTiles = K/TS;\n"
 "  // Initialize accumulation register\n"
 "  float acc = 0.0f;\n"
-"  for(int k = 0; k < K; ++k){\n"
-"     acc += A[k*M + globalRow] * B[globalCol*K + k];\n"
-"  }\n"
+"    for (int t=0; t<numTiles; t++) {\n"
+"        // Load one tile of A and B into local memory\n"
+"        const int tiledRow = t*TS + row;\n"
+"        const int tiledCol = t*TS + col;\n"
+"        Asub[col][row] = A[tiledCol*M + globalRow];\n"
+"        Bsub[col][row] = B[globalCol*K + tiledRow];\n"
+"        // Synchronise to make sure the tile is loaded\n"
+"        barrier(CLK_LOCAL_MEM_FENCE);\n"
+"        // Perform the computation for a single tile\n"
+"        for (int k=0; k<TS; k++) {\n"
+"            acc += Asub[k][row] * Bsub[col][k];\n"
+"        }\n"
+"        // Synchronise before loading the next tile\n"
+"        barrier(CLK_LOCAL_MEM_FENCE);\n"
+"    }\n"
 "  C[globalCol*M + globalRow] = acc;\n"
 "}\n";
 
@@ -398,7 +413,7 @@ int main(int argc, char* argv[]){
         // letting the OpenCL runtime choose the work-group size
     const size_t global[2] = {M, N};
     //const size_t local[2] = {8, 8};
-    const size_t local[2] = {16, 16};
+    const size_t local[2] = {TS, TS};
     //const size_t local[2] = {32, 32}; // error: can not exceed 256 work-items
     printf("Starting my SGEMM M = %d N = %d K = %d "
             "running...(repeated %d times)\n",
@@ -466,7 +481,7 @@ int main(int argc, char* argv[]){
     // Test the results
     correct = 0;
     float temp = 0;
-#if 0
+#if 1 
     printf("Verifing the GPU result...\n");
     for(int i = 0; i < M; ++i)
     {

@@ -10,15 +10,12 @@ WARNING=-Wno-deprecated-declarations
 
 .PHONY: all
 
-all: vadd_c vadd_cpu matmul_c_v1 
+all: matmul_c_v1 matmul_c_v2
 
 matmul_c_v1: matmul_c_v1.c
 	$(CC) $^ $(CCFLAGS) $(LIBS) $(WARNING) -I $(COMM_DIR) -o $@
-vadd_c: vadd_c.c
+
+matmul_c_v2: matmul_c_v2.c
 	$(CC) $^ $(CCFLAGS) $(LIBS) $(WARNING) -I $(COMM_DIR) -o $@
-
-vadd_cpu: vadd_cpu.c
-	$(CC) $^ -o $@
-
 clean:
-	rm -rf vadd_c vadd_cpu matmul_c_v1
+	rm -rf matmul_c_v1 matmul_c_v2
