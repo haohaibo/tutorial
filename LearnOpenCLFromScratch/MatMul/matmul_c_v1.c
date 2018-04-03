@@ -421,7 +421,7 @@ int main(int argc, char* argv[]){
     rtime = (wtime() - rtime)/(double)NUM_RUNS;
     checkError(err, "Waiting for kernel to finish");
     double gflops = ((long)M*(long)N*(long)K*2*1.0)/(double)(1000*1000*1000);
-    printf("\nThe kernel ran in %lf seconds\n", rtime);
+    //printf("\nThe kernel ran in %lf seconds\n", rtime);
     printf("%.1lf GFLOPS\n",gflops/rtime);
 
 #if 0 

@@ -1,7 +1,7 @@
 /*
  * Author: Haibo Hao
  * Email : haohaibo@ncic.ac.cn
- * Desc  : Elementwise addtion of two vectors(c = a + b)
+ * Desc  : General Matrix Matrix Multiply 
  * Copyright (C) 2017 NCIC
  **/
 
@@ -39,53 +39,107 @@
 #define DEVICE CL_DEVICE_TYPE_DEFAULT
 #endif
 
+//#define TOL (0.001)    // tolerence used in floating point comparisons
 #define TOL (0.001)    // tolerence used in floating point comparisons
+//#define TOL (2.0)    // tolerence used in floating point comparisons
 #define LENGTH (1024)  // length of vector c, a and b
 
-const char *vadd_kernel_source = 
-"\n"\
-        "__kernel void vadd(                           \n"\
-        " __global float* a,                           \n"\
-        " __global float* b,                           \n"\ 
-        " __global float* c,                           \n"\
-            " const unsigned int count                     \n"\
-            " )                                            \n"\
-            "{                                             \n"\
-            "  int i = get_global_id(0);                   \n"\
-            "  if(i < count)                               \n"\
-            "      c[i] = a[i] + b[i];                     \n"\
-            "}                                             \n"\
-            "\n";
+// Size of the matrices - M, N, K(squared)
+#define SIZE 1024 
+
+// Number of repeated times
+#define NUM_RUNS 5
+
+// Threadblock Sizes
+#define TS 8 
+
+//const char *vadd_kernel_source = 
+//"\n"\
+//        "__kernel void vadd(                           \n"\
+//        " __global float* a,                           \n"\
+//        " __global float* b,                           \n"\ 
+//        " __global float* c,                           \n"\
+//            " const unsigned int count                     \n"\
+//            " )                                            \n"\
+//            "{                                             \n"\
+//            "  int i = get_global_id(0);                   \n"\
+//            "  if(i < count)                               \n"\
+//            "      c[i] = a[i] + b[i];                     \n"\
+//            "}                                             \n"\
+//            "\n";
+const char *MatMult_kernel_source = 
+"\n"
+"__kernel void MatMul(\n"
+" const __global float* A,\n"
+" const __global float* B,\n" 
+" __global float* C,\n"
+" const int M,\n"
+" const int N,\n"
+" const int K\n"
+" )\n"
+"{\n"
+"  // Thread identifiers
+"  const int row = get_local_id(0); // Local row ID (max: TS)\n"
+"  const int col = get_local_id(1); // Local col ID (max: TS)\n"
+"  cont int globalRow = get_group_id(0)*TS + row; // Row ID of C (0..M)\n"
+"  cont int globalCol = get_group_id(1)*TS + col; // Col ID of C (0..N)\n"
+"  // local momory to fit a tile of TS*TS elements of A and B\n"
+"  __local float Asub[TS][TS];\n"
+"  __local float Bsub[TS][TS];\n"
+"  // Initialize accumulation register\n"
+"  float acc = 0.0f;\n"
+"  for(int k = 0; k < K; ++k){\n"
+"     acc += A[k*M + globalRow] * B[globalCol*K + k];\n"
+"  }\n"
+"  C[globalCol*M + globalRow] = acc;\n"
+"}\n";
 
 int main(int argc, char* argv[]){
-    //printf("%s\n",vadd_kernel_source);
+    //printf("%s\n",MatMult_kernel_source);
 
     int err;   // error code returned from OpenCL calls
     unsigned int correct; // number of correct results
-    float*    h_a = malloc(LENGTH*sizeof(float));  // host vector a
-    float*    h_b = malloc(LENGTH*sizeof(float));  // host vector b
-    float*    h_c = malloc(LENGTH*sizeof(float));  // host vector c
+    // Set the sizes
+    //int M = SIZE;
+    //int N = SIZE;
+    //int K = SIZE;
+    int M = atoi(argv[1]);
+    int N = atoi(argv[2]);
+    int K = atoi(argv[3]);;
+    float*    h_a = malloc(M*K*sizeof(float));  // host matrix a
+    float*    h_b = malloc(K*N*sizeof(float));  // host matrix b
+    float*    h_c = malloc(M*N*sizeof(float));  // host matrix c
 
-    size_t global;  // global domain size
 
     // device
     cl_device_id     device_id; // compute device id
     cl_context       context;   // compute context
     cl_command_queue command_queue;  // compute command queue
     cl_program       program;   // compute program
-    cl_kernel        ko_vadd;   // compute kernel
+    cl_kernel        ko_MatMul;   // compute kernel
 
-    cl_mem           d_a;       // device vector a
-    cl_mem           d_b;       // device vector b 
-    cl_mem           d_c;       // device vector c 
+    cl_mem           d_a;       // device matrix a
+    cl_mem           d_b;       // device matrix b 
+    cl_mem           d_c;       // device matrix c 
 
-    // Fill vectors a and b with random float values
+    // Fill matrix a and b with random float values
     int i = 0;
-    int count = LENGTH;
-    for(i = 0; i < count; ++i){
+    for(i = 0; i < M*K; ++i){
         h_a[i] = rand() / (float)RAND_MAX;
-        h_b[i] = rand() / (float)RAND_MAX;
+        //h_a[i] = 3.0;
+        //h_a[i] = 3.6*i + i*i + 3.1;
+        //printf("%f ",h_a[i]);
     }
+    //printf("\n");
+    for(i = 0; i < N*K; ++i){
+        h_b[i] = rand() / (float)RAND_MAX;
+        //h_b[i] = 5.0;
+        //h_b[i] = 1.2*i + 0.01*i*i + 13.9;
+        //printf("%f ",h_b[i]);
+    }
+    //printf("\n");
+
+    // Configure the OpenCL environment
 
     // set up platform and GPU device
     cl_uint num_platforms;
@@ -178,7 +232,7 @@ int main(int argc, char* argv[]){
         program = clCreateProgramWithSource(
                 context,
                 1,
-                (const char **)&vadd_kernel_source,
+                (const char **)&MatMult_kernel_source,
                 NULL, // null-terminated
                 &err);
     checkError(err, "Creating program from source");
@@ -209,9 +263,9 @@ int main(int argc, char* argv[]){
             cl_int *errcode_ret)
 #endif
         // create the compute kernel object from the program
-        ko_vadd = clCreateKernel( 
+        ko_MatMul = clCreateKernel( 
                 program,
-                "vadd",
+                "MatMul",
                 &err);
     checkError(err, "Creating kernel");
 
@@ -231,21 +285,21 @@ int main(int argc, char* argv[]){
         d_a = clCreateBuffer(
                 context,
                 CL_MEM_READ_ONLY,
-                sizeof(float)*count,
+                sizeof(float)*M*K,
                 NULL,
                 &err);
     checkError(err, "Creating buffer d_a");
     d_b = clCreateBuffer(
             context,
             CL_MEM_READ_ONLY,
-            sizeof(float)*count,
+            sizeof(float)*K*N,
             NULL,
             &err);
     checkError(err, "Creating buffer d_b");
     d_c = clCreateBuffer(
             context,
             CL_MEM_READ_WRITE,
-            sizeof(float)*count,
+            sizeof(float)*M*N,
             NULL,
             &err);
     checkError(err, "Creating buffer d_c");
@@ -269,7 +323,7 @@ int main(int argc, char* argv[]){
                 d_a,
                 CL_TRUE,
                 0,
-                sizeof(float)*count,
+                sizeof(float)*M*K,
                 h_a,
                 0,
                 NULL,
@@ -281,7 +335,7 @@ int main(int argc, char* argv[]){
             d_b,
             CL_TRUE,
             0,
-            sizeof(float)*count,
+            sizeof(float)*K*N,
             h_b,
             0,
             NULL,
@@ -296,25 +350,35 @@ int main(int argc, char* argv[]){
 #endif
         // set the arguments to our compute kernel
         err = clSetKernelArg(
-                ko_vadd,
+                ko_MatMul,
                 0,
                 sizeof(cl_mem),
                 &d_a);
     err |= clSetKernelArg(
-            ko_vadd,
+            ko_MatMul,
             1,
             sizeof(cl_mem),
             &d_b);
     err |= clSetKernelArg(
-            ko_vadd,
+            ko_MatMul,
             2,
             sizeof(cl_mem),
             &d_c);
     err |= clSetKernelArg(
-            ko_vadd,
+            ko_MatMul,
             3,
-            sizeof(unsigned int),
-            &count);
+            sizeof(int),
+            &M);
+    err |= clSetKernelArg(
+            ko_MatMul,
+            4,
+            sizeof(int),
+            &N);
+    err |= clSetKernelArg(
+            ko_MatMul,
+            5,
+            sizeof(int),
+            &K);
     checkError(err, "Setting kernel arguments");
 
 #if 0
@@ -332,30 +396,40 @@ int main(int argc, char* argv[]){
 #endif
         // execute the kernel
         // letting the OpenCL runtime choose the work-group size
-        global = count;
+    const size_t global[2] = {M, N};
+    //const size_t local[2] = {8, 8};
+    const size_t local[2] = {16, 16};
+    //const size_t local[2] = {32, 32}; // error: can not exceed 256 work-items
+    printf("Starting my SGEMM M = %d N = %d K = %d "
+            "running...(repeated %d times)\n",
+            M,N,K,NUM_RUNS);
     double rtime = wtime();
+    for(int i = 0; i < NUM_RUNS; ++i){
     err = clEnqueueNDRangeKernel(
             command_queue,
-            ko_vadd,
-            1,
+            ko_MatMul,
+            2,
             NULL,
-            &global,
-            NULL,
+            global,
+            local,
             0,
             NULL,
             NULL);
-    checkError(err, "Enqueuing kernel");
-
 #if 0
     cl_int clFinish(
             cl_command_queue command_queue);
 #endif
     // wait for the commands to complete before
-    // stopping the timer
     err = clFinish(command_queue);
-    rtime = wtime() - rtime;
+    }
+    //checkError(err, "Enqueuing kernel");
+
+    // stopping the timer
+    rtime = (wtime() - rtime)/(double)NUM_RUNS;
     checkError(err, "Waiting for kernel to finish");
-    printf("\nThe kernel ran in %lf seconds\n", rtime);
+    double gflops = ((long)M*(long)N*(long)K*2*1.0)/(double)(1000*1000*1000);
+    //printf("\nThe kernel ran in %lf seconds\n", rtime);
+    printf("%.1lf GFLOPS\n",gflops/rtime);
 
 #if 0 
     cl_int clEnqueueReadBuffer(
@@ -375,7 +449,7 @@ int main(int argc, char* argv[]){
                 d_c,
                 CL_TRUE,
                 0,
-                sizeof(float)*count,
+                sizeof(float)*M*N,
                 h_c,
                 0,
                 NULL,
@@ -385,23 +459,53 @@ int main(int argc, char* argv[]){
         printf("Error: Failed to read output array\n");
     }
 
+    //for(int i = 0; i < M*N; ++i){
+    //    printf("%f ",h_c[i]);
+    //}
+    printf("\n");
     // Test the results
     correct = 0;
     float temp = 0;
-    for(int i = 0; i < count; ++i)
+#if 0
+    printf("Verifing the GPU result...\n");
+    for(int i = 0; i < M; ++i)
     {
-        temp = h_a[i] + h_b[i];
-        temp -= h_c[i];
-        if(temp*temp < TOL*TOL){
-            ++correct;
-        }else{
-            printf("temp %f h_a %f h_b %f h_c %f\n",
-                    temp,h_a[i],h_b[i],h_c[i]);
+        for(int j = 0; j < N; ++j){
+            temp = 0;
+            for(int k = 0; k < K; ++k){
+                temp += h_a[k*M + i]*h_b[j*K + k]; 
+            }
+            //printf("%f ",temp);
+            temp -= h_c[j*M + i];
+            //printf("quare err %f\n",temp*temp);
+            if(temp*temp < TOL*TOL){
+                ++correct;
+            }else{
+                printf("temp %f h_c %f\n",
+                        temp,h_c[i]);
+            }
         }
     }
 
     // sum results
-    printf("C = A + B: %d out of %d results were correct.\n", correct, count);
+    printf("C = A * B: %d out of %d results were correct.\n", correct, M*N);
+#endif
+    // Free the OpenCL memory objects
+    clReleaseMemObject(d_a);
+    clReleaseMemObject(d_b);
+    clReleaseMemObject(d_c);
+
+    // Clean up OpenCL environment
+    clReleaseContext(context);
+    clReleaseCommandQueue(command_queue);
+    clReleaseProgram(program);
+    clReleaseKernel(ko_MatMul);
+
+
+    // Free host memory objects
+    free(h_a);
+    free(h_b);
+    free(h_c);
 
     return 0;
 }
