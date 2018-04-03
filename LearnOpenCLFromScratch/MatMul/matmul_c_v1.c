@@ -1,7 +1,7 @@
 /*
  * Author: Haibo Hao
  * Email : haohaibo@ncic.ac.cn
- * Desc  : Elementwise addtion of two vectors(c = a + b)
+ * Desc  : General Matrix Matrix Multiply 
  * Copyright (C) 2017 NCIC
  **/
 
@@ -51,7 +51,7 @@
 #define NUM_RUNS 5
 
 // Threadblock Sizes
-#define TS 32
+#define TS 8 
 
 //const char *vadd_kernel_source = 
 //"\n"\
@@ -78,12 +78,15 @@ const char *MatMult_kernel_source =
 " const int K\n"
 " )\n"
 "{\n"
-"  const int globalRow = get_global_id(0);\n"
-"  const int globalCol = get_global_id(1);\n"
+"  // Thread identifiers\n"
+"  const int globalRow = get_global_id(0); // Row ID of C (0..M)\n"
+"  const int globalCol = get_global_id(1); // Col ID of C (0..N)\n"
+"  // Initialize accumulation register\n"
 "  float acc = 0.0f;\n"
-"  for(int k = 0; k < K; ++k){\n"
-"     acc += A[k*M + globalRow] * B[globalCol*K + k];\n"
-"  }\n"
+"    // Perform computation\n"
+"    for (int k = 0; k < K; ++k) {\n"
+"         acc += A[k*M + globalRow]*B[globalCol*K + k];\n"
+"    }\n"
 "  C[globalCol*M + globalRow] = acc;\n"
 "}\n";
 
@@ -391,7 +394,7 @@ int main(int argc, char* argv[]){
         // letting the OpenCL runtime choose the work-group size
     const size_t global[2] = {M, N};
     //const size_t local[2] = {8, 8};
-    const size_t local[2] = {16, 16};
+    const size_t local[2] = {TS, TS};
     //const size_t local[2] = {32, 32}; // error: can not exceed 256 work-items
     printf("Starting my SGEMM M = %d N = %d K = %d "
             "running...(repeated %d times)\n",
@@ -459,7 +462,7 @@ int main(int argc, char* argv[]){
     // Test the results
     correct = 0;
     float temp = 0;
-#if 0
+#if 1 
     printf("Verifing the GPU result...\n");
     for(int i = 0; i < M; ++i)
     {

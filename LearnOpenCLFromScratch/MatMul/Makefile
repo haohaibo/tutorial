@@ -17,5 +17,6 @@ matmul_c_v1: matmul_c_v1.c
 
 matmul_c_v2: matmul_c_v2.c
 	$(CC) $^ $(CCFLAGS) $(LIBS) $(WARNING) -I $(COMM_DIR) -o $@
+
 clean:
 	rm -rf matmul_c_v1 matmul_c_v2
