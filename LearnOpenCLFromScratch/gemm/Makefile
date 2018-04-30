@@ -28,6 +28,9 @@ matmul_c_tile16x16_WPT4: matmul_c_tile16x16_WPT4.c
 matmul_c_tile16x16_WPT2: matmul_c_tile16x16_WPT2.c
 	$(CC) $^ $(CCFLAGS) $(LIBS) $(WARNING) -I $(COMM_DIR) -o $@
 
+gemm_block8x8_thread8x8: gemm_block8x8_thread8x8.c
+	$(CC) $^ $(CCFLAGS) $(LIBS) $(WARNING) -I $(COMM_DIR) -o $@
+
 clean:
 	rm -rf matmul_c_orignal matmul_c_tile16x16 matmul_c_tile16x16_WPT8 \
-		matmul_c_tile16x16_WPT4 matmul_c_tile16x16_WPT2
+		matmul_c_tile16x16_WPT4 matmul_c_tile16x16_WPT2 gemm_block8x8_thread8x8
