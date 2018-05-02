@@ -396,9 +396,10 @@ int main(int argc, char* argv[]){
     //const size_t local[2] = {8, 8};
     const size_t local[2] = {TS, TS};
     //const size_t local[2] = {32, 32}; // error: can not exceed 256 work-items
-    printf("Starting my SGEMM M = %d N = %d K = %d "
-            "running...(repeated %d times)\n",
-            M,N,K,NUM_RUNS);
+    //printf("Starting my SGEMM M = %d N = %d K = %d "
+    //        "running...(repeated %d times)\n",
+    //        M,N,K,NUM_RUNS);
+    printf("%d\t\t", M);
     double rtime = wtime();
     for(int i = 0; i < NUM_RUNS; ++i){
     err = clEnqueueNDRangeKernel(
@@ -425,7 +426,8 @@ int main(int argc, char* argv[]){
     checkError(err, "Waiting for kernel to finish");
     double gflops = ((long)M*(long)N*(long)K*2*1.0)/(double)(1000*1000*1000);
     //printf("\nThe kernel ran in %lf seconds\n", rtime);
-    printf("%.1lf GFLOPS\n",gflops/rtime);
+    //printf("%.1lf GFLOPS\n",gflops/rtime);
+    printf("%.1lf GFLOPS",gflops/rtime);
 
 #if 0 
     cl_int clEnqueueReadBuffer(
@@ -462,7 +464,7 @@ int main(int argc, char* argv[]){
     // Test the results
     correct = 0;
     float temp = 0;
-#if 1 
+#if 0 
     printf("Verifing the GPU result...\n");
     for(int i = 0; i < M; ++i)
     {

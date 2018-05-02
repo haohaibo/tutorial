@@ -51,7 +51,7 @@
 #define NUM_RUNS 5
 
 // Threadblock Sizes
-#define TS 16 
+#define TS 8 
 
 //const char *vadd_kernel_source = 
 //"\n"\
@@ -81,7 +81,7 @@ const char *MatMult_kernel_source =
 "  // Thread identifiers\n"
 "  const int row = get_local_id(0); // Local row ID (max: TS)\n"
 "  const int col = get_local_id(1); // Local col ID (max: TS)\n"
-"  const int TS = 16;\n"
+"  const int TS = 8;\n"
 "  const int globalRow = get_group_id(0)*TS + row; // Row ID of C (0..M)\n"
 "  const int globalCol = get_group_id(1)*TS + col; // Col ID of C (0..N)\n"
 "  // Local memory to fit a tile of A and B\n"
@@ -108,33 +108,6 @@ const char *MatMult_kernel_source =
 "    }\n"
 "  C[globalCol*M + globalRow] = acc;\n"
 "}\n";
-
-char * getKernelSource(char *filename);
-
-char * getKernelSource(char *filename){
-    FILE *file = fopen(filename, "r");
-    if(!file){
-        fprintf(stderr,
-                "Error, Could not open kernel source file\n");
-        exit(EXIT_FAILURE);
-    }
-    // pointer: seek to the end of the file
-    fseek(file, 0, SEEK_END);
-    int len = ftell(file) + 1;
-    // pointer: rewind to the begin of the file
-    rewind(file);
-
-    char* source = (char*)calloc(sizeof(char), len);
-    if(!source){
-        fprintf(stderr,
-                "Error, Could not allocate memory for source string\n");
-        exit(EXIT_FAILURE);
-    }
-
-    fread(source, sizeof(char), len, file);
-    fclose(file);
-    return source;
-}
 
 int main(int argc, char* argv[]){
     //printf("%s\n",MatMult_kernel_source);
@@ -270,16 +243,11 @@ int main(int argc, char* argv[]){
             const size_t *lengths,
             cl_int *errcode_ret)
 #endif
-
-        // get kernel source
-        char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_preG.cl");
-        //fprintf(stdout,"%s\n",gemm_kernel);
         // create the compute program from the source buffer
         program = clCreateProgramWithSource(
                 context,
                 1,
-                //(const char **)&MatMult_kernel_source,
-                (const char **)&gemm_kernel,
+                (const char **)&MatMult_kernel_source,
                 NULL, // null-terminated
                 &err);
     checkError(err, "Creating program from source");
@@ -312,8 +280,7 @@ int main(int argc, char* argv[]){
         // create the compute kernel object from the program
         ko_MatMul = clCreateKernel( 
                 program,
-                //"MatMul",
-                "gemm",
+                "MatMul",
                 &err);
     checkError(err, "Creating kernel");
 
@@ -444,13 +411,14 @@ int main(int argc, char* argv[]){
 #endif
         // execute the kernel
         // letting the OpenCL runtime choose the work-group size
-    const size_t global[2] = {M/8, N/8};
-    const size_t local[2] = {8, 8};
-    //const size_t local[2] = {TS, TS};
+    const size_t global[2] = {M, N};
+    //const size_t local[2] = {8, 8};
+    const size_t local[2] = {TS, TS};
     //const size_t local[2] = {32, 32}; // error: can not exceed 256 work-items
-    printf("Starting my SGEMM M = %d N = %d K = %d "
-            "running...(repeated %d times)\n",
-            M,N,K,NUM_RUNS);
+    //printf("Starting my SGEMM M = %d N = %d K = %d "
+    //        "running...(repeated %d times)\n",
+    //        M,N,K,NUM_RUNS);
+    printf("%d\t\t", M);
     double rtime = wtime();
     for(int i = 0; i < NUM_RUNS; ++i){
     err = clEnqueueNDRangeKernel(
@@ -476,8 +444,9 @@ int main(int argc, char* argv[]){
     rtime = (wtime() - rtime)/(double)NUM_RUNS;
     checkError(err, "Waiting for kernel to finish");
     double gflops = ((long)M*(long)N*(long)K*2*1.0)/(double)(1000*1000*1000);
-    printf("\nThe kernel ran in %lf seconds\n", rtime);
-    printf("%.1lf GFLOPS\n",gflops/rtime);
+    //printf("\nThe kernel ran in %lf seconds\n", rtime);
+    //printf("%.1lf GFLOPS\n",gflops/rtime);
+    printf("%.1lf GFLOPS",gflops/rtime);
 
 #if 0 
     cl_int clEnqueueReadBuffer(
@@ -514,7 +483,7 @@ int main(int argc, char* argv[]){
     // Test the results
     correct = 0;
     float temp = 0;
-#if 1 
+#if 0 
     printf("Verifing the GPU result...\n");
     for(int i = 0; i < M; ++i)
     {
