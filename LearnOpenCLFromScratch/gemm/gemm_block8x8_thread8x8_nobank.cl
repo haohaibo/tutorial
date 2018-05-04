@@ -86,25 +86,26 @@ __kernel void gemm(
 
         for(int k = 0; k < NUM_UNROLL; ++k){
             // load A, B from shared memory to registers and compute C
-            regA[0] = tileA[k*tile_dim_x + local_thread_id_x*8 + 0];
-            regA[1] = tileA[k*tile_dim_x + local_thread_id_x*8 + 1];
-            regA[2] = tileA[k*tile_dim_x + local_thread_id_x*8 + 2];
-            regA[3] = tileA[k*tile_dim_x + local_thread_id_x*8 + 3];
-            regA[4] = tileA[k*tile_dim_x + local_thread_id_x*8 + 4];
-            regA[5] = tileA[k*tile_dim_x + local_thread_id_x*8 + 5];
-            regA[6] = tileA[k*tile_dim_x + local_thread_id_x*8 + 6];
-            regA[7] = tileA[k*tile_dim_x + local_thread_id_x*8 + 7];
+            regA[0] = tileA[k*tile_dim_x + local_thread_id_x*4 + 0];
+            regA[1] = tileA[k*tile_dim_x + local_thread_id_x*4 + 1];
+            regA[2] = tileA[k*tile_dim_x + local_thread_id_x*4 + 2];
+            regA[3] = tileA[k*tile_dim_x + local_thread_id_x*4 + 3];
+
+            regA[4] = tileA[k*tile_dim_x + tile_dim_x/2 + local_thread_id_x*4 + 0];
+            regA[5] = tileA[k*tile_dim_x + tile_dim_x/2 + local_thread_id_x*4 + 1];
+            regA[6] = tileA[k*tile_dim_x + tile_dim_x/2 + local_thread_id_x*4 + 2];
+            regA[7] = tileA[k*tile_dim_x + tile_dim_x/2 + local_thread_id_x*4 + 3];
 
 
-            regB[0] = tileB[k*tile_dim_y + local_thread_id_y*8 + 0];
-            regB[1] = tileB[k*tile_dim_y + local_thread_id_y*8 + 1];
-            regB[2] = tileB[k*tile_dim_y + local_thread_id_y*8 + 2];
-            regB[3] = tileB[k*tile_dim_y + local_thread_id_y*8 + 3];
-            regB[4] = tileB[k*tile_dim_y + local_thread_id_y*8 + 4];
-            regB[5] = tileB[k*tile_dim_y + local_thread_id_y*8 + 5];
-            regB[6] = tileB[k*tile_dim_y + local_thread_id_y*8 + 6];
-            regB[7] = tileB[k*tile_dim_y + local_thread_id_y*8 + 7];
-            
+            regB[0] = tileB[k*tile_dim_y + local_thread_id_y*4 + 0];
+            regB[1] = tileB[k*tile_dim_y + local_thread_id_y*4 + 1];
+            regB[2] = tileB[k*tile_dim_y + local_thread_id_y*4 + 2];
+            regB[3] = tileB[k*tile_dim_y + local_thread_id_y*4 + 3];
+
+            regB[4] = tileB[k*tile_dim_y + tile_dim_y/2 + local_thread_id_y*4 + 0];
+            regB[5] = tileB[k*tile_dim_y + tile_dim_y/2 + local_thread_id_y*4 + 1];
+            regB[6] = tileB[k*tile_dim_y + tile_dim_y/2 + local_thread_id_y*4 + 2];
+            regB[7] = tileB[k*tile_dim_y + tile_dim_y/2 + local_thread_id_y*4 + 3];
             // Synchronise to make sure the tile 
             // is loaded from shared to registers
             //barrier(CLK_LOCAL_MEM_FENCE);
@@ -193,210 +194,218 @@ __kernel void gemm(
     // write C
 
     // col 0 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][0];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 0)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][0];
 
     // col 1 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][1];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 1)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][1];
 
     // col 2 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][2];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 2)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][2];
 
     // col 3 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][3];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 3)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][3];
     
     // col 4 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][4];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 4)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 0)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][4];
 
     // col 5 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][5];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 5)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 1)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][5];
 
     // col 6 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][6];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 6)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 2)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][6];
 
     // col 7 
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 0] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[0][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 1] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[1][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 2] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[2][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 3] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[3][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 4] = 
+
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 0] = 
         regC[4][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 5] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 1] = 
         regC[5][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 6] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 2] = 
         regC[6][7];
-    C[(block_id_y*tile_dim_y + local_thread_id_y*thread_task_y + 7)*M + 
-        block_id_x*tile_dim_x + local_thread_id_x*thread_task_x + 7] = 
+    C[(block_id_y*tile_dim_y + tile_dim_y/2 + local_thread_id_y*(thread_task_y/2) + 3)*M + 
+        block_id_x*tile_dim_x + tile_dim_x/2 + local_thread_id_x*(thread_task_x/2) + 3] = 
         regC[7][7];
 }
