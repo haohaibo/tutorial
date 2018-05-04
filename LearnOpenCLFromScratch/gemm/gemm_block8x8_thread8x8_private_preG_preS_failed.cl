@@ -73,8 +73,6 @@ __kernel void gemm(
         }
     }
 
-
-    // global -> register
     // (64tile_dim*8unroll)/(8*8 threads) = 8
     for(int t = 0; t < 8; ++t){
         loadA[t] = 
@@ -100,14 +98,12 @@ __kernel void gemm(
         // *shared memory double buffer*
         if(i % 2 == 0){
 
-            // register -> shared
             for(int t = 0; t < 8; ++t){
                 tileA[local_thread_id_y*64 + local_thread_id_x*8 + t] = loadA[t];
                 tileB[local_thread_id + t*tile_dim_y] = loadB[t];
             }
             barrier(CLK_LOCAL_MEM_FENCE);
 
-            // global -> register
             if( i != (K/NUM_UNROLL -1)){
                 for(int t = 0; t < 8; ++t){
                     loadA[t] = 
@@ -642,7 +638,7 @@ __kernel void gemm(
         }
 
         // Synchronise to make sure the shared memory used 
-        //barrier(CLK_LOCAL_MEM_FENCE);
+        barrier(CLK_LOCAL_MEM_FENCE);
     }
 
     // write C

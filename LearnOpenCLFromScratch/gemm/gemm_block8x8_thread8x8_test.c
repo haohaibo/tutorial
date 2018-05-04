@@ -273,7 +273,20 @@ int main(int argc, char* argv[]){
 
         // get kernel source
         //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_ffma_bench.cl");
-        char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG.cl");
+        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG_test2.cl");
+        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG_preS.cl");
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll.cl";
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG.cl";
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif.cl";
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_v2.cl";
+        char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_512unroll.cl";
+        //printf("gemm kernel file: %s\n",gemm_kernel_file);
+        //char * gemm_kernel = getKernelSource(gemm_kernel);
+        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_manual_unroll.cl");
+        char * gemm_kernel = getKernelSource(gemm_kernel_file);
+        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG.cl");
+        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_nobank.cl");
+        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG_nobank.cl");
         //fprintf(stdout,"%s\n",gemm_kernel);
         // create the compute program from the source buffer
         program = clCreateProgramWithSource(

@@ -52,6 +52,8 @@ __kernel void gemm(
     __local float tileB[64 * 8];
     __local float tileB_bak[64 * 8];
     //__local float tileC[tile_dim_x * tile_dim_y];
+
+    // for global -> register loadA, loadB
     __private float loadA[8];
     __private float loadB[8];
 
