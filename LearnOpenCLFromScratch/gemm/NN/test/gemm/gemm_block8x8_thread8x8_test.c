@@ -57,7 +57,7 @@
 //"\n"\
 //        "__kernel void vadd(                           \n"\
 //        " __global float* a,                           \n"\
-//        " __global float* b,                           \n"\ 
+//        " __global float* b,                           \n"\
 //        " __global float* c,                           \n"\
 //            " const unsigned int count                     \n"\
 //            " )                                            \n"\
@@ -109,9 +109,9 @@ const char *MatMult_kernel_source =
 "  C[globalCol*M + globalRow] = acc;\n"
 "}\n";
 
-char * getKernelSource(char *filename);
+char * getKernelSource(char *filename, int *length);
 
-char * getKernelSource(char *filename){
+char * getKernelSource(char *filename, int *length){
     FILE *file = fopen(filename, "r");
     if(!file){
         fprintf(stderr,
@@ -121,6 +121,7 @@ char * getKernelSource(char *filename){
     // pointer: seek to the end of the file
     fseek(file, 0, SEEK_END);
     int len = ftell(file) + 1;
+    *length = len;
     // pointer: rewind to the begin of the file
     rewind(file);
 
@@ -279,16 +280,47 @@ int main(int argc, char* argv[]){
         //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG.cl";
         //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif.cl";
         //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_v2.cl";
-        char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_512unroll.cl";
-        //printf("gemm kernel file: %s\n",gemm_kernel_file);
-        //char * gemm_kernel = getKernelSource(gemm_kernel);
-        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_manual_unroll.cl");
-        char * gemm_kernel = getKernelSource(gemm_kernel_file);
-        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG.cl");
-        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_nobank.cl");
-        //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG_nobank.cl");
-        //fprintf(stdout,"%s\n",gemm_kernel);
-        // create the compute program from the source buffer
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_512unroll.cl";
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_512unroll_nobank.cl";
+        //char * gemm_kernel_file = "gemm_block8x8_thread8x8_private_manual_unroll_preG_noif_512unroll_nobank_test.cl";
+        char * gemm_kernel_file = "gemm.co";
+    //printf("gemm kernel file: %s\n",gemm_kernel_file);
+    //char * gemm_kernel = getKernelSource(gemm_kernel);
+    //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_manual_unroll.cl");
+    int length;
+    char * gemm_kernel = getKernelSource(gemm_kernel_file, &length);
+    //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG.cl");
+    //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_nobank.cl");
+    //char * gemm_kernel = getKernelSource("gemm_block8x8_thread8x8_private_preG_nobank.cl");
+    //fprintf(stdout,"%s\n",gemm_kernel);
+    // create the compute program from the source buffer
+#if 0
+    cl_program clCreateProgramWithBinary (  cl_context context,
+            cl_uint num_devices,
+            const cl_device_id *device_list,
+            const size_t *lengths,
+            const unsigned char **binaries,
+            cl_int *binary_status,
+            cl_int *errcode_ret)
+#endif
+
+        program = clCreateProgramWithBinary (
+                context,
+                1,
+                &device_id,
+                (const size_t *)&length,
+                (const unsigned char **)&gemm_kernel,
+                NULL,
+                &err);
+#if 0
+    cl_program clCreateProgramWithSource (  cl_context context,
+            cl_uint count,
+            const char **strings,
+            const size_t *lengths,
+            cl_int *errcode_ret)
+
+#endif
+#if 0
         program = clCreateProgramWithSource(
                 context,
                 1,
@@ -296,6 +328,7 @@ int main(int argc, char* argv[]){
                 (const char **)&gemm_kernel,
                 NULL, // null-terminated
                 &err);
+#endif
     checkError(err, "Creating program from source");
 
 #if 0
@@ -458,7 +491,7 @@ int main(int argc, char* argv[]){
 #endif
         // execute the kernel
         // letting the OpenCL runtime choose the work-group size
-    const size_t global[2] = {M/8, N/8};
+        const size_t global[2] = {M/8, N/8};
     const size_t local[2] = {8, 8};
     //const size_t local[2] = {TS, TS};
     //const size_t local[2] = {32, 32}; // error: can not exceed 256 work-items
@@ -468,22 +501,22 @@ int main(int argc, char* argv[]){
     printf("%d\t\t", M);
     double rtime = wtime();
     for(int i = 0; i < NUM_RUNS; ++i){
-    err = clEnqueueNDRangeKernel(
-            command_queue,
-            ko_MatMul,
-            2,
-            NULL,
-            global,
-            local,
-            0,
-            NULL,
-            NULL);
+        err = clEnqueueNDRangeKernel(
+                command_queue,
+                ko_MatMul,
+                2,
+                NULL,
+                global,
+                local,
+                0,
+                NULL,
+                NULL);
 #if 0
-    cl_int clFinish(
-            cl_command_queue command_queue);
+        cl_int clFinish(
+                cl_command_queue command_queue);
 #endif
-    // wait for the commands to complete before
-    err = clFinish(command_queue);
+        // wait for the commands to complete before
+        err = clFinish(command_queue);
     }
     //checkError(err, "Enqueuing kernel");
 
@@ -529,7 +562,7 @@ int main(int argc, char* argv[]){
     // Test the results
     correct = 0;
     float temp = 0;
-#if 0 
+#if 1 
     printf("Verifing the GPU result...\n");
     for(int i = 0; i < M; ++i)
     {
