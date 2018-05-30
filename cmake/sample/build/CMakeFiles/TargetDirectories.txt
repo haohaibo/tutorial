@@ -1,0 +1,3 @@
+/home/hhb/work/lab/tutorial/cmake/sample/build/CMakeFiles/rebuild_cache.dir
+/home/hhb/work/lab/tutorial/cmake/sample/build/CMakeFiles/edit_cache.dir
+/home/hhb/work/lab/tutorial/cmake/sample/build/CMakeFiles/sample_test.dir

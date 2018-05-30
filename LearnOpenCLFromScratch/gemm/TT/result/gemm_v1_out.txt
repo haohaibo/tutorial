@@ -1,0 +1,80 @@
+Starting my SGEMM M = 512 N = 512 K = 512 running...(repeated 5 times)
+
+The kernel ran in 0.000551 seconds
+487.5 GFLOPS
+
+Starting my SGEMM M = 1024 N = 1024 K = 1024 running...(repeated 5 times)
+
+The kernel ran in 0.003460 seconds
+620.6 GFLOPS
+
+Starting my SGEMM M = 1536 N = 1536 K = 1536 running...(repeated 5 times)
+
+The kernel ran in 0.005917 seconds
+1224.9 GFLOPS
+
+Starting my SGEMM M = 2048 N = 2048 K = 2048 running...(repeated 5 times)
+
+The kernel ran in 0.014504 seconds
+1184.5 GFLOPS
+
+Starting my SGEMM M = 2560 N = 2560 K = 2560 running...(repeated 5 times)
+
+The kernel ran in 0.015243 seconds
+2201.3 GFLOPS
+
+Starting my SGEMM M = 3072 N = 3072 K = 3072 running...(repeated 5 times)
+
+The kernel ran in 0.028210 seconds
+2055.4 GFLOPS
+
+Starting my SGEMM M = 3584 N = 3584 K = 3584 running...(repeated 5 times)
+
+The kernel ran in 0.035220 seconds
+2614.2 GFLOPS
+
+Starting my SGEMM M = 4096 N = 4096 K = 4096 running...(repeated 5 times)
+
+The kernel ran in 0.064887 seconds
+2118.1 GFLOPS
+
+Starting my SGEMM M = 4608 N = 4608 K = 4608 running...(repeated 5 times)
+
+The kernel ran in 0.071037 seconds
+2754.8 GFLOPS
+
+Starting my SGEMM M = 5120 N = 5120 K = 5120 running...(repeated 5 times)
+
+The kernel ran in 0.113008 seconds
+2375.4 GFLOPS
+
+Starting my SGEMM M = 5632 N = 5632 K = 5632 running...(repeated 5 times)
+
+The kernel ran in 0.126648 seconds
+2821.1 GFLOPS
+
+Starting my SGEMM M = 6144 N = 6144 K = 6144 running...(repeated 5 times)
+
+The kernel ran in 0.192613 seconds
+2408.2 GFLOPS
+
+Starting my SGEMM M = 6656 N = 6656 K = 6656 running...(repeated 5 times)
+
+The kernel ran in 0.209505 seconds
+2815.0 GFLOPS
+
+Starting my SGEMM M = 7168 N = 7168 K = 7168 running...(repeated 5 times)
+
+The kernel ran in 0.308313 seconds
+2389.1 GFLOPS
+
+Starting my SGEMM M = 7680 N = 7680 K = 7680 running...(repeated 5 times)
+
+The kernel ran in 0.321359 seconds
+2819.2 GFLOPS
+
+Starting my SGEMM M = 8192 N = 8192 K = 8192 running...(repeated 5 times)
+
+The kernel ran in 0.521982 seconds
+2106.4 GFLOPS
+
