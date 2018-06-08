@@ -33,6 +33,5 @@ int main(int argc, char* argv[]){
     std::cout << sizeof(CRectangle) << std::endl;
     std::cout << r.Area() << std::endl;
     std::cout << r.Perimeter() << std::endl;
-    
     return 0;
 }
