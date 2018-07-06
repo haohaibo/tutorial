@@ -1,0 +1,48 @@
+Starting my SGEMM M = 512 N = 512 K = 512 running...(repeated 5 times)
+702.0 GFLOPS
+
+Starting my SGEMM M = 1024 N = 1024 K = 1024 running...(repeated 5 times)
+1050.7 GFLOPS
+
+Starting my SGEMM M = 1536 N = 1536 K = 1536 running...(repeated 5 times)
+1154.1 GFLOPS
+
+Starting my SGEMM M = 2048 N = 2048 K = 2048 running...(repeated 5 times)
+1174.3 GFLOPS
+
+Starting my SGEMM M = 2560 N = 2560 K = 2560 running...(repeated 5 times)
+1203.0 GFLOPS
+
+Starting my SGEMM M = 3072 N = 3072 K = 3072 running...(repeated 5 times)
+1222.8 GFLOPS
+
+Starting my SGEMM M = 3584 N = 3584 K = 3584 running...(repeated 5 times)
+1233.3 GFLOPS
+
+Starting my SGEMM M = 4096 N = 4096 K = 4096 running...(repeated 5 times)
+1246.9 GFLOPS
+
+Starting my SGEMM M = 4608 N = 4608 K = 4608 running...(repeated 5 times)
+1245.9 GFLOPS
+
+Starting my SGEMM M = 5120 N = 5120 K = 5120 running...(repeated 5 times)
+1249.0 GFLOPS
+
+Starting my SGEMM M = 5632 N = 5632 K = 5632 running...(repeated 5 times)
+1249.7 GFLOPS
+
+Starting my SGEMM M = 6144 N = 6144 K = 6144 running...(repeated 5 times)
+1251.1 GFLOPS
+
+Starting my SGEMM M = 6656 N = 6656 K = 6656 running...(repeated 5 times)
+1252.5 GFLOPS
+
+Starting my SGEMM M = 7168 N = 7168 K = 7168 running...(repeated 5 times)
+1254.5 GFLOPS
+
+Starting my SGEMM M = 7680 N = 7680 K = 7680 running...(repeated 5 times)
+1256.1 GFLOPS
+
+Starting my SGEMM M = 8192 N = 8192 K = 8192 running...(repeated 5 times)
+1255.8 GFLOPS
+
