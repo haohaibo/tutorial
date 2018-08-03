@@ -4,5 +4,5 @@
 
 ## For what 
 
-# Learning materials
+# This is **not** a project
 
