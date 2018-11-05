@@ -11,17 +11,14 @@
 #include <cstdio>
 #include <iostream>
 
-void swap(int &a, int &b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
+void swap(int &a, int &b) {
+  int temp = a;
+  a = b;
+  b = temp;
 }
-int main(int argc, char *argv[])
-{
-    int a = 2, b = 6;
-    swap(a,b); 
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    return 0;
+int main(int argc, char *argv[]) {
+  int a = 2, b = 6;
+  swap(a, b);
+  std::cout << "a = " << a << ", b = " << b << std::endl;
+  return 0;
 }
-

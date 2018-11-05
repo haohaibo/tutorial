@@ -8,11 +8,8 @@
 *        Create: 2017-09-22 14:49:40
 * Last Modified: 2017-09-22 14:53:41
 **/
-#include<iostream>
-#include<cstdio>
+#include <cstdio>
+#include <iostream>
 
-char a = 'A'; // global variable
-void msg(){
-    std::cout << "hello world" << std::endl;
-}
-
+char a = 'A';  // global variable
+void msg() { std::cout << "hello world" << std::endl; }

@@ -11,50 +11,43 @@
 #include <iostream>
 #include <mutex>
 
-class some_data
-{
-    int a;
-    std::string b;
-    public:
-        void do_someting()
-        {}
+class some_data {
+  int a;
+  std::string b;
 
+ public:
+  void do_someting() {}
 };
 
-class data_wrapper
-{
-    private:
-        some_data data;
-        std::mutex m;
-    public:
-        template<typename Function>
-            void process_data(Function func)
-            {
-                std::lock_guard<std::mutex> l(m);
-                func(data);
-            }
+class data_wrapper {
+ private:
+  some_data data;
+  std::mutex m;
+
+ public:
+  template <typename Function>
+  void process_data(Function func) {
+    std::lock_guard<std::mutex> l(m);
+    func(data);
+  }
 };
 
 some_data *unprotected;
 
-void malicious_function(some_data &protected_data)
-{
-    unprotected = &protected_data;
+void malicious_function(some_data &protected_data) {
+  unprotected = &protected_data;
 }
 
 data_wrapper x;
 
-void foo()
-{
-    x.process_data(malicious_function);
+void foo() {
+  x.process_data(malicious_function);
 
-    // 在mutex无保护的情况下访问保护数据
-    unprotected->do_someting();
+  // 在mutex无保护的情况下访问保护数据
+  unprotected->do_someting();
 }
 
-int main()
-{
-    foo();
-    return 0;
+int main() {
+  foo();
+  return 0;
 }
-

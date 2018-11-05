@@ -10,17 +10,16 @@
 **/
 #include <stdio.h>
 
-__global__ void kernel(){
-    unsigned long a, b, c;
-    a = 24;
-    b = 12;
-    c = a + b;
+__global__ void kernel() {
+  unsigned long a, b, c;
+  a = 24;
+  b = 12;
+  c = a + b;
 }
 
-int main(int argc, char* argv[]){
-    cudaFree(0);
-    kernel<<<1,1>>>();
-    cudaDeviceSynchronize();
-    return  0;
+int main(int argc, char* argv[]) {
+  cudaFree(0);
+  kernel<<<1, 1>>>();
+  cudaDeviceSynchronize();
+  return 0;
 }
-

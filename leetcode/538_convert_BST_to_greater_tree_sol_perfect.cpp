@@ -8,20 +8,20 @@
  * };
  */
 class Solution {
-public:
-    TreeNode* convertBST(TreeNode* root) {
-        Inorder(root);
-        return root;
+ public:
+  TreeNode* convertBST(TreeNode* root) {
+    Inorder(root);
+    return root;
+  }
+  int great_sum = 0;
+  void Inorder(TreeNode* root) {
+    if (root == NULL) {
+      return;
     }
-    int great_sum=0;
-    void Inorder(TreeNode* root){
-        if(root == NULL){
-            return; 
-        }
-        
-        Inorder(root->right);
-        great_sum += root->val;
-        root->val = great_sum;
-        Inorder(root->left);
-    }
+
+    Inorder(root->right);
+    great_sum += root->val;
+    root->val = great_sum;
+    Inorder(root->left);
+  }
 };

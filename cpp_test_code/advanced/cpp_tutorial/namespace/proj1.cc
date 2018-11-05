@@ -12,26 +12,19 @@
 using namespace std;
 
 // first namespace
-namespace first_space{
-    void func(){
-        cout << "Inside first_space" << endl;
-    }
+namespace first_space {
+void func() { cout << "Inside first_space" << endl; }
 }
 
-namespace second_space{
-    void func(){
-        cout << "Inside second_space" << endl;
-    }
+namespace second_space {
+void func() { cout << "Inside second_space" << endl; }
 }
 
-int main()
-{
-    // call func() in first_space
-    first_space::func();
+int main() {
+  // call func() in first_space
+  first_space::func();
 
-    // call func() in second_space
-    second_space::func();
-    return 0;
+  // call func() in second_space
+  second_space::func();
+  return 0;
 }
-
-

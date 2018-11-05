@@ -11,46 +11,32 @@
 #include <iostream>
 #include <typeinfo>
 
-class A
-{
-    public:
-        virtual void Print()
-        {
-            std::cout << "This is class A" << std::endl;
-        }
+class A {
+ public:
+  virtual void Print() { std::cout << "This is class A" << std::endl; }
 };
 
-class B 
-{
-    public:
-        virtual void Print()
-        {
-            std::cout << "This is class B" << std::endl;
-        }
+class B {
+ public:
+  virtual void Print() { std::cout << "This is class B" << std::endl; }
 };
 
-class C : public A, public B 
-{
-    public:
-        virtual void Print()
-        {
-            std::cout << "This is class C" << std::endl;
-        }
+class C : public A, public B {
+ public:
+  virtual void Print() { std::cout << "This is class C" << std::endl; }
 };
 
-int main()
-{
-    A *pA = new C;
+int main() {
+  A *pA = new C;
 
-    //C *pC= pA; //error
-    C *pC = dynamic_cast<C *>(pA);
-    if(pC != NULL)
-    {
-        pC->Print();
-    }
-    
-    pA->Print();
-    delete pA;
+  // C *pC= pA; //error
+  C *pC = dynamic_cast<C *>(pA);
+  if (pC != NULL) {
+    pC->Print();
+  }
 
-    return 0;
+  pA->Print();
+  delete pA;
+
+  return 0;
 }

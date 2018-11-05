@@ -8,13 +8,10 @@
 *        Create: 2017-08-22 09:59:30
 * Last Modified: 2017-08-22 10:02:55
 **/
-#include <iostream>
 #include "header.h"
+#include <iostream>
 
-void print_global_x(){
-    
-    // print global_x here
-    std::cout << global_x << std::endl;
+void print_global_x() {
+  // print global_x here
+  std::cout << global_x << std::endl;
 }
- 
-

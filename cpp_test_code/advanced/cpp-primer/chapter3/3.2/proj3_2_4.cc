@@ -15,24 +15,20 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int main()
-{
-    string big = "big", small = "small";
-    string s1 = big; // s1 is a copy of big
-    if(big == small)
-    {
-        cout << big << " is equal to " << small << endl;
-    }
-    if(big <= s1)
-    {
-        cout << big << " is less than or equal to " << s1 << endl;
-    }
-    
-    // st1 is an empty string, st2 is a copy of the literal
-    string st1, st2 = "The expense of spirit";
-    st1 = st2; // replace st1 by a copy of st2
-    cout << st1 << endl;
+int main() {
+  string big = "big", small = "small";
+  string s1 = big;  // s1 is a copy of big
+  if (big == small) {
+    cout << big << " is equal to " << small << endl;
+  }
+  if (big <= s1) {
+    cout << big << " is less than or equal to " << s1 << endl;
+  }
 
-    return 0;
+  // st1 is an empty string, st2 is a copy of the literal
+  string st1, st2 = "The expense of spirit";
+  st1 = st2;  // replace st1 by a copy of st2
+  cout << st1 << endl;
+
+  return 0;
 }
-

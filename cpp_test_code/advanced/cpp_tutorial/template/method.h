@@ -14,6 +14,7 @@
  * template < typename identifier> function_declaration;
  **/
 
-template<typename T> void swap(T &t1, T &t2);
+template <typename T>
+void swap(T &t1, T &t2);
 
 #include "method.cpp"

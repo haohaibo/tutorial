@@ -16,17 +16,15 @@ using std::vector;
 using std::cin;
 using std::cout;
 using std::endl;
-int main()
-{
-   vector<int> ivec1;
-   vector<int> ivec2(ivec1); // ok: copy elements of ivect1 into ivect2
-   //vector<string> svec(ivec1);
-   vector<int> ivec4(10, -1); // 10 elements, each initialized to -1
-   vector<string> svec(10, "hi"); // 10 elements, each initialized to "hi"
+int main() {
+  vector<int> ivec1;
+  vector<int> ivec2(ivec1);  // ok: copy elements of ivect1 into ivect2
+  // vector<string> svec(ivec1);
+  vector<int> ivec4(10, -1);      // 10 elements, each initialized to -1
+  vector<string> svec(10, "hi");  // 10 elements, each initialized to "hi"
 
-   vector<int> fvec(10); // 10 elements, each initialized to 0
-   vector<string> strvec(10); // 10 elements, each an empty string
+  vector<int> fvec(10);       // 10 elements, each initialized to 0
+  vector<string> strvec(10);  // 10 elements, each an empty string
 
-   return 0;
+  return 0;
 }
-

@@ -11,11 +11,9 @@
 #include <iostream>
 #include <limits>
 
-int main(int argc, char* argv[])
-{
-    unsigned int e1, e2;
-    e1 = std::numeric_limits<unsigned int>::max();
-    std::cout << "e1 = " << e1 << std::endl;
-    return 0;
+int main(int argc, char* argv[]) {
+  unsigned int e1, e2;
+  e1 = std::numeric_limits<unsigned int>::max();
+  std::cout << "e1 = " << e1 << std::endl;
+  return 0;
 }
-

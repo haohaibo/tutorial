@@ -10,19 +10,14 @@
 **/
 #include <iostream>
 
-void print(std::string const &s)
-{
-    std::cout << s << std::endl;
-}
-int main()
-{
-    int const &i = 42;
-    std::cout << i << std::endl;
-    // error: assignment of read-only reference 'i'
-    // 说明i是只读的，不能被修改
-    //i = 3;
-    
-    print("hhb"); // 创建了临时std::string 对象
-    return 0;
-}
+void print(std::string const &s) { std::cout << s << std::endl; }
+int main() {
+  int const &i = 42;
+  std::cout << i << std::endl;
+  // error: assignment of read-only reference 'i'
+  // 说明i是只读的，不能被修改
+  // i = 3;
 
+  print("hhb");  // 创建了临时std::string 对象
+  return 0;
+}

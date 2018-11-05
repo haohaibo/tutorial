@@ -10,13 +10,12 @@
 **/
 #include <iostream>
 
-int main(){
-    bool isLock{false};
-    if(isLock == false){
-        std::cout << "not lock" << std::endl;
-    }else{
-        std::cout << "locked" << std::endl;
-    }
-    return 0;
+int main() {
+  bool isLock{false};
+  if (isLock == false) {
+    std::cout << "not lock" << std::endl;
+  } else {
+    std::cout << "locked" << std::endl;
+  }
+  return 0;
 }
-

@@ -9,17 +9,16 @@
 * Last Modified: 2017-12-03 14:18:12
 **/
 
-//ref : https://stackoverflow.com/questions/10422034/when-to-use-extern-in-c
+// ref : https://stackoverflow.com/questions/10422034/when-to-use-extern-in-c
 #include "header.h"
 
-// it defined here 
+// it defined here
 int global_x;
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]) {
+  // set global_x here
+  global_x = 9;
+  print_global_x();
 
-    // set global_x here
-    global_x = 9;
-    print_global_x();
-
-    return 0;
+  return 0;
 }

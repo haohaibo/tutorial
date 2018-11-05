@@ -9,39 +9,37 @@
 * Last Modified: 2017-09-03 21:45:28
 **/
 
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 
 namespace ns {
-    class Base {
-        public :
-            virtual void Vfunc() = 0;
-            int x;
-    };
-    //void Base::Vfunc(){
-    //    x = 3;
-    //    std::cout << x << std::endl;
-    //}
+class Base {
+ public:
+  virtual void Vfunc() = 0;
+  int x;
+};
+// void Base::Vfunc(){
+//    x = 3;
+//    std::cout << x << std::endl;
+//}
 
-    class Derived : public Base {
-        public :
-            void Vfunc(){
-                //Base::Vfunc();
-                x = 4;
-                std::cout << "in Derived" << std::endl;
-                std::cout << x << std::endl;
-            }
-    };
-
+class Derived : public Base {
+ public:
+  void Vfunc() {
+    // Base::Vfunc();
+    x = 4;
+    std::cout << "in Derived" << std::endl;
+    std::cout << x << std::endl;
+  }
+};
 }
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]) {
+  // invalid new-expression of abstract class type ‘ns::Base’
+  // ns::Base* pb = new ns::Base;
 
-    // invalid new-expression of abstract class type ‘ns::Base’
-    //ns::Base* pb = new ns::Base;
-    
-    ns::Base* pb = new ns::Derived;
-    pb->Vfunc();
-    delete pb;
+  ns::Base* pb = new ns::Derived;
+  pb->Vfunc();
+  delete pb;
 
-    return 0;
+  return 0;
 }

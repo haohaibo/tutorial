@@ -8,18 +8,15 @@
 *        Create: 2017-05-04 16:50:05
 * Last Modified: 2017-05-04 17:00:11
 **/
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
 #include <string>
 using namespace std;
 
-int main()
-{
-    string love = "I Love GPLT";
-    for(int i = 0; i < love.size(); ++i)
-    {
-        cout << love[i] << endl;
-    }
-    return 0;
+int main() {
+  string love = "I Love GPLT";
+  for (int i = 0; i < love.size(); ++i) {
+    cout << love[i] << endl;
+  }
+  return 0;
 }
-

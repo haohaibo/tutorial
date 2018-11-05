@@ -8,13 +8,12 @@
 *        Create: 2018-09-23 09:13:09
 * Last Modified: 2018-09-23 09:13:09
 **/
-#include<iostream>
+#include <iostream>
 
-int main(){
-    // alias declarations
-    using INT=int;
-    INT ia = 9;
-    std::cout << ia << std::endl;
-    return 0;
+int main() {
+  // alias declarations
+  using INT = int;
+  INT ia = 9;
+  std::cout << ia << std::endl;
+  return 0;
 }
-

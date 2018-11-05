@@ -8,15 +8,13 @@
 *        Create: 2017-05-04 11:34:25
 * Last Modified: 2017-05-04 12:29:41
 **/
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    int D;
-    scanf("%d",&D);
-    printf("%d\n",(D - 1 + 2)%7 + 1);
-    return 0;
+int main() {
+  int D;
+  scanf("%d", &D);
+  printf("%d\n", (D - 1 + 2) % 7 + 1);
+  return 0;
 }
-

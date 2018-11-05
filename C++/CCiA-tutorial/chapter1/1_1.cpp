@@ -11,14 +11,10 @@
 #include <iostream>
 // 管理线程的函数和类在<thread>中声明
 #include <thread>
-void hello()
-{
-    std::cout << "Hello Concurrent World" << std::endl;
-}
-int main()
-{
-    // 创建线程对象
-    std::thread t(hello);
-    // 初始线程等待新线程结束
-    t.join();
+void hello() { std::cout << "Hello Concurrent World" << std::endl; }
+int main() {
+  // 创建线程对象
+  std::thread t(hello);
+  // 初始线程等待新线程结束
+  t.join();
 }

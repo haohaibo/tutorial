@@ -10,20 +10,19 @@
 **/
 #include <iostream>
 
-int main()
-{
-    std::cout << "a multi-line "
-                 "string literal "
-                 "using concatenation"
-              << std::endl;
-    std::cou\
-t << "hi" << std::endl;
+int main() {
+  std::cout << "a multi-line "
+               "string literal "
+               "using concatenation"
+            << std::endl;
+  std::cou\
+t << "hi"
+  << std::endl;
 
-    // multiline string literal
-    std::cout << "a multi-line \
+  // multiline string literal
+  std::cout << "a multi-line \
 string literal \
 using a backslash"
-              << std::endl;
-    return 0;
+            << std::endl;
+  return 0;
 }
-

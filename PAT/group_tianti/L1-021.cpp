@@ -8,14 +8,13 @@
 *        Create: 2017-05-04 00:21:56
 * Last Modified: 2017-05-04 00:35:04
 **/
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    printf("I'm gonna WIN!\n");
-    printf("I'm gonna WIN!\n");
-    printf("I'm gonna WIN!\n");
-    return 0;
+int main() {
+  printf("I'm gonna WIN!\n");
+  printf("I'm gonna WIN!\n");
+  printf("I'm gonna WIN!\n");
+  return 0;
 }

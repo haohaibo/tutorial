@@ -8,38 +8,31 @@
 *        Create: 2017-05-08 00:43:37
 * Last Modified: 2017-05-08 01:18:35
 **/
-#include <iostream>
-#include <stdio.h>
 #include <math.h>
-#include <string>
+#include <stdio.h>
 #include <algorithm>
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main()
-{
-    int N;
-    scanf("%d",&N);
-    float H, W, S;
-    for(int i = 0; i < N; ++i)
-    {
-        scanf("%f",&H);
-        scanf("%f",&W);
-        W = W/2.0;
-        S = (H - 100)*0.9;  
-        if(fabs(S - W) < S*0.1) 
-        {
-            printf("You are wan mei!\n");
-        }else
-        {
-            if(W > S)
-            {
-                printf("You are tai pang le!\n");
-            }else
-            {
-                printf("You are tai shou le!\n");
-            }
-
-        }
+int main() {
+  int N;
+  scanf("%d", &N);
+  float H, W, S;
+  for (int i = 0; i < N; ++i) {
+    scanf("%f", &H);
+    scanf("%f", &W);
+    W = W / 2.0;
+    S = (H - 100) * 0.9;
+    if (fabs(S - W) < S * 0.1) {
+      printf("You are wan mei!\n");
+    } else {
+      if (W > S) {
+        printf("You are tai pang le!\n");
+      } else {
+        printf("You are tai shou le!\n");
+      }
     }
-    return 0;
+  }
+  return 0;
 }

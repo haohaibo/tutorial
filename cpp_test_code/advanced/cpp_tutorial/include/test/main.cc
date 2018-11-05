@@ -13,9 +13,7 @@
 #include "test/b.h"
 #include "utils/utils.h"
 
-int main()
-{
-    std::cout << "a.h b.h utils/utils.h" << std::endl;
-    return 0;
+int main() {
+  std::cout << "a.h b.h utils/utils.h" << std::endl;
+  return 0;
 }
-

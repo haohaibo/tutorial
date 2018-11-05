@@ -5,19 +5,17 @@
  *
  * @return base raised to the power exponent.
  */
-double power(double base, int exponent)
-{
-    int result = base;
-    int i;
+double power(double base, int exponent) {
+  int result = base;
+  int i;
 
-    if (exponent == 0) {
-        return 1;
-    }
-    
-    for(i = 1; i < exponent; ++i){
-        result = result * base;
-    }
+  if (exponent == 0) {
+    return 1;
+  }
 
-    return result;
+  for (i = 1; i < exponent; ++i) {
+    result = result * base;
+  }
+
+  return result;
 }
-

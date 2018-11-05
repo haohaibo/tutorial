@@ -11,9 +11,7 @@
 #include <iostream>
 #include "Sales_item.cc"
 
-int main()
-{
-    Sales_item sales;
-    return 0;
+int main() {
+  Sales_item sales;
+  return 0;
 }
-

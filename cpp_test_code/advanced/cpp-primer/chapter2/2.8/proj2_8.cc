@@ -10,14 +10,13 @@
 **/
 #include <iostream>
 #include <string>
-class Sales_item
-{
-    public:
-        // operations on Sales_item objects will go here
-    private:
-        std::string isbn;
-        unsigned int units_sold;
-        double revenue;
+class Sales_item {
+ public:
+  // operations on Sales_item objects will go here
+ private:
+  std::string isbn;
+  unsigned int units_sold;
+  double revenue;
 };
 
 /*struct Sales_item
@@ -30,8 +29,4 @@ class Sales_item
 };
 */
 
-int main()
-{
-    
-}
-
+int main() {}

@@ -11,12 +11,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char* argv[]){
-    float a,b,c;
-    a = 1234.567;
-    b = 45.67834;
-    c = a + b;
-    printf("%f\n",c);
-    return 0;
+int main(int argc, char* argv[]) {
+  float a, b, c;
+  a = 1234.567;
+  b = 45.67834;
+  c = a + b;
+  printf("%f\n", c);
+  return 0;
 }
-

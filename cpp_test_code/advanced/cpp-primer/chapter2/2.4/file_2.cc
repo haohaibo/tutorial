@@ -11,11 +11,9 @@
 #include <iostream>
 #include "file_1.cc"
 extern int counter;
-extern const int buffSize; // use buffSize from file_1
-int main()
-{
-    std::cout << ++counter << std::endl;
-    std::cout << "buffSize is " << buffSize << std::endl;
-    return 0;
+extern const int buffSize;  // use buffSize from file_1
+int main() {
+  std::cout << ++counter << std::endl;
+  std::cout << "buffSize is " << buffSize << std::endl;
+  return 0;
 }
-

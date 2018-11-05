@@ -1,17 +1,16 @@
 class NumArray {
-public:
-    NumArray(vector<int> nums) {
-        data.push_back(0);
-        for(int num : nums){
-            data.push_back(data.back()+num);
-        }
+ public:
+  NumArray(vector<int> nums) {
+    data.push_back(0);
+    for (int num : nums) {
+      data.push_back(data.back() + num);
     }
-    
-    int sumRange(int i, int j) {
-        return data[j+1]-data[i];
-    }
-private:
-    vector<int> data;
+  }
+
+  int sumRange(int i, int j) { return data[j + 1] - data[i]; }
+
+ private:
+  vector<int> data;
 };
 
 /**

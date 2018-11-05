@@ -18,24 +18,25 @@
 #include <hc.hpp>
 #endif
 
-#define CHECK(cmd) \
-{\
-    hipError_t error = cmd;\
-    if (error != hipSuccess) { \
-        fprintf(stderr, "error: '%s'(%d) at %s:%d\n", hipGetErrorString(error), error, __FILE__, __LINE__); \
-        exit(EXIT_FAILURE);\
-    }\
-}
+#define CHECK(cmd)                                                            \
+  {                                                                           \
+    hipError_t error = cmd;                                                   \
+    if (error != hipSuccess) {                                                \
+      fprintf(stderr, "error: '%s'(%d) at %s:%d\n", hipGetErrorString(error), \
+              error, __FILE__, __LINE__);                                     \
+      exit(EXIT_FAILURE);                                                     \
+    }                                                                         \
+  }
 
-int main(int argc, char* argv[]){
-    uint32_t *A_d, *C_d;
-    uint32_t *A_h, *C_h;
-    size_t N = 1000000;
-    size_t Nbytes = N * sizeof(uint32_t);
+int main(int argc, char *argv[]) {
+  uint32_t *A_d, *C_d;
+  uint32_t *A_h, *C_h;
+  size_t N = 1000000;
+  size_t Nbytes = N * sizeof(uint32_t);
 
-    int deviceId;
-    CHECK (hipGetDevice(&deviceId));
-    
-    std::cout << "CHECK ok" << std::endl;
-    return 0;
+  int deviceId;
+  CHECK(hipGetDevice(&deviceId));
+
+  std::cout << "CHECK ok" << std::endl;
+  return 0;
 }

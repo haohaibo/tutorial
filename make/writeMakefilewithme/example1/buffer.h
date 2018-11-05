@@ -12,4 +12,3 @@
 #define BUFFER_H
 
 #endif
-

@@ -9,8 +9,4 @@
 * Last Modified: 2017-05-29 13:35:03
 **/
 #include <iostream>
-int main()
-{
-    std::cout << "Hello World\n";
-}
-
+int main() { std::cout << "Hello World\n"; }

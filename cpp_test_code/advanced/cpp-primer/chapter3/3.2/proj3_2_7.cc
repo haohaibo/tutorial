@@ -15,18 +15,15 @@ using std::cout;
 using std::endl;
 using std::string;
 
-int main()
-{
-    string str("some string");
-    for(string::size_type index = 0; index != str.size(); ++index)
-    {
-        cout << str[index] << endl;
-    }
+int main() {
+  string str("some string");
+  for (string::size_type index = 0; index != str.size(); ++index) {
+    cout << str[index] << endl;
+  }
 
-    for(string::size_type index = 0; index != str.size(); ++index)
-    {
-        str[index] = '*';
-        cout << str[index] << endl;
-    }
-    return 0;
+  for (string::size_type index = 0; index != str.size(); ++index) {
+    str[index] = '*';
+    cout << str[index] << endl;
+  }
+  return 0;
 }

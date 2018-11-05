@@ -11,13 +11,12 @@
 #ifndef SALESITEM_H
 #define SALESITEM_H
 #include <iostream>
-class Sales_item
-{
-    public:
-        // some functions
-    private:
-        std::string isbn;
-        unsigned int units_sold;
-        double revenue;
+class Sales_item {
+ public:
+  // some functions
+ private:
+  std::string isbn;
+  unsigned int units_sold;
+  double revenue;
 };
 #endif

@@ -8,20 +8,21 @@
 *        Create: 2018-08-07 19:23:08
 * Last Modified: 2018-08-07 19:23:08
 **/
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 
-void f(){}
+void f() {}
 void g();
 
 extern "C" {
-    void ef(){}
-    void eg();
+void ef() {}
+void eg();
 }
 
 // prevent g and eg from being optimized away
-void h(){g(); eg();}
-
-int main(){
-    return 0;
+void h() {
+  g();
+  eg();
 }
+
+int main() { return 0; }

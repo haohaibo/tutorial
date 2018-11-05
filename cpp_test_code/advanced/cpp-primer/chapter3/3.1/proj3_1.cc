@@ -14,11 +14,9 @@
 // using namespace::name;
 using std::cin;
 using std::string;
-int main()
-{
-    string s;
-    cin >> s;
-    std::cout << s;
-    return 0;
+int main() {
+  string s;
+  cin >> s;
+  std::cout << s;
+  return 0;
 }
-

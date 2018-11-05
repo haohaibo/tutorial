@@ -1,13 +1,13 @@
 #include <iostream>
 
 #define NUM 10
-int main(){
-    for(int i = 0; i < NUM; ++i){
-        static bool flag = true;
-        if(flag){
-            std::cout << "OK" << std::endl;
-        }
-        flag = false;
+int main() {
+  for (int i = 0; i < NUM; ++i) {
+    static bool flag = true;
+    if (flag) {
+      std::cout << "OK" << std::endl;
     }
-    return 0;
+    flag = false;
+  }
+  return 0;
 }

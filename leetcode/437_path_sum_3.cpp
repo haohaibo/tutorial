@@ -8,18 +8,20 @@
  * };
  */
 class Solution {
-public:
-    int pathSum(TreeNode* root, int sum) {
-        if(root == nullptr){
-            return 0;
-        }
-        return pathSumFrom(root, sum) + pathSum(root->left, sum) + pathSum(root->right, sum);
+ public:
+  int pathSum(TreeNode* root, int sum) {
+    if (root == nullptr) {
+      return 0;
     }
-    int pathSumFrom(TreeNode* root, int sum){
-        if(root == nullptr){
-            return 0;
-        }
-        return (root->val == sum ? 1:0) + pathSumFrom(root->left, sum - root->val) + pathSumFrom(root->right, sum - root->val);
+    return pathSumFrom(root, sum) + pathSum(root->left, sum) +
+           pathSum(root->right, sum);
+  }
+  int pathSumFrom(TreeNode* root, int sum) {
+    if (root == nullptr) {
+      return 0;
     }
+    return (root->val == sum ? 1 : 0) +
+           pathSumFrom(root->left, sum - root->val) +
+           pathSumFrom(root->right, sum - root->val);
+  }
 };
-

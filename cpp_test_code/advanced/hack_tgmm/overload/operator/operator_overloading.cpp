@@ -2,32 +2,25 @@
 using namespace std;
 
 struct Complex {
-    Complex( double r, double i) : re(r), im(i)
-    {
-    }
+  Complex(double r, double i) : re(r), im(i) {}
 
-    Complex operator+(Complex &other);
-    void Display()
-    {
-        cout << re << ", " << im << endl;
-    }
+  Complex operator+(Complex &other);
+  void Display() { cout << re << ", " << im << endl; }
 
-  private:
-    double re, im;
+ private:
+  double re, im;
 };
 
 // Operator overload using a member function
-Complex Complex::operator+(Complex &other)
-{
-    return Complex(re + other.re, im + other.im);
+Complex Complex::operator+(Complex &other) {
+  return Complex(re + other.re, im + other.im);
 }
 
-int main()
-{
-    Complex a = Complex( 1.2, 3.4 );
-    Complex b = Complex( 5.6, 7.8 );
-    Complex c = Complex( 0.0, 0.0 );
+int main() {
+  Complex a = Complex(1.2, 3.4);
+  Complex b = Complex(5.6, 7.8);
+  Complex c = Complex(0.0, 0.0);
 
-    c = a + b;
-    c.Display();
+  c = a + b;
+  c.Display();
 }

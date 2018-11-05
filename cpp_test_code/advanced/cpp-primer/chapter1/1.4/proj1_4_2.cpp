@@ -10,16 +10,12 @@
 **/
 #include <iostream>
 
-int main()
-{
-    int sum = 0;
-    // sum values from 1 up to 10 inclusive
-    for(int val = 0; val <= 10; ++val)
-    {
-        sum += val; // equivalent to sum = sum + val
-    }
-    std::cout << "Sum of 1 to 10 inclusvie is "
-              << sum << std::endl;
-    return 0;
+int main() {
+  int sum = 0;
+  // sum values from 1 up to 10 inclusive
+  for (int val = 0; val <= 10; ++val) {
+    sum += val;  // equivalent to sum = sum + val
+  }
+  std::cout << "Sum of 1 to 10 inclusvie is " << sum << std::endl;
+  return 0;
 }
-

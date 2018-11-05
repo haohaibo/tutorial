@@ -11,9 +11,8 @@
 #include <iostream>
 #include "src/Test1.h"
 
-int main(){
-    std::cout << "hello world" << std::endl;
-    test1();
-    return 0;
+int main() {
+  std::cout << "hello world" << std::endl;
+  test1();
+  return 0;
 }
-

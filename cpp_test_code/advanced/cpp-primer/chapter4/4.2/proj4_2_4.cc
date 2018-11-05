@@ -14,16 +14,14 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int main()
-{
-    const size_t arr_size = 5;
-    int int_array[arr_size] = {0, 1, 2, 3, 4};
-    
-    for(int *pbegin = int_array, *pend = int_array + arr_size; pbegin != pend; ++pbegin)
-    {
-        cout << *pbegin << " ";
-    }
-    cout << endl;
-    return 0;
-}
+int main() {
+  const size_t arr_size = 5;
+  int int_array[arr_size] = {0, 1, 2, 3, 4};
 
+  for (int *pbegin = int_array, *pend = int_array + arr_size; pbegin != pend;
+       ++pbegin) {
+    cout << *pbegin << " ";
+  }
+  cout << endl;
+  return 0;
+}

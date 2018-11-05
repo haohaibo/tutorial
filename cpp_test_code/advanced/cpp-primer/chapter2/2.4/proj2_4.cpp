@@ -10,10 +10,8 @@
 **/
 #include <iostream>
 
-int main()
-{
-    const std::string str = "hello!"; // ok: initialized
-    //const int i, j= 0; // error: i is uninitialized const
-    return 0;
+int main() {
+  const std::string str = "hello!";  // ok: initialized
+  // const int i, j= 0; // error: i is uninitialized const
+  return 0;
 }
-

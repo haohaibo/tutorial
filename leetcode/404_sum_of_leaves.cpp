@@ -8,25 +8,23 @@
  * };
  */
 class Solution {
-public:
-    int sumOfLeftLeaves(TreeNode* root) {
-        if(root == nullptr)
-            return 0;
-        int sum = 0;
-        if(root->left == nullptr && root->right == nullptr)
-            return 0;
-        return LeftLeavesOfTree(root);
+ public:
+  int sumOfLeftLeaves(TreeNode* root) {
+    if (root == nullptr) return 0;
+    int sum = 0;
+    if (root->left == nullptr && root->right == nullptr) return 0;
+    return LeftLeavesOfTree(root);
+  }
+
+  int LeftLeavesOfTree(TreeNode* root) {
+    if (root == nullptr) return 0;
+    int sum = 0;
+    if (root->left && root->left->left == nullptr &&
+        root->left->right == nullptr) {
+      sum += root->left->val;
+      return sum + LeftLeavesOfTree(root->right);
     }
-    
-    int LeftLeavesOfTree(TreeNode* root){
-        if(root == nullptr)
-            return 0;
-        int sum = 0;
-        if(root->left && root->left->left == nullptr && root->left->right == nullptr){
-            sum += root->left->val;
-            return sum + LeftLeavesOfTree(root->right);
-        }
-        
-        return sum + LeftLeavesOfTree(root->left) + LeftLeavesOfTree(root->right);
-    }
+
+    return sum + LeftLeavesOfTree(root->left) + LeftLeavesOfTree(root->right);
+  }
 };
