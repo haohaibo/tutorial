@@ -16,12 +16,18 @@ typedef struct S {
   size_t i[MAX_DIMS];
 } Array;
 
+int func(int in, int out, const bool c)
+{
+    std::cout << in << std::endl;
+}
 int main() {
   int nbDims = 4;
-  Array a{1 + nbDims, {size_t(0)}};
+  Array a{1 + nbDims, {size_t(233)}};
   std::cout << a.nbElements << std::endl;
   for (int i = 0; i < a.MAX_DIMS; ++i) {
     std::cout << a.i[i] << std::endl;
   }
+
+  func(2, 3);
   return 0;
 }
