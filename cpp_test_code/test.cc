@@ -1,30 +1,15 @@
 #include <iostream>
+#include <vector>
 
-// void fun(int * const * fp)
-//{
-//    std::cout << "fun " << **fp << std::endl;
-//}
-
-typedef struct { int* t; } Tensor;
-
-void fun(Tensor* const* ptensor) {
-  std::cout << "Tensor " << *((*ptensor)->t) << std::endl;
-}
-int main() {
-  int* p;
-  int a = 2;
-  p = &a;
-
-  int* const* fp = &p;
-  std::cout << **fp << std::endl;
-
-  // fun(&p);
-
-  Tensor* tensor = new Tensor;
-  // tensor->t = &a;
-  // std::cout << "2333" << (tensor->t) << std::endl;
-  tensor->t = new int(8);
-  fun(&tensor);
-
-  fun(&(new Tensor));
+struct Person {
+    int age;
+    bool gender;
+    Person(int _age, bool _gender): age(_age), gender(_gender){}
+};
+int main(){
+    std::vector<Person> v;
+    Person s1(5,1);
+    std::cout << s1.age << std::endl;
+    v.push_back(s1);
+    return 0;
 }
