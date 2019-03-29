@@ -4,3 +4,4 @@
 - [**MIT** PDOS](https://pdos.csail.mit.edu/)
 - [**MIT open course**: Operating System Engineering](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/)
 - [**MIT** OS course 6.828 homepage](https://pdos.csail.mit.edu/6.828/2017/)
+- [**How to Make a Computer Operating System**](https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System)
