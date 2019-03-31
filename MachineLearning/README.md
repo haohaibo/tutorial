@@ -4,3 +4,6 @@
 
 - [**Machine Learning cheatsheets for Stanford's CS 229**](https://github.com/afshinea/stanford-cs-229-machine-learning)
 
+- [**h2o-3**](https://github.com/h2oai/h2o-3)
+
+- [**EasyML**](https://github.com/ICT-BDA/EasyML)
