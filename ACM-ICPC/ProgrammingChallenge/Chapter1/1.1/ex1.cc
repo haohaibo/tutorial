@@ -9,6 +9,10 @@
 * Last Modified: 2019-04-21 02:49:29
 **/
 #include <cstdio>
+#include <cstdlib>
+
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:4996)
 
 #define MAX_IN 50
 
@@ -17,7 +21,7 @@ int main()
 {
     int n, m, k[MAX_IN];
 
-    scanf("%d%d", n, m);
+    scanf("%d%d", &n, &m);
 
     for (int i = 0; i < n; ++i)
     {
@@ -45,6 +49,7 @@ int main()
 
     if (result) puts("Yes");
     else puts("No");
+	system("pause");
     return 0;
 }
 
