@@ -49,7 +49,6 @@ int main()
 
     if (result) puts("Yes");
     else puts("No");
-	system("pause");
     return 0;
 }
 
