@@ -15,6 +15,7 @@ void printDevProp(cudaDeviceProp devProp)
     printf("Name:                          %s\n",  devProp.name);
     printf("Total global memory:           %u\n",  devProp.totalGlobalMem);
     printf("Total shared memory per block: %u\n",  devProp.sharedMemPerBlock);
+    printf("Total shared memory per multi-processor : %u\n",  devProp.sharedMemPerMultiprocessor);
     printf("Total registers per block:     %d\n",  devProp.regsPerBlock);
     printf("Warp size:                     %d\n",  devProp.warpSize);
     printf("Maximum memory pitch:          %u\n",  devProp.memPitch);
