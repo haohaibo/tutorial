@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// shared_ptr陷阱 ： 当外部用std::shared_ptr<T> & 的时候
 int main()
 {
    
