@@ -1,0 +1,2400 @@
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 64
+[INFO]: n = 64
+[INFO]: k = 64
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000047 sec. perf: 11.222158 GFLOPS
+[INFO]: time: 0.000046 sec. perf: 11.497544 GFLOPS
+[INFO]: time: 0.000046 sec. perf: 11.457343 GFLOPS
+[INFO]: time: 0.000046 sec. perf: 11.417422 GFLOPS
+[INFO]: time: 0.000025 sec. perf: 21.277922 GFLOPS
+[INFO]: time: 0.000025 sec. perf: 21.140645 GFLOPS
+[INFO]: time: 0.000046 sec. perf: 11.417422 GFLOPS
+[INFO]: time: 0.000025 sec. perf: 21.140645 GFLOPS
+[INFO]: time: 0.000025 sec. perf: 21.140645 GFLOPS
+[INFO]: time: 0.000025 sec. perf: 21.140645 GFLOPS
+[INFO]: Ops: 0.000524 gops
+[INFO]: AVERAGE perf: 14.820485 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.001809 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 128
+[INFO]: n = 128
+[INFO]: k = 128
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000066 sec. perf: 63.628150 GFLOPS
+[INFO]: time: 0.000066 sec. perf: 63.320763 GFLOPS
+[INFO]: time: 0.000046 sec. perf: 91.658741 GFLOPS
+[INFO]: time: 0.000066 sec. perf: 63.168180 GFLOPS
+[INFO]: time: 0.000065 sec. perf: 64.094867 GFLOPS
+[INFO]: time: 0.000066 sec. perf: 63.320763 GFLOPS
+[INFO]: time: 0.000046 sec. perf: 91.658741 GFLOPS
+[INFO]: time: 0.000066 sec. perf: 63.168180 GFLOPS
+[INFO]: time: 0.000066 sec. perf: 63.782965 GFLOPS
+[INFO]: time: 0.000066 sec. perf: 63.168180 GFLOPS
+[INFO]: Ops: 0.004194 gops
+[INFO]: AVERAGE perf: 67.616038 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.008254 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 192
+[INFO]: n = 192
+[INFO]: k = 192
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000087 sec. perf: 162.936682 GFLOPS
+[INFO]: time: 0.000086 sec. perf: 163.841896 GFLOPS
+[INFO]: time: 0.000086 sec. perf: 165.373147 GFLOPS
+[INFO]: time: 0.000086 sec. perf: 164.145874 GFLOPS
+[INFO]: time: 0.000086 sec. perf: 164.757225 GFLOPS
+[INFO]: time: 0.000067 sec. perf: 212.680118 GFLOPS
+[INFO]: time: 0.000067 sec. perf: 212.170086 GFLOPS
+[INFO]: time: 0.000067 sec. perf: 212.680118 GFLOPS
+[INFO]: time: 0.000067 sec. perf: 212.170086 GFLOPS
+[INFO]: time: 0.000067 sec. perf: 212.170086 GFLOPS
+[INFO]: Ops: 0.014156 gops
+[INFO]: AVERAGE perf: 185.209876 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.022609 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 256
+[INFO]: n = 256
+[INFO]: k = 256
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000108 sec. perf: 311.615375 GFLOPS
+[INFO]: time: 0.000107 sec. perf: 314.418538 GFLOPS
+[INFO]: time: 0.000107 sec. perf: 314.890643 GFLOPS
+[INFO]: time: 0.000108 sec. perf: 312.079093 GFLOPS
+[INFO]: time: 0.000088 sec. perf: 383.395971 GFLOPS
+[INFO]: time: 0.000088 sec. perf: 383.395971 GFLOPS
+[INFO]: time: 0.000088 sec. perf: 383.395971 GFLOPS
+[INFO]: time: 0.000088 sec. perf: 383.395971 GFLOPS
+[INFO]: time: 0.000088 sec. perf: 383.395971 GFLOPS
+[INFO]: time: 0.000088 sec. perf: 383.395971 GFLOPS
+[INFO]: Ops: 0.033554 gops
+[INFO]: AVERAGE perf: 351.874831 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.042953 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 320
+[INFO]: n = 320
+[INFO]: k = 320
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000129 sec. perf: 509.460657 GFLOPS
+[INFO]: time: 0.000128 sec. perf: 513.935288 GFLOPS
+[INFO]: time: 0.000129 sec. perf: 509.460657 GFLOPS
+[INFO]: time: 0.000109 sec. perf: 603.245612 GFLOPS
+[INFO]: time: 0.000109 sec. perf: 603.245612 GFLOPS
+[INFO]: time: 0.000108 sec. perf: 604.135363 GFLOPS
+[INFO]: time: 0.000108 sec. perf: 604.135363 GFLOPS
+[INFO]: time: 0.000108 sec. perf: 604.140932 GFLOPS
+[INFO]: time: 0.000109 sec. perf: 602.358478 GFLOPS
+[INFO]: time: 0.000108 sec. perf: 604.140932 GFLOPS
+[INFO]: Ops: 0.065536 gops
+[INFO]: AVERAGE perf: 572.474307 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.069882 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 384
+[INFO]: n = 384
+[INFO]: k = 384
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000150 sec. perf: 756.194714 GFLOPS
+[INFO]: time: 0.000148 sec. perf: 763.536509 GFLOPS
+[INFO]: time: 0.000129 sec. perf: 874.906967 GFLOPS
+[INFO]: time: 0.000130 sec. perf: 873.826818 GFLOPS
+[INFO]: time: 0.000130 sec. perf: 873.826818 GFLOPS
+[INFO]: time: 0.000130 sec. perf: 873.826818 GFLOPS
+[INFO]: time: 0.000129 sec. perf: 874.906967 GFLOPS
+[INFO]: time: 0.000130 sec. perf: 873.826818 GFLOPS
+[INFO]: time: 0.000130 sec. perf: 873.826818 GFLOPS
+[INFO]: time: 0.000130 sec. perf: 873.826818 GFLOPS
+[INFO]: Ops: 0.113246 gops
+[INFO]: AVERAGE perf: 848.578596 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.103586 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 448
+[INFO]: n = 448
+[INFO]: k = 448
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000171 sec. perf: 1053.379163 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1054.367335 GFLOPS
+[INFO]: time: 0.000150 sec. perf: 1195.699305 GFLOPS
+[INFO]: time: 0.000151 sec. perf: 1194.428619 GFLOPS
+[INFO]: time: 0.000151 sec. perf: 1194.428619 GFLOPS
+[INFO]: time: 0.000150 sec. perf: 1195.699305 GFLOPS
+[INFO]: time: 0.000151 sec. perf: 1194.428619 GFLOPS
+[INFO]: time: 0.000150 sec. perf: 1195.699305 GFLOPS
+[INFO]: time: 0.000151 sec. perf: 1194.428619 GFLOPS
+[INFO]: time: 0.000151 sec. perf: 1194.428619 GFLOPS
+[INFO]: Ops: 0.179831 gops
+[INFO]: AVERAGE perf: 1163.757452 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.142060 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 512
+[INFO]: n = 512
+[INFO]: k = 512
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000192 sec. perf: 1401.627302 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.518377 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.527519 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.527519 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.527519 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.527519 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.527519 GFLOPS
+[INFO]: time: 0.000172 sec. perf: 1565.066180 GFLOPS
+[INFO]: time: 0.000172 sec. perf: 1565.066180 GFLOPS
+[INFO]: time: 0.000171 sec. perf: 1566.527519 GFLOPS
+[INFO]: Ops: 0.268435 gops
+[INFO]: AVERAGE perf: 1548.025150 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.188968 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 576
+[INFO]: n = 576
+[INFO]: k = 576
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000214 sec. perf: 1789.378840 GFLOPS
+[INFO]: time: 0.000193 sec. perf: 1975.867864 GFLOPS
+[INFO]: time: 0.000194 sec. perf: 1974.234890 GFLOPS
+[INFO]: time: 0.000193 sec. perf: 1975.867864 GFLOPS
+[INFO]: time: 0.000193 sec. perf: 1975.867864 GFLOPS
+[INFO]: time: 0.000193 sec. perf: 1975.867864 GFLOPS
+[INFO]: time: 0.000194 sec. perf: 1974.234890 GFLOPS
+[INFO]: time: 0.000193 sec. perf: 1975.867864 GFLOPS
+[INFO]: time: 0.000194 sec. perf: 1974.234890 GFLOPS
+[INFO]: time: 0.000194 sec. perf: 1974.234890 GFLOPS
+[INFO]: Ops: 0.382206 gops
+[INFO]: AVERAGE perf: 1954.847671 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.238629 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 640
+[INFO]: n = 640
+[INFO]: k = 640
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000233 sec. perf: 2250.588094 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2461.954582 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2460.106233 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2460.106233 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2458.260658 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2461.954582 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2460.106233 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2460.106233 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2460.106233 GFLOPS
+[INFO]: time: 0.000213 sec. perf: 2461.954582 GFLOPS
+[INFO]: Ops: 0.524288 gops
+[INFO]: AVERAGE perf: 2437.777819 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.297580 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 704
+[INFO]: n = 704
+[INFO]: k = 704
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000254 sec. perf: 2743.075080 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2985.280925 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2983.238975 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2983.226221 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2985.268155 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2985.280925 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2985.280925 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2985.280925 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2983.226221 GFLOPS
+[INFO]: time: 0.000234 sec. perf: 2983.238975 GFLOPS
+[INFO]: Ops: 0.697827 gops
+[INFO]: AVERAGE perf: 2958.345799 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.361126 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 768
+[INFO]: n = 768
+[INFO]: k = 768
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000275 sec. perf: 3290.187808 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3547.869108 GFLOPS
+[INFO]: time: 0.000256 sec. perf: 3545.647490 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3547.869108 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3552.320708 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3550.093512 GFLOPS
+[INFO]: time: 0.000256 sec. perf: 3545.647490 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3547.869108 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3547.869108 GFLOPS
+[INFO]: time: 0.000255 sec. perf: 3550.093512 GFLOPS
+[INFO]: Ops: 0.905970 gops
+[INFO]: AVERAGE perf: 3520.736566 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.429777 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 832
+[INFO]: n = 832
+[INFO]: k = 832
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000296 sec. perf: 3893.578658 GFLOPS
+[INFO]: time: 0.000276 sec. perf: 4166.238307 GFLOPS
+[INFO]: time: 0.000277 sec. perf: 4163.828641 GFLOPS
+[INFO]: time: 0.000276 sec. perf: 4171.066017 GFLOPS
+[INFO]: time: 0.000277 sec. perf: 4163.828641 GFLOPS
+[INFO]: time: 0.000276 sec. perf: 4168.650765 GFLOPS
+[INFO]: time: 0.000276 sec. perf: 4173.468949 GFLOPS
+[INFO]: time: 0.000276 sec. perf: 4166.238307 GFLOPS
+[INFO]: time: 0.000277 sec. perf: 4163.813589 GFLOPS
+[INFO]: time: 0.000276 sec. perf: 4175.889790 GFLOPS
+[INFO]: Ops: 1.151861 gops
+[INFO]: AVERAGE perf: 4138.926408 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.505240 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 896
+[INFO]: n = 896
+[INFO]: k = 896
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000317 sec. perf: 4543.547845 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4823.867997 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4834.225836 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4831.644379 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4821.281429 GFLOPS
+[INFO]: time: 0.000297 sec. perf: 4836.842577 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4834.225836 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4834.225836 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4821.281429 GFLOPS
+[INFO]: time: 0.000298 sec. perf: 4821.281429 GFLOPS
+[INFO]: Ops: 1.438646 gops
+[INFO]: AVERAGE perf: 4798.633878 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.585771 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 960
+[INFO]: n = 960
+[INFO]: k = 960
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000338 sec. perf: 5233.978360 GFLOPS
+[INFO]: time: 0.000319 sec. perf: 5549.108585 GFLOPS
+[INFO]: time: 0.000320 sec. perf: 5537.976189 GFLOPS
+[INFO]: time: 0.000320 sec. perf: 5537.993521 GFLOPS
+[INFO]: time: 0.000319 sec. perf: 5540.750761 GFLOPS
+[INFO]: time: 0.000320 sec. perf: 5532.452671 GFLOPS
+[INFO]: time: 0.000319 sec. perf: 5540.768111 GFLOPS
+[INFO]: time: 0.000320 sec. perf: 5537.976189 GFLOPS
+[INFO]: time: 0.000320 sec. perf: 5537.976189 GFLOPS
+[INFO]: time: 0.000319 sec. perf: 5551.894326 GFLOPS
+[INFO]: Ops: 1.769472 gops
+[INFO]: AVERAGE perf: 5508.473284 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.672421 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1024
+[INFO]: n = 1024
+[INFO]: k = 1024
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000363 sec. perf: 5917.987092 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6248.606668 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6239.873452 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6239.873452 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6239.891583 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6242.793909 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6248.606668 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6245.680771 GFLOPS
+[INFO]: time: 0.000344 sec. perf: 6248.606668 GFLOPS
+[INFO]: time: 0.000343 sec. perf: 6254.412046 GFLOPS
+[INFO]: Ops: 2.147484 gops
+[INFO]: AVERAGE perf: 6211.008878 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.758180 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1088
+[INFO]: n = 1088
+[INFO]: k = 1088
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000656 sec. perf: 3925.667826 GFLOPS
+[INFO]: time: 0.000642 sec. perf: 4014.755442 GFLOPS
+[INFO]: time: 0.000641 sec. perf: 4017.767562 GFLOPS
+[INFO]: time: 0.000641 sec. perf: 4017.761295 GFLOPS
+[INFO]: time: 0.000621 sec. perf: 4144.999347 GFLOPS
+[INFO]: time: 0.000621 sec. perf: 4144.999347 GFLOPS
+[INFO]: time: 0.000621 sec. perf: 4147.134878 GFLOPS
+[INFO]: time: 0.000621 sec. perf: 4144.999347 GFLOPS
+[INFO]: time: 0.000622 sec. perf: 4143.932406 GFLOPS
+[INFO]: time: 0.000621 sec. perf: 4144.999347 GFLOPS
+[INFO]: Ops: 2.575827 gops
+[INFO]: AVERAGE perf: 4083.183563 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.498435 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1152
+[INFO]: n = 1152
+[INFO]: k = 1152
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000694 sec. perf: 4408.443064 GFLOPS
+[INFO]: time: 0.000679 sec. perf: 4502.970589 GFLOPS
+[INFO]: time: 0.000679 sec. perf: 4500.849513 GFLOPS
+[INFO]: time: 0.000677 sec. perf: 4514.672333 GFLOPS
+[INFO]: time: 0.000658 sec. perf: 4645.264210 GFLOPS
+[INFO]: time: 0.000658 sec. perf: 4646.393640 GFLOPS
+[INFO]: time: 0.000658 sec. perf: 4648.654146 GFLOPS
+[INFO]: time: 0.000658 sec. perf: 4647.516554 GFLOPS
+[INFO]: time: 0.000658 sec. perf: 4646.393640 GFLOPS
+[INFO]: time: 0.000658 sec. perf: 4647.516554 GFLOPS
+[INFO]: Ops: 3.057648 gops
+[INFO]: AVERAGE perf: 4579.255433 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.558991 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1216
+[INFO]: n = 1216
+[INFO]: k = 1216
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000731 sec. perf: 4919.218515 GFLOPS
+[INFO]: time: 0.000717 sec. perf: 5016.945561 GFLOPS
+[INFO]: time: 0.000717 sec. perf: 5016.945561 GFLOPS
+[INFO]: time: 0.000694 sec. perf: 5181.172754 GFLOPS
+[INFO]: time: 0.000694 sec. perf: 5179.978641 GFLOPS
+[INFO]: time: 0.000694 sec. perf: 5179.978641 GFLOPS
+[INFO]: time: 0.000695 sec. perf: 5176.399603 GFLOPS
+[INFO]: time: 0.000694 sec. perf: 5178.785079 GFLOPS
+[INFO]: time: 0.000695 sec. perf: 5176.399603 GFLOPS
+[INFO]: time: 0.000694 sec. perf: 5178.785079 GFLOPS
+[INFO]: Ops: 3.596091 gops
+[INFO]: AVERAGE perf: 5118.750852 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.624848 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1280
+[INFO]: n = 1280
+[INFO]: k = 1280
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000769 sec. perf: 5452.324219 GFLOPS
+[INFO]: time: 0.000754 sec. perf: 5559.868980 GFLOPS
+[INFO]: time: 0.000755 sec. perf: 5558.697392 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5740.046995 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5738.790399 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5736.286701 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5738.798251 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5740.046995 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5736.286701 GFLOPS
+[INFO]: time: 0.000731 sec. perf: 5738.790399 GFLOPS
+[INFO]: Ops: 4.194304 gops
+[INFO]: AVERAGE perf: 5672.112889 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.692397 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1344
+[INFO]: n = 1344
+[INFO]: k = 1344
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000807 sec. perf: 6016.442037 GFLOPS
+[INFO]: time: 0.000793 sec. perf: 6120.803170 GFLOPS
+[INFO]: time: 0.000794 sec. perf: 6118.327354 GFLOPS
+[INFO]: time: 0.000769 sec. perf: 6317.010528 GFLOPS
+[INFO]: time: 0.000768 sec. perf: 6320.957899 GFLOPS
+[INFO]: time: 0.000769 sec. perf: 6314.389897 GFLOPS
+[INFO]: time: 0.000768 sec. perf: 6322.274786 GFLOPS
+[INFO]: time: 0.000768 sec. perf: 6318.325770 GFLOPS
+[INFO]: time: 0.000768 sec. perf: 6319.641560 GFLOPS
+[INFO]: time: 0.000768 sec. perf: 6320.957899 GFLOPS
+[INFO]: Ops: 4.855431 gops
+[INFO]: AVERAGE perf: 6246.922545 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.762564 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1408
+[INFO]: n = 1408
+[INFO]: k = 1408
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.000846 sec. perf: 6598.325218 GFLOPS
+[INFO]: time: 0.000833 sec. perf: 6702.249512 GFLOPS
+[INFO]: time: 0.000825 sec. perf: 6765.941132 GFLOPS
+[INFO]: time: 0.000806 sec. perf: 6927.125120 GFLOPS
+[INFO]: time: 0.000806 sec. perf: 6927.125120 GFLOPS
+[INFO]: time: 0.000805 sec. perf: 6932.630573 GFLOPS
+[INFO]: time: 0.000806 sec. perf: 6929.876753 GFLOPS
+[INFO]: time: 0.000806 sec. perf: 6928.500663 GFLOPS
+[INFO]: time: 0.000806 sec. perf: 6927.133715 GFLOPS
+[INFO]: time: 0.000806 sec. perf: 6928.500663 GFLOPS
+[INFO]: Ops: 5.582619 gops
+[INFO]: AVERAGE perf: 6854.727948 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.836759 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1472
+[INFO]: n = 1472
+[INFO]: k = 1472
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.001286 sec. perf: 4961.968243 GFLOPS
+[INFO]: time: 0.001231 sec. perf: 5181.213888 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5177.177041 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5177.853615 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5176.504844 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5178.521957 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5177.853615 GFLOPS
+[INFO]: time: 0.001230 sec. perf: 5186.606154 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5178.526161 GFLOPS
+[INFO]: time: 0.001232 sec. perf: 5177.849412 GFLOPS
+[INFO]: Ops: 6.379012 gops
+[INFO]: AVERAGE perf: 5156.554439 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.629462 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1536
+[INFO]: n = 1536
+[INFO]: k = 1536
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.001342 sec. perf: 5399.188539 GFLOPS
+[INFO]: time: 0.001287 sec. perf: 5633.526600 GFLOPS
+[INFO]: time: 0.001287 sec. perf: 5632.826076 GFLOPS
+[INFO]: time: 0.001286 sec. perf: 5634.227298 GFLOPS
+[INFO]: time: 0.001286 sec. perf: 5634.928171 GFLOPS
+[INFO]: time: 0.001286 sec. perf: 5637.031835 GFLOPS
+[INFO]: time: 0.001287 sec. perf: 5632.125726 GFLOPS
+[INFO]: time: 0.001286 sec. perf: 5636.326056 GFLOPS
+[INFO]: time: 0.001286 sec. perf: 5634.928171 GFLOPS
+[INFO]: time: 0.001286 sec. perf: 5637.031835 GFLOPS
+[INFO]: Ops: 7.247757 gops
+[INFO]: AVERAGE perf: 5610.292470 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.684850 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1600
+[INFO]: n = 1600
+[INFO]: k = 1600
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.001399 sec. perf: 5854.192587 GFLOPS
+[INFO]: time: 0.001340 sec. perf: 6112.069023 GFLOPS
+[INFO]: time: 0.001341 sec. perf: 6109.880898 GFLOPS
+[INFO]: time: 0.001340 sec. perf: 6111.339474 GFLOPS
+[INFO]: time: 0.001340 sec. perf: 6112.064463 GFLOPS
+[INFO]: time: 0.001341 sec. perf: 6109.880898 GFLOPS
+[INFO]: time: 0.001340 sec. perf: 6111.334915 GFLOPS
+[INFO]: time: 0.001340 sec. perf: 6111.334915 GFLOPS
+[INFO]: time: 0.001341 sec. perf: 6110.605541 GFLOPS
+[INFO]: time: 0.001340 sec. perf: 6112.064463 GFLOPS
+[INFO]: Ops: 8.192000 gops
+[INFO]: AVERAGE perf: 6084.465784 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.742733 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1664
+[INFO]: n = 1664
+[INFO]: k = 1664
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.001446 sec. perf: 6372.417903 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6616.186694 GFLOPS
+[INFO]: time: 0.001394 sec. perf: 6611.634244 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6615.431475 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6615.431475 GFLOPS
+[INFO]: time: 0.001392 sec. perf: 6618.467648 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6616.186694 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6613.912059 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6614.666932 GFLOPS
+[INFO]: time: 0.001393 sec. perf: 6613.912059 GFLOPS
+[INFO]: Ops: 9.214886 gops
+[INFO]: AVERAGE perf: 6589.995703 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.804443 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1728
+[INFO]: n = 1728
+[INFO]: k = 1728
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.001498 sec. perf: 6887.894547 GFLOPS
+[INFO]: time: 0.001446 sec. perf: 7137.923913 GFLOPS
+[INFO]: time: 0.001446 sec. perf: 7136.339417 GFLOPS
+[INFO]: time: 0.001447 sec. perf: 7132.393576 GFLOPS
+[INFO]: time: 0.001446 sec. perf: 7136.344352 GFLOPS
+[INFO]: time: 0.001446 sec. perf: 7135.549899 GFLOPS
+[INFO]: time: 0.001446 sec. perf: 7138.713956 GFLOPS
+[INFO]: time: 0.001447 sec. perf: 7133.976320 GFLOPS
+[INFO]: time: 0.001447 sec. perf: 7133.976320 GFLOPS
+[INFO]: time: 0.001446 sec. perf: 7134.765489 GFLOPS
+[INFO]: Ops: 10.319561 gops
+[INFO]: AVERAGE perf: 7109.988770 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.867919 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1792
+[INFO]: n = 1792
+[INFO]: k = 1792
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002026 sec. perf: 5680.155175 GFLOPS
+[INFO]: time: 0.001968 sec. perf: 5848.247699 GFLOPS
+[INFO]: time: 0.001967 sec. perf: 5850.150217 GFLOPS
+[INFO]: time: 0.001968 sec. perf: 5848.250671 GFLOPS
+[INFO]: time: 0.001969 sec. perf: 5846.346418 GFLOPS
+[INFO]: time: 0.001965 sec. perf: 5858.249746 GFLOPS
+[INFO]: time: 0.001969 sec. perf: 5845.396241 GFLOPS
+[INFO]: time: 0.001966 sec. perf: 5853.006316 GFLOPS
+[INFO]: time: 0.001968 sec. perf: 5848.250671 GFLOPS
+[INFO]: time: 0.001965 sec. perf: 5856.821769 GFLOPS
+[INFO]: Ops: 11.509170 gops
+[INFO]: AVERAGE perf: 5833.026166 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.712039 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1856
+[INFO]: n = 1856
+[INFO]: k = 1856
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002066 sec. perf: 6189.522390 GFLOPS
+[INFO]: time: 0.002038 sec. perf: 6273.090190 GFLOPS
+[INFO]: time: 0.002038 sec. perf: 6275.060414 GFLOPS
+[INFO]: time: 0.002038 sec. perf: 6273.090190 GFLOPS
+[INFO]: time: 0.002038 sec. perf: 6274.075147 GFLOPS
+[INFO]: time: 0.002039 sec. perf: 6272.102466 GFLOPS
+[INFO]: time: 0.002039 sec. perf: 6270.134099 GFLOPS
+[INFO]: time: 0.002039 sec. perf: 6272.594751 GFLOPS
+[INFO]: time: 0.002039 sec. perf: 6271.613334 GFLOPS
+[INFO]: time: 0.002039 sec. perf: 6272.102466 GFLOPS
+[INFO]: Ops: 12.786860 gops
+[INFO]: AVERAGE perf: 6264.237939 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.764677 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1920
+[INFO]: n = 1920
+[INFO]: k = 1920
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002144 sec. perf: 6602.609089 GFLOPS
+[INFO]: time: 0.002110 sec. perf: 6709.257889 GFLOPS
+[INFO]: time: 0.002109 sec. perf: 6712.818100 GFLOPS
+[INFO]: time: 0.002109 sec. perf: 6712.308813 GFLOPS
+[INFO]: time: 0.002110 sec. perf: 6708.749142 GFLOPS
+[INFO]: time: 0.002110 sec. perf: 6710.275616 GFLOPS
+[INFO]: time: 0.002111 sec. perf: 6704.678761 GFLOPS
+[INFO]: time: 0.002110 sec. perf: 6708.749142 GFLOPS
+[INFO]: time: 0.002108 sec. perf: 6714.349612 GFLOPS
+[INFO]: time: 0.002113 sec. perf: 6700.616489 GFLOPS
+[INFO]: Ops: 14.155776 gops
+[INFO]: AVERAGE perf: 6698.284813 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.817662 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 1984
+[INFO]: n = 1984
+[INFO]: k = 1984
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002202 sec. perf: 7091.947391 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7165.878376 GFLOPS
+[INFO]: time: 0.002179 sec. perf: 7166.923998 GFLOPS
+[INFO]: time: 0.002179 sec. perf: 7168.506162 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7165.345819 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7165.871801 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7165.345819 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7164.294086 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7165.345819 GFLOPS
+[INFO]: time: 0.002180 sec. perf: 7165.875089 GFLOPS
+[INFO]: Ops: 15.619064 gops
+[INFO]: AVERAGE perf: 7158.463887 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.873836 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2048
+[INFO]: n = 2048
+[INFO]: k = 2048
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002295 sec. perf: 7484.725112 GFLOPS
+[INFO]: time: 0.002256 sec. perf: 7615.848526 GFLOPS
+[INFO]: time: 0.002259 sec. perf: 7605.598961 GFLOPS
+[INFO]: time: 0.002253 sec. perf: 7625.046019 GFLOPS
+[INFO]: time: 0.002254 sec. perf: 7620.716612 GFLOPS
+[INFO]: time: 0.002252 sec. perf: 7629.376959 GFLOPS
+[INFO]: time: 0.002253 sec. perf: 7625.046019 GFLOPS
+[INFO]: time: 0.002254 sec. perf: 7622.877318 GFLOPS
+[INFO]: time: 0.002253 sec. perf: 7623.959823 GFLOPS
+[INFO]: time: 0.002258 sec. perf: 7607.754470 GFLOPS
+[INFO]: Ops: 17.179869 gops
+[INFO]: AVERAGE perf: 7605.869679 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.928451 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2112
+[INFO]: n = 2112
+[INFO]: k = 2112
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002889 sec. perf: 6522.667379 GFLOPS
+[INFO]: time: 0.002873 sec. perf: 6557.902044 GFLOPS
+[INFO]: time: 0.002875 sec. perf: 6553.524776 GFLOPS
+[INFO]: time: 0.002873 sec. perf: 6558.632537 GFLOPS
+[INFO]: time: 0.002873 sec. perf: 6557.536858 GFLOPS
+[INFO]: time: 0.002874 sec. perf: 6556.441544 GFLOPS
+[INFO]: time: 0.002873 sec. perf: 6557.536858 GFLOPS
+[INFO]: time: 0.002873 sec. perf: 6557.171713 GFLOPS
+[INFO]: time: 0.002873 sec. perf: 6557.902044 GFLOPS
+[INFO]: time: 0.002875 sec. perf: 6554.252015 GFLOPS
+[INFO]: Ops: 18.841338 gops
+[INFO]: AVERAGE perf: 6553.340370 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.799968 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2176
+[INFO]: n = 2176
+[INFO]: k = 2176
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.002977 sec. perf: 6921.398343 GFLOPS
+[INFO]: time: 0.002961 sec. perf: 6958.422104 GFLOPS
+[INFO]: time: 0.002962 sec. perf: 6957.667928 GFLOPS
+[INFO]: time: 0.002960 sec. perf: 6960.676209 GFLOPS
+[INFO]: time: 0.002963 sec. perf: 6954.286718 GFLOPS
+[INFO]: time: 0.002963 sec. perf: 6955.040162 GFLOPS
+[INFO]: time: 0.002961 sec. perf: 6959.171743 GFLOPS
+[INFO]: time: 0.002962 sec. perf: 6958.043821 GFLOPS
+[INFO]: time: 0.002962 sec. perf: 6956.167110 GFLOPS
+[INFO]: time: 0.002961 sec. perf: 6959.174094 GFLOPS
+[INFO]: Ops: 20.606616 gops
+[INFO]: AVERAGE perf: 6953.987264 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.848875 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2240
+[INFO]: n = 2240
+[INFO]: k = 2240
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.003063 sec. perf: 7337.703103 GFLOPS
+[INFO]: time: 0.003048 sec. perf: 7374.679146 GFLOPS
+[INFO]: time: 0.003049 sec. perf: 7372.744113 GFLOPS
+[INFO]: time: 0.003051 sec. perf: 7368.106591 GFLOPS
+[INFO]: time: 0.003050 sec. perf: 7369.263613 GFLOPS
+[INFO]: time: 0.003050 sec. perf: 7371.196818 GFLOPS
+[INFO]: time: 0.003048 sec. perf: 7375.451023 GFLOPS
+[INFO]: time: 0.003049 sec. perf: 7372.741695 GFLOPS
+[INFO]: time: 0.003048 sec. perf: 7375.453443 GFLOPS
+[INFO]: time: 0.003050 sec. perf: 7370.810096 GFLOPS
+[INFO]: Ops: 22.478848 gops
+[INFO]: AVERAGE perf: 7368.799553 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.899512 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2304
+[INFO]: n = 2304
+[INFO]: k = 2304
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.003766 sec. perf: 6496.055000 GFLOPS
+[INFO]: time: 0.003739 sec. perf: 6542.763408 GFLOPS
+[INFO]: time: 0.003738 sec. perf: 6544.165481 GFLOPS
+[INFO]: time: 0.003735 sec. perf: 6548.931065 GFLOPS
+[INFO]: time: 0.003734 sec. perf: 6550.334029 GFLOPS
+[INFO]: time: 0.003737 sec. perf: 6545.004211 GFLOPS
+[INFO]: time: 0.003734 sec. perf: 6550.612940 GFLOPS
+[INFO]: time: 0.003738 sec. perf: 6544.443866 GFLOPS
+[INFO]: time: 0.003734 sec. perf: 6551.735839 GFLOPS
+[INFO]: time: 0.003739 sec. perf: 6541.923502 GFLOPS
+[INFO]: Ops: 24.461181 gops
+[INFO]: AVERAGE perf: 6541.559785 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.798530 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2368
+[INFO]: n = 2368
+[INFO]: k = 2368
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.003859 sec. perf: 6882.093506 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6909.884751 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6909.597098 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6909.598896 GFLOPS
+[INFO]: time: 0.003842 sec. perf: 6912.762596 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6910.172428 GFLOPS
+[INFO]: time: 0.003844 sec. perf: 6908.734284 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6910.460128 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6909.597098 GFLOPS
+[INFO]: time: 0.003843 sec. perf: 6909.597098 GFLOPS
+[INFO]: Ops: 26.556760 gops
+[INFO]: AVERAGE perf: 6907.239429 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.843169 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2432
+[INFO]: n = 2432
+[INFO]: k = 2432
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.003964 sec. perf: 7258.201571 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7287.028931 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7287.322422 GFLOPS
+[INFO]: time: 0.003949 sec. perf: 7285.845977 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7287.322422 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7287.324268 GFLOPS
+[INFO]: time: 0.003947 sec. perf: 7287.913167 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7286.141218 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7287.028931 GFLOPS
+[INFO]: time: 0.003948 sec. perf: 7287.027085 GFLOPS
+[INFO]: Ops: 28.768731 gops
+[INFO]: AVERAGE perf: 7284.105279 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.889173 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2496
+[INFO]: n = 2496
+[INFO]: k = 2496
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.004069 sec. perf: 7644.011043 GFLOPS
+[INFO]: time: 0.004053 sec. perf: 7673.584487 GFLOPS
+[INFO]: time: 0.004053 sec. perf: 7673.281561 GFLOPS
+[INFO]: time: 0.004052 sec. perf: 7675.097578 GFLOPS
+[INFO]: time: 0.004054 sec. perf: 7671.767293 GFLOPS
+[INFO]: time: 0.004055 sec. perf: 7669.950960 GFLOPS
+[INFO]: time: 0.004054 sec. perf: 7672.372929 GFLOPS
+[INFO]: time: 0.004053 sec. perf: 7673.887436 GFLOPS
+[INFO]: time: 0.004054 sec. perf: 7672.372929 GFLOPS
+[INFO]: time: 0.004052 sec. perf: 7674.491513 GFLOPS
+[INFO]: Ops: 31.100240 gops
+[INFO]: AVERAGE perf: 7670.071644 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.936288 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2560
+[INFO]: n = 2560
+[INFO]: k = 2560
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.004840 sec. perf: 6932.155250 GFLOPS
+[INFO]: time: 0.004826 sec. perf: 6953.532705 GFLOPS
+[INFO]: time: 0.004827 sec. perf: 6951.226445 GFLOPS
+[INFO]: time: 0.004826 sec. perf: 6952.148189 GFLOPS
+[INFO]: time: 0.004828 sec. perf: 6950.535297 GFLOPS
+[INFO]: time: 0.004825 sec. perf: 6953.763271 GFLOPS
+[INFO]: time: 0.004824 sec. perf: 6955.376221 GFLOPS
+[INFO]: time: 0.004826 sec. perf: 6952.841099 GFLOPS
+[INFO]: time: 0.004827 sec. perf: 6950.997487 GFLOPS
+[INFO]: time: 0.004825 sec. perf: 6954.455061 GFLOPS
+[INFO]: Ops: 33.554432 gops
+[INFO]: AVERAGE perf: 6950.697272 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.848474 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2624
+[INFO]: n = 2624
+[INFO]: k = 2624
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.004960 sec. perf: 7284.818066 GFLOPS
+[INFO]: time: 0.004946 sec. perf: 7305.555409 GFLOPS
+[INFO]: time: 0.004947 sec. perf: 7304.846511 GFLOPS
+[INFO]: time: 0.004946 sec. perf: 7305.793216 GFLOPS
+[INFO]: time: 0.004947 sec. perf: 7303.665319 GFLOPS
+[INFO]: time: 0.004946 sec. perf: 7305.555409 GFLOPS
+[INFO]: time: 0.004948 sec. perf: 7303.192949 GFLOPS
+[INFO]: time: 0.004946 sec. perf: 7305.793216 GFLOPS
+[INFO]: time: 0.004947 sec. perf: 7304.139226 GFLOPS
+[INFO]: time: 0.004947 sec. perf: 7304.373988 GFLOPS
+[INFO]: Ops: 36.134453 gops
+[INFO]: AVERAGE perf: 7302.768311 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.891451 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2688
+[INFO]: n = 2688
+[INFO]: k = 2688
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.005085 sec. perf: 7639.487795 GFLOPS
+[INFO]: time: 0.005070 sec. perf: 7661.910420 GFLOPS
+[INFO]: time: 0.005070 sec. perf: 7662.155262 GFLOPS
+[INFO]: time: 0.005069 sec. perf: 7663.606497 GFLOPS
+[INFO]: time: 0.005068 sec. perf: 7664.332320 GFLOPS
+[INFO]: time: 0.005068 sec. perf: 7664.332320 GFLOPS
+[INFO]: time: 0.005070 sec. perf: 7660.703066 GFLOPS
+[INFO]: time: 0.005070 sec. perf: 7661.913443 GFLOPS
+[INFO]: time: 0.005068 sec. perf: 7663.848422 GFLOPS
+[INFO]: time: 0.005069 sec. perf: 7663.121179 GFLOPS
+[INFO]: Ops: 38.843449 gops
+[INFO]: AVERAGE perf: 7660.534460 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.935124 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2752
+[INFO]: n = 2752
+[INFO]: k = 2752
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.005923 sec. perf: 7037.998499 GFLOPS
+[INFO]: time: 0.005906 sec. perf: 7058.402222 GFLOPS
+[INFO]: time: 0.005909 sec. perf: 7054.769515 GFLOPS
+[INFO]: time: 0.005908 sec. perf: 7055.915904 GFLOPS
+[INFO]: time: 0.005907 sec. perf: 7056.298117 GFLOPS
+[INFO]: time: 0.005908 sec. perf: 7055.152797 GFLOPS
+[INFO]: time: 0.005909 sec. perf: 7054.387468 GFLOPS
+[INFO]: time: 0.005908 sec. perf: 7055.917099 GFLOPS
+[INFO]: time: 0.005910 sec. perf: 7052.668768 GFLOPS
+[INFO]: time: 0.005909 sec. perf: 7054.578486 GFLOPS
+[INFO]: Ops: 41.684566 gops
+[INFO]: AVERAGE perf: 7053.604759 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.861036 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2816
+[INFO]: n = 2816
+[INFO]: k = 2816
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.006064 sec. perf: 7365.050033 GFLOPS
+[INFO]: time: 0.006049 sec. perf: 7383.754464 GFLOPS
+[INFO]: time: 0.006047 sec. perf: 7385.902387 GFLOPS
+[INFO]: time: 0.006048 sec. perf: 7384.729971 GFLOPS
+[INFO]: time: 0.006048 sec. perf: 7384.534605 GFLOPS
+[INFO]: time: 0.006049 sec. perf: 7383.753243 GFLOPS
+[INFO]: time: 0.006048 sec. perf: 7383.948568 GFLOPS
+[INFO]: time: 0.006046 sec. perf: 7386.293275 GFLOPS
+[INFO]: time: 0.006049 sec. perf: 7383.753243 GFLOPS
+[INFO]: time: 0.006048 sec. perf: 7384.534605 GFLOPS
+[INFO]: Ops: 44.660949 gops
+[INFO]: AVERAGE perf: 7382.620684 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.901199 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2880
+[INFO]: n = 2880
+[INFO]: k = 2880
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.006202 sec. perf: 7703.701315 GFLOPS
+[INFO]: time: 0.006186 sec. perf: 7723.228377 GFLOPS
+[INFO]: time: 0.006185 sec. perf: 7724.026254 GFLOPS
+[INFO]: time: 0.006186 sec. perf: 7723.426895 GFLOPS
+[INFO]: time: 0.006186 sec. perf: 7722.629141 GFLOPS
+[INFO]: time: 0.006187 sec. perf: 7722.029998 GFLOPS
+[INFO]: time: 0.006186 sec. perf: 7722.830125 GFLOPS
+[INFO]: time: 0.006187 sec. perf: 7721.629373 GFLOPS
+[INFO]: time: 0.006184 sec. perf: 7725.226502 GFLOPS
+[INFO]: time: 0.006194 sec. perf: 7712.655548 GFLOPS
+[INFO]: Ops: 47.775744 gops
+[INFO]: AVERAGE perf: 7720.133076 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.942399 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 2944
+[INFO]: n = 2944
+[INFO]: k = 2944
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.007107 sec. perf: 7180.935936 GFLOPS
+[INFO]: time: 0.007091 sec. perf: 7196.815983 GFLOPS
+[INFO]: time: 0.007093 sec. perf: 7194.380968 GFLOPS
+[INFO]: time: 0.007094 sec. perf: 7193.892134 GFLOPS
+[INFO]: time: 0.007094 sec. perf: 7193.407423 GFLOPS
+[INFO]: time: 0.007095 sec. perf: 7192.920750 GFLOPS
+[INFO]: time: 0.007092 sec. perf: 7195.678423 GFLOPS
+[INFO]: time: 0.007093 sec. perf: 7194.218692 GFLOPS
+[INFO]: time: 0.007093 sec. perf: 7194.379954 GFLOPS
+[INFO]: time: 0.007092 sec. perf: 7195.354776 GFLOPS
+[INFO]: Ops: 51.032097 gops
+[INFO]: AVERAGE perf: 7193.196016 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.878076 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3008
+[INFO]: n = 3008
+[INFO]: k = 3008
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.007263 sec. perf: 7494.659937 GFLOPS
+[INFO]: time: 0.007249 sec. perf: 7508.885923 GFLOPS
+[INFO]: time: 0.007247 sec. perf: 7510.875239 GFLOPS
+[INFO]: time: 0.007247 sec. perf: 7511.042100 GFLOPS
+[INFO]: time: 0.007249 sec. perf: 7509.383153 GFLOPS
+[INFO]: time: 0.007249 sec. perf: 7509.545804 GFLOPS
+[INFO]: time: 0.007249 sec. perf: 7508.554473 GFLOPS
+[INFO]: time: 0.007246 sec. perf: 7511.705469 GFLOPS
+[INFO]: time: 0.007247 sec. perf: 7511.042100 GFLOPS
+[INFO]: time: 0.007249 sec. perf: 7509.051659 GFLOPS
+[INFO]: Ops: 54.433153 gops
+[INFO]: AVERAGE perf: 7508.471615 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.916561 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3072
+[INFO]: n = 3072
+[INFO]: k = 3072
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.007425 sec. perf: 7808.691756 GFLOPS
+[INFO]: time: 0.007410 sec. perf: 7825.214095 GFLOPS
+[INFO]: time: 0.007409 sec. perf: 7826.399202 GFLOPS
+[INFO]: time: 0.007413 sec. perf: 7821.837138 GFLOPS
+[INFO]: time: 0.007408 sec. perf: 7826.905253 GFLOPS
+[INFO]: time: 0.007409 sec. perf: 7825.553113 GFLOPS
+[INFO]: time: 0.007411 sec. perf: 7823.525780 GFLOPS
+[INFO]: time: 0.007408 sec. perf: 7826.906309 GFLOPS
+[INFO]: time: 0.007411 sec. perf: 7823.695740 GFLOPS
+[INFO]: time: 0.007409 sec. perf: 7826.061167 GFLOPS
+[INFO]: Ops: 57.982058 gops
+[INFO]: AVERAGE perf: 7823.475532 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.955014 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3136
+[INFO]: n = 3136
+[INFO]: k = 3136
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.008393 sec. perf: 7348.804917 GFLOPS
+[INFO]: time: 0.008377 sec. perf: 7362.982672 GFLOPS
+[INFO]: time: 0.008377 sec. perf: 7363.262179 GFLOPS
+[INFO]: time: 0.008376 sec. perf: 7364.387454 GFLOPS
+[INFO]: time: 0.008377 sec. perf: 7363.403698 GFLOPS
+[INFO]: time: 0.008377 sec. perf: 7363.402819 GFLOPS
+[INFO]: time: 0.008378 sec. perf: 7362.559935 GFLOPS
+[INFO]: time: 0.008378 sec. perf: 7362.278724 GFLOPS
+[INFO]: time: 0.008379 sec. perf: 7361.716365 GFLOPS
+[INFO]: time: 0.008377 sec. perf: 7363.262179 GFLOPS
+[INFO]: Ops: 61.681959 gops
+[INFO]: AVERAGE perf: 7361.603553 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.898633 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3200
+[INFO]: n = 3200
+[INFO]: k = 3200
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.008566 sec. perf: 7650.905043 GFLOPS
+[INFO]: time: 0.008552 sec. perf: 7663.359434 GFLOPS
+[INFO]: time: 0.008551 sec. perf: 7663.932984 GFLOPS
+[INFO]: time: 0.008552 sec. perf: 7663.216060 GFLOPS
+[INFO]: time: 0.008552 sec. perf: 7663.647094 GFLOPS
+[INFO]: time: 0.008552 sec. perf: 7662.929328 GFLOPS
+[INFO]: time: 0.008550 sec. perf: 7664.649145 GFLOPS
+[INFO]: time: 0.008552 sec. perf: 7663.644406 GFLOPS
+[INFO]: time: 0.008551 sec. perf: 7663.787796 GFLOPS
+[INFO]: time: 0.008551 sec. perf: 7664.076384 GFLOPS
+[INFO]: Ops: 65.536000 gops
+[INFO]: AVERAGE perf: 7662.412817 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.935353 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3264
+[INFO]: n = 3264
+[INFO]: k = 3264
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.009585 sec. perf: 7255.509912 GFLOPS
+[INFO]: time: 0.009571 sec. perf: 7266.426096 GFLOPS
+[INFO]: time: 0.009569 sec. perf: 7267.762550 GFLOPS
+[INFO]: time: 0.009575 sec. perf: 7263.268401 GFLOPS
+[INFO]: time: 0.009573 sec. perf: 7264.603693 GFLOPS
+[INFO]: time: 0.009571 sec. perf: 7266.669051 GFLOPS
+[INFO]: time: 0.009574 sec. perf: 7264.362394 GFLOPS
+[INFO]: time: 0.009574 sec. perf: 7264.362394 GFLOPS
+[INFO]: time: 0.009574 sec. perf: 7264.362394 GFLOPS
+[INFO]: time: 0.009574 sec. perf: 7263.876050 GFLOPS
+[INFO]: Ops: 69.547327 gops
+[INFO]: AVERAGE perf: 7264.118910 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.886733 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3328
+[INFO]: n = 3328
+[INFO]: k = 3328
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.009780 sec. perf: 7537.858433 GFLOPS
+[INFO]: time: 0.009765 sec. perf: 7549.097349 GFLOPS
+[INFO]: time: 0.009765 sec. perf: 7549.590590 GFLOPS
+[INFO]: time: 0.009764 sec. perf: 7550.458170 GFLOPS
+[INFO]: time: 0.009767 sec. perf: 7547.984314 GFLOPS
+[INFO]: time: 0.009764 sec. perf: 7550.334439 GFLOPS
+[INFO]: time: 0.009765 sec. perf: 7549.095803 GFLOPS
+[INFO]: time: 0.009764 sec. perf: 7549.961723 GFLOPS
+[INFO]: time: 0.009765 sec. perf: 7549.343961 GFLOPS
+[INFO]: time: 0.009766 sec. perf: 7548.230081 GFLOPS
+[INFO]: Ops: 73.719087 gops
+[INFO]: AVERAGE perf: 7548.193834 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.921410 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3392
+[INFO]: n = 3392
+[INFO]: k = 3392
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.010075 sec. perf: 7747.428166 GFLOPS
+[INFO]: time: 0.009955 sec. perf: 7841.068352 GFLOPS
+[INFO]: time: 0.009955 sec. perf: 7840.439041 GFLOPS
+[INFO]: time: 0.009956 sec. perf: 7839.809045 GFLOPS
+[INFO]: time: 0.009954 sec. perf: 7841.195171 GFLOPS
+[INFO]: time: 0.009956 sec. perf: 7839.808257 GFLOPS
+[INFO]: time: 0.009955 sec. perf: 7840.816300 GFLOPS
+[INFO]: time: 0.009956 sec. perf: 7840.061031 GFLOPS
+[INFO]: time: 0.009956 sec. perf: 7839.935036 GFLOPS
+[INFO]: time: 0.009956 sec. perf: 7840.059456 GFLOPS
+[INFO]: Ops: 78.054425 gops
+[INFO]: AVERAGE perf: 7830.961761 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.955928 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3456
+[INFO]: n = 3456
+[INFO]: k = 3456
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.011058 sec. perf: 7465.834227 GFLOPS
+[INFO]: time: 0.011043 sec. perf: 7475.676813 GFLOPS
+[INFO]: time: 0.011046 sec. perf: 7473.620837 GFLOPS
+[INFO]: time: 0.011044 sec. perf: 7475.460199 GFLOPS
+[INFO]: time: 0.011043 sec. perf: 7475.678844 GFLOPS
+[INFO]: time: 0.011045 sec. perf: 7474.702824 GFLOPS
+[INFO]: time: 0.011045 sec. perf: 7474.703501 GFLOPS
+[INFO]: time: 0.011046 sec. perf: 7474.052511 GFLOPS
+[INFO]: time: 0.011046 sec. perf: 7474.053188 GFLOPS
+[INFO]: time: 0.011046 sec. perf: 7473.727736 GFLOPS
+[INFO]: Ops: 82.556486 gops
+[INFO]: AVERAGE perf: 7473.750063 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.912323 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3520
+[INFO]: n = 3520
+[INFO]: k = 3520
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.011266 sec. perf: 7742.913902 GFLOPS
+[INFO]: time: 0.011252 sec. perf: 7751.941886 GFLOPS
+[INFO]: time: 0.011251 sec. perf: 7752.713543 GFLOPS
+[INFO]: time: 0.011251 sec. perf: 7753.155248 GFLOPS
+[INFO]: time: 0.011253 sec. perf: 7751.831662 GFLOPS
+[INFO]: time: 0.011252 sec. perf: 7752.492365 GFLOPS
+[INFO]: time: 0.011253 sec. perf: 7751.611223 GFLOPS
+[INFO]: time: 0.011249 sec. perf: 7754.037431 GFLOPS
+[INFO]: time: 0.011253 sec. perf: 7751.611223 GFLOPS
+[INFO]: time: 0.011252 sec. perf: 7752.272578 GFLOPS
+[INFO]: Ops: 87.228416 gops
+[INFO]: AVERAGE perf: 7751.456992 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.946223 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3584
+[INFO]: n = 3584
+[INFO]: k = 3584
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.012409 sec. perf: 7419.645315 GFLOPS
+[INFO]: time: 0.012394 sec. perf: 7428.743420 GFLOPS
+[INFO]: time: 0.012394 sec. perf: 7429.032328 GFLOPS
+[INFO]: time: 0.012395 sec. perf: 7428.168666 GFLOPS
+[INFO]: time: 0.012396 sec. perf: 7427.784548 GFLOPS
+[INFO]: time: 0.012395 sec. perf: 7428.168666 GFLOPS
+[INFO]: time: 0.012393 sec. perf: 7429.511895 GFLOPS
+[INFO]: time: 0.012393 sec. perf: 7429.318862 GFLOPS
+[INFO]: time: 0.012391 sec. perf: 7430.566558 GFLOPS
+[INFO]: time: 0.012393 sec. perf: 7429.702539 GFLOPS
+[INFO]: Ops: 92.073361 gops
+[INFO]: AVERAGE perf: 7428.063134 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.906746 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3648
+[INFO]: n = 3648
+[INFO]: k = 3648
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.012632 sec. perf: 7686.412868 GFLOPS
+[INFO]: time: 0.012615 sec. perf: 7696.746721 GFLOPS
+[INFO]: time: 0.012617 sec. perf: 7695.673048 GFLOPS
+[INFO]: time: 0.012622 sec. perf: 7692.746981 GFLOPS
+[INFO]: time: 0.012618 sec. perf: 7695.086925 GFLOPS
+[INFO]: time: 0.012617 sec. perf: 7695.673048 GFLOPS
+[INFO]: time: 0.012617 sec. perf: 7695.770033 GFLOPS
+[INFO]: time: 0.012616 sec. perf: 7695.965838 GFLOPS
+[INFO]: time: 0.012617 sec. perf: 7695.380280 GFLOPS
+[INFO]: time: 0.012618 sec. perf: 7695.185724 GFLOPS
+[INFO]: Ops: 97.094468 gops
+[INFO]: AVERAGE perf: 7694.463085 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.939266 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3712
+[INFO]: n = 3712
+[INFO]: k = 3712
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.013823 sec. perf: 7400.177444 GFLOPS
+[INFO]: time: 0.013808 sec. perf: 7408.495272 GFLOPS
+[INFO]: time: 0.013809 sec. perf: 7407.808558 GFLOPS
+[INFO]: time: 0.013809 sec. perf: 7407.636363 GFLOPS
+[INFO]: time: 0.013803 sec. perf: 7410.899774 GFLOPS
+[INFO]: time: 0.013806 sec. perf: 7409.267977 GFLOPS
+[INFO]: time: 0.013809 sec. perf: 7407.894390 GFLOPS
+[INFO]: time: 0.013806 sec. perf: 7409.353307 GFLOPS
+[INFO]: time: 0.013808 sec. perf: 7408.324118 GFLOPS
+[INFO]: time: 0.013808 sec. perf: 7408.151363 GFLOPS
+[INFO]: Ops: 102.294880 gops
+[INFO]: AVERAGE perf: 7407.799868 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.904272 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3776
+[INFO]: n = 3776
+[INFO]: k = 3776
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.014061 sec. perf: 7657.695082 GFLOPS
+[INFO]: time: 0.014050 sec. perf: 7663.711541 GFLOPS
+[INFO]: time: 0.014050 sec. perf: 7663.711541 GFLOPS
+[INFO]: time: 0.014047 sec. perf: 7665.370058 GFLOPS
+[INFO]: time: 0.014048 sec. perf: 7664.846784 GFLOPS
+[INFO]: time: 0.014046 sec. perf: 7665.806629 GFLOPS
+[INFO]: time: 0.014050 sec. perf: 7663.886088 GFLOPS
+[INFO]: time: 0.014048 sec. perf: 7664.846784 GFLOPS
+[INFO]: time: 0.014050 sec. perf: 7663.884997 GFLOPS
+[INFO]: time: 0.014048 sec. perf: 7665.194352 GFLOPS
+[INFO]: Ops: 107.677745 gops
+[INFO]: AVERAGE perf: 7663.894761 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.935534 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3840
+[INFO]: n = 3840
+[INFO]: k = 3840
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.015306 sec. perf: 7398.888307 GFLOPS
+[INFO]: time: 0.015284 sec. perf: 7409.345051 GFLOPS
+[INFO]: time: 0.015282 sec. perf: 7410.276412 GFLOPS
+[INFO]: time: 0.015283 sec. perf: 7410.043671 GFLOPS
+[INFO]: time: 0.015289 sec. perf: 7406.864343 GFLOPS
+[INFO]: time: 0.015287 sec. perf: 7408.027195 GFLOPS
+[INFO]: time: 0.015291 sec. perf: 7406.166322 GFLOPS
+[INFO]: time: 0.015289 sec. perf: 7406.941370 GFLOPS
+[INFO]: time: 0.015283 sec. perf: 7410.120764 GFLOPS
+[INFO]: time: 0.015284 sec. perf: 7409.267973 GFLOPS
+[INFO]: Ops: 113.246208 gops
+[INFO]: AVERAGE perf: 7407.592730 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.904247 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3904
+[INFO]: n = 3904
+[INFO]: k = 3904
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.015564 sec. perf: 7645.952354 GFLOPS
+[INFO]: time: 0.015547 sec. perf: 7654.214787 GFLOPS
+[INFO]: time: 0.015547 sec. perf: 7654.215771 GFLOPS
+[INFO]: time: 0.015547 sec. perf: 7654.609150 GFLOPS
+[INFO]: time: 0.015547 sec. perf: 7654.293065 GFLOPS
+[INFO]: time: 0.015547 sec. perf: 7654.372330 GFLOPS
+[INFO]: time: 0.015550 sec. perf: 7652.718938 GFLOPS
+[INFO]: time: 0.015548 sec. perf: 7653.978484 GFLOPS
+[INFO]: time: 0.015547 sec. perf: 7654.372330 GFLOPS
+[INFO]: time: 0.015550 sec. perf: 7653.033416 GFLOPS
+[INFO]: Ops: 119.003415 gops
+[INFO]: AVERAGE perf: 7653.175260 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.934225 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 3968
+[INFO]: n = 3968
+[INFO]: k = 3968
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.016847 sec. perf: 7416.928829 GFLOPS
+[INFO]: time: 0.016829 sec. perf: 7424.615696 GFLOPS
+[INFO]: time: 0.016831 sec. perf: 7424.121181 GFLOPS
+[INFO]: time: 0.016831 sec. perf: 7423.838883 GFLOPS
+[INFO]: time: 0.016833 sec. perf: 7423.274350 GFLOPS
+[INFO]: time: 0.016830 sec. perf: 7424.261897 GFLOPS
+[INFO]: time: 0.016830 sec. perf: 7424.261456 GFLOPS
+[INFO]: time: 0.016830 sec. perf: 7424.261897 GFLOPS
+[INFO]: time: 0.016831 sec. perf: 7423.980029 GFLOPS
+[INFO]: time: 0.016830 sec. perf: 7424.543787 GFLOPS
+[INFO]: Ops: 124.952510 gops
+[INFO]: AVERAGE perf: 7423.408154 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.906178 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4032
+[INFO]: n = 4032
+[INFO]: k = 4032
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.017131 sec. perf: 7652.771357 GFLOPS
+[INFO]: time: 0.017118 sec. perf: 7658.422204 GFLOPS
+[INFO]: time: 0.017117 sec. perf: 7658.779686 GFLOPS
+[INFO]: time: 0.017117 sec. perf: 7658.994460 GFLOPS
+[INFO]: time: 0.017118 sec. perf: 7658.350622 GFLOPS
+[INFO]: time: 0.017118 sec. perf: 7658.421309 GFLOPS
+[INFO]: time: 0.017117 sec. perf: 7658.707203 GFLOPS
+[INFO]: time: 0.017119 sec. perf: 7657.991838 GFLOPS
+[INFO]: time: 0.017120 sec. perf: 7657.563310 GFLOPS
+[INFO]: time: 0.017115 sec. perf: 7659.638405 GFLOPS
+[INFO]: Ops: 131.096642 gops
+[INFO]: AVERAGE perf: 7657.963611 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.934810 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4096
+[INFO]: n = 4096
+[INFO]: k = 4096
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.017414 sec. perf: 7892.310117 GFLOPS
+[INFO]: time: 0.017397 sec. perf: 7900.003579 GFLOPS
+[INFO]: time: 0.017397 sec. perf: 7900.148438 GFLOPS
+[INFO]: time: 0.017397 sec. perf: 7900.004033 GFLOPS
+[INFO]: time: 0.017398 sec. perf: 7899.495028 GFLOPS
+[INFO]: time: 0.017395 sec. perf: 7900.875988 GFLOPS
+[INFO]: time: 0.017399 sec. perf: 7899.131363 GFLOPS
+[INFO]: time: 0.017395 sec. perf: 7901.020424 GFLOPS
+[INFO]: time: 0.017398 sec. perf: 7899.567674 GFLOPS
+[INFO]: time: 0.017396 sec. perf: 7900.729287 GFLOPS
+[INFO]: Ops: 137.438953 gops
+[INFO]: AVERAGE perf: 7899.327856 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.964273 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4160
+[INFO]: n = 4160
+[INFO]: k = 4160
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.018766 sec. perf: 7672.481014 GFLOPS
+[INFO]: time: 0.018754 sec. perf: 7677.326466 GFLOPS
+[INFO]: time: 0.018753 sec. perf: 7677.784162 GFLOPS
+[INFO]: time: 0.018753 sec. perf: 7677.849669 GFLOPS
+[INFO]: time: 0.018751 sec. perf: 7678.569907 GFLOPS
+[INFO]: time: 0.018750 sec. perf: 7679.094099 GFLOPS
+[INFO]: time: 0.018751 sec. perf: 7678.700948 GFLOPS
+[INFO]: time: 0.018754 sec. perf: 7677.456646 GFLOPS
+[INFO]: time: 0.018753 sec. perf: 7677.718657 GFLOPS
+[INFO]: time: 0.018749 sec. perf: 7679.357041 GFLOPS
+[INFO]: Ops: 143.982592 gops
+[INFO]: AVERAGE perf: 7677.633420 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.937211 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4224
+[INFO]: n = 4224
+[INFO]: k = 4224
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.020146 sec. perf: 7481.885208 GFLOPS
+[INFO]: time: 0.020132 sec. perf: 7486.939782 GFLOPS
+[INFO]: time: 0.020130 sec. perf: 7487.832780 GFLOPS
+[INFO]: time: 0.020131 sec. perf: 7487.534843 GFLOPS
+[INFO]: time: 0.020131 sec. perf: 7487.534843 GFLOPS
+[INFO]: time: 0.020131 sec. perf: 7487.357058 GFLOPS
+[INFO]: time: 0.020130 sec. perf: 7487.832780 GFLOPS
+[INFO]: time: 0.020129 sec. perf: 7488.249413 GFLOPS
+[INFO]: time: 0.020129 sec. perf: 7488.368831 GFLOPS
+[INFO]: time: 0.020131 sec. perf: 7487.654610 GFLOPS
+[INFO]: Ops: 150.730703 gops
+[INFO]: AVERAGE perf: 7487.118587 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.913955 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4288
+[INFO]: n = 4288
+[INFO]: k = 4288
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.020464 sec. perf: 7705.371274 GFLOPS
+[INFO]: time: 0.020451 sec. perf: 7710.617566 GFLOPS
+[INFO]: time: 0.020446 sec. perf: 7712.367037 GFLOPS
+[INFO]: time: 0.020451 sec. perf: 7710.496539 GFLOPS
+[INFO]: time: 0.020450 sec. perf: 7710.797794 GFLOPS
+[INFO]: time: 0.020450 sec. perf: 7710.918453 GFLOPS
+[INFO]: time: 0.020452 sec. perf: 7710.194930 GFLOPS
+[INFO]: time: 0.020451 sec. perf: 7710.375516 GFLOPS
+[INFO]: time: 0.020452 sec. perf: 7710.074294 GFLOPS
+[INFO]: time: 0.020452 sec. perf: 7710.073917 GFLOPS
+[INFO]: Ops: 157.686432 gops
+[INFO]: AVERAGE perf: 7710.128354 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.941178 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4352
+[INFO]: n = 4352
+[INFO]: k = 4352
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.021898 sec. perf: 7528.197677 GFLOPS
+[INFO]: time: 0.021892 sec. perf: 7530.398536 GFLOPS
+[INFO]: time: 0.021884 sec. perf: 7533.041611 GFLOPS
+[INFO]: time: 0.021892 sec. perf: 7530.178392 GFLOPS
+[INFO]: time: 0.021891 sec. perf: 7530.618693 GFLOPS
+[INFO]: time: 0.021885 sec. perf: 7532.820280 GFLOPS
+[INFO]: time: 0.021892 sec. perf: 7530.453230 GFLOPS
+[INFO]: time: 0.021885 sec. perf: 7532.765551 GFLOPS
+[INFO]: time: 0.021888 sec. perf: 7531.609213 GFLOPS
+[INFO]: time: 0.021892 sec. perf: 7530.343155 GFLOPS
+[INFO]: Ops: 164.852924 gops
+[INFO]: AVERAGE perf: 7531.042359 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.919317 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4416
+[INFO]: n = 4416
+[INFO]: k = 4416
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.022233 sec. perf: 7746.654025 GFLOPS
+[INFO]: time: 0.022218 sec. perf: 7751.842432 GFLOPS
+[INFO]: time: 0.022219 sec. perf: 7751.507858 GFLOPS
+[INFO]: time: 0.022219 sec. perf: 7751.508207 GFLOPS
+[INFO]: time: 0.022220 sec. perf: 7751.396223 GFLOPS
+[INFO]: time: 0.022222 sec. perf: 7750.447110 GFLOPS
+[INFO]: time: 0.022222 sec. perf: 7750.726483 GFLOPS
+[INFO]: time: 0.022217 sec. perf: 7752.344871 GFLOPS
+[INFO]: time: 0.022218 sec. perf: 7751.898604 GFLOPS
+[INFO]: time: 0.022219 sec. perf: 7751.619496 GFLOPS
+[INFO]: Ops: 172.233327 gops
+[INFO]: AVERAGE perf: 7750.994226 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.946166 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4480
+[INFO]: n = 4480
+[INFO]: k = 4480
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.023722 sec. perf: 7580.647954 GFLOPS
+[INFO]: time: 0.023709 sec. perf: 7584.945238 GFLOPS
+[INFO]: time: 0.023711 sec. perf: 7584.433721 GFLOPS
+[INFO]: time: 0.023711 sec. perf: 7584.433081 GFLOPS
+[INFO]: time: 0.023714 sec. perf: 7583.461421 GFLOPS
+[INFO]: time: 0.023714 sec. perf: 7583.461101 GFLOPS
+[INFO]: time: 0.023713 sec. perf: 7583.563117 GFLOPS
+[INFO]: time: 0.023711 sec. perf: 7584.125692 GFLOPS
+[INFO]: time: 0.023705 sec. perf: 7586.327222 GFLOPS
+[INFO]: time: 0.023707 sec. perf: 7585.508018 GFLOPS
+[INFO]: Ops: 179.830784 gops
+[INFO]: AVERAGE perf: 7584.090381 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.925792 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4544
+[INFO]: n = 4544
+[INFO]: k = 4544
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.024071 sec. perf: 7795.679075 GFLOPS
+[INFO]: time: 0.024056 sec. perf: 7800.502128 GFLOPS
+[INFO]: time: 0.024057 sec. perf: 7800.191170 GFLOPS
+[INFO]: time: 0.024056 sec. perf: 7800.605894 GFLOPS
+[INFO]: time: 0.024054 sec. perf: 7801.125415 GFLOPS
+[INFO]: time: 0.024055 sec. perf: 7800.969422 GFLOPS
+[INFO]: time: 0.024057 sec. perf: 7800.191170 GFLOPS
+[INFO]: time: 0.024052 sec. perf: 7801.644033 GFLOPS
+[INFO]: time: 0.024056 sec. perf: 7800.398365 GFLOPS
+[INFO]: time: 0.024054 sec. perf: 7801.280766 GFLOPS
+[INFO]: Ops: 187.648442 gops
+[INFO]: AVERAGE perf: 7800.258418 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.952180 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4608
+[INFO]: n = 4608
+[INFO]: k = 4608
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.025615 sec. perf: 7639.607792 GFLOPS
+[INFO]: time: 0.025599 sec. perf: 7644.334634 GFLOPS
+[INFO]: time: 0.025599 sec. perf: 7644.382413 GFLOPS
+[INFO]: time: 0.025598 sec. perf: 7644.668799 GFLOPS
+[INFO]: time: 0.025596 sec. perf: 7645.289426 GFLOPS
+[INFO]: time: 0.025597 sec. perf: 7645.098568 GFLOPS
+[INFO]: time: 0.025595 sec. perf: 7645.528087 GFLOPS
+[INFO]: time: 0.025599 sec. perf: 7644.285960 GFLOPS
+[INFO]: time: 0.025601 sec. perf: 7643.808212 GFLOPS
+[INFO]: time: 0.025600 sec. perf: 7644.237585 GFLOPS
+[INFO]: Ops: 195.689447 gops
+[INFO]: AVERAGE perf: 7644.123818 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.933121 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4672
+[INFO]: n = 4672
+[INFO]: k = 4672
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.025973 sec. perf: 7852.544625 GFLOPS
+[INFO]: time: 0.025961 sec. perf: 7856.367946 GFLOPS
+[INFO]: time: 0.025960 sec. perf: 7856.562539 GFLOPS
+[INFO]: time: 0.025959 sec. perf: 7856.804356 GFLOPS
+[INFO]: time: 0.025962 sec. perf: 7855.933098 GFLOPS
+[INFO]: time: 0.025961 sec. perf: 7856.368551 GFLOPS
+[INFO]: time: 0.025960 sec. perf: 7856.658477 GFLOPS
+[INFO]: time: 0.025955 sec. perf: 7857.966132 GFLOPS
+[INFO]: time: 0.025962 sec. perf: 7855.883776 GFLOPS
+[INFO]: time: 0.025958 sec. perf: 7857.094616 GFLOPS
+[INFO]: Ops: 203.956945 gops
+[INFO]: AVERAGE perf: 7856.218180 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.959011 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4736
+[INFO]: n = 4736
+[INFO]: k = 4736
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.027567 sec. perf: 7706.889759 GFLOPS
+[INFO]: time: 0.027552 sec. perf: 7710.917975 GFLOPS
+[INFO]: time: 0.027550 sec. perf: 7711.679280 GFLOPS
+[INFO]: time: 0.027556 sec. perf: 7709.932700 GFLOPS
+[INFO]: time: 0.027554 sec. perf: 7710.336182 GFLOPS
+[INFO]: time: 0.027553 sec. perf: 7710.694090 GFLOPS
+[INFO]: time: 0.027551 sec. perf: 7711.231436 GFLOPS
+[INFO]: time: 0.027553 sec. perf: 7710.828420 GFLOPS
+[INFO]: time: 0.027552 sec. perf: 7711.052312 GFLOPS
+[INFO]: time: 0.027550 sec. perf: 7711.499856 GFLOPS
+[INFO]: Ops: 212.454081 gops
+[INFO]: AVERAGE perf: 7710.505981 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.941224 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4800
+[INFO]: n = 4800
+[INFO]: k = 4800
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.027947 sec. perf: 7914.340036 GFLOPS
+[INFO]: time: 0.027933 sec. perf: 7918.375547 GFLOPS
+[INFO]: time: 0.027931 sec. perf: 7918.828570 GFLOPS
+[INFO]: time: 0.027933 sec. perf: 7918.420620 GFLOPS
+[INFO]: time: 0.027932 sec. perf: 7918.783492 GFLOPS
+[INFO]: time: 0.027933 sec. perf: 7918.374980 GFLOPS
+[INFO]: time: 0.027930 sec. perf: 7919.191763 GFLOPS
+[INFO]: time: 0.027935 sec. perf: 7917.830741 GFLOPS
+[INFO]: time: 0.027931 sec. perf: 7919.055668 GFLOPS
+[INFO]: time: 0.027933 sec. perf: 7918.284269 GFLOPS
+[INFO]: Ops: 221.184000 gops
+[INFO]: AVERAGE perf: 7918.148347 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.966571 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4864
+[INFO]: n = 4864
+[INFO]: k = 4864
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.029590 sec. perf: 7777.976463 GFLOPS
+[INFO]: time: 0.029576 sec. perf: 7781.637443 GFLOPS
+[INFO]: time: 0.029573 sec. perf: 7782.311054 GFLOPS
+[INFO]: time: 0.029573 sec. perf: 7782.521055 GFLOPS
+[INFO]: time: 0.029572 sec. perf: 7782.563424 GFLOPS
+[INFO]: time: 0.029575 sec. perf: 7781.847408 GFLOPS
+[INFO]: time: 0.029573 sec. perf: 7782.449737 GFLOPS
+[INFO]: time: 0.029574 sec. perf: 7782.184480 GFLOPS
+[INFO]: time: 0.029576 sec. perf: 7781.720586 GFLOPS
+[INFO]: time: 0.029573 sec. perf: 7782.478948 GFLOPS
+[INFO]: Ops: 230.149849 gops
+[INFO]: AVERAGE perf: 7781.768841 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.949923 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4928
+[INFO]: n = 4928
+[INFO]: k = 4928
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.031266 sec. perf: 7655.454227 GFLOPS
+[INFO]: time: 0.031248 sec. perf: 7659.804742 GFLOPS
+[INFO]: time: 0.031243 sec. perf: 7661.021016 GFLOPS
+[INFO]: time: 0.031249 sec. perf: 7659.491726 GFLOPS
+[INFO]: time: 0.031243 sec. perf: 7660.982028 GFLOPS
+[INFO]: time: 0.031243 sec. perf: 7660.982028 GFLOPS
+[INFO]: time: 0.031250 sec. perf: 7659.334370 GFLOPS
+[INFO]: time: 0.031249 sec. perf: 7659.687572 GFLOPS
+[INFO]: time: 0.031249 sec. perf: 7659.687572 GFLOPS
+[INFO]: time: 0.031242 sec. perf: 7661.295411 GFLOPS
+[INFO]: Ops: 239.354774 gops
+[INFO]: AVERAGE perf: 7659.773733 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.935031 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 4992
+[INFO]: n = 4992
+[INFO]: k = 4992
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.031679 sec. perf: 7853.795991 GFLOPS
+[INFO]: time: 0.031666 sec. perf: 7857.090448 GFLOPS
+[INFO]: time: 0.031665 sec. perf: 7857.368605 GFLOPS
+[INFO]: time: 0.031665 sec. perf: 7857.407812 GFLOPS
+[INFO]: time: 0.031661 sec. perf: 7858.201458 GFLOPS
+[INFO]: time: 0.031665 sec. perf: 7857.367861 GFLOPS
+[INFO]: time: 0.031665 sec. perf: 7857.209301 GFLOPS
+[INFO]: time: 0.031664 sec. perf: 7857.685495 GFLOPS
+[INFO]: time: 0.031664 sec. perf: 7857.606084 GFLOPS
+[INFO]: time: 0.031664 sec. perf: 7857.606084 GFLOPS
+[INFO]: Ops: 248.801919 gops
+[INFO]: AVERAGE perf: 7857.133746 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.959123 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5056
+[INFO]: n = 5056
+[INFO]: k = 5056
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.033406 sec. perf: 7737.879630 GFLOPS
+[INFO]: time: 0.033392 sec. perf: 7741.253617 GFLOPS
+[INFO]: time: 0.033393 sec. perf: 7741.067925 GFLOPS
+[INFO]: time: 0.033387 sec. perf: 7742.439614 GFLOPS
+[INFO]: time: 0.033392 sec. perf: 7741.289551 GFLOPS
+[INFO]: time: 0.033389 sec. perf: 7741.846454 GFLOPS
+[INFO]: time: 0.033390 sec. perf: 7741.771562 GFLOPS
+[INFO]: time: 0.033391 sec. perf: 7741.438159 GFLOPS
+[INFO]: time: 0.033394 sec. perf: 7740.807832 GFLOPS
+[INFO]: time: 0.033390 sec. perf: 7741.623637 GFLOPS
+[INFO]: Ops: 258.494431 gops
+[INFO]: AVERAGE perf: 7741.141621 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.944964 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5120
+[INFO]: n = 5120
+[INFO]: k = 5120
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.033844 sec. perf: 7931.561907 GFLOPS
+[INFO]: time: 0.033830 sec. perf: 7934.825027 GFLOPS
+[INFO]: time: 0.033826 sec. perf: 7935.838880 GFLOPS
+[INFO]: time: 0.033831 sec. perf: 7934.712914 GFLOPS
+[INFO]: time: 0.033831 sec. perf: 7934.637861 GFLOPS
+[INFO]: time: 0.033824 sec. perf: 7936.176733 GFLOPS
+[INFO]: time: 0.033828 sec. perf: 7935.200324 GFLOPS
+[INFO]: time: 0.033830 sec. perf: 7934.825027 GFLOPS
+[INFO]: time: 0.033827 sec. perf: 7935.425754 GFLOPS
+[INFO]: time: 0.033829 sec. perf: 7935.012906 GFLOPS
+[INFO]: Ops: 268.435456 gops
+[INFO]: AVERAGE perf: 7934.821556 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.968606 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5184
+[INFO]: n = 5184
+[INFO]: k = 5184
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.035614 sec. perf: 7823.589171 GFLOPS
+[INFO]: time: 0.035599 sec. perf: 7826.754477 GFLOPS
+[INFO]: time: 0.035598 sec. perf: 7827.000064 GFLOPS
+[INFO]: time: 0.035599 sec. perf: 7826.754037 GFLOPS
+[INFO]: time: 0.035597 sec. perf: 7827.351871 GFLOPS
+[INFO]: time: 0.035599 sec. perf: 7826.823512 GFLOPS
+[INFO]: time: 0.035596 sec. perf: 7827.421797 GFLOPS
+[INFO]: time: 0.035597 sec. perf: 7827.210705 GFLOPS
+[INFO]: time: 0.035598 sec. perf: 7826.964445 GFLOPS
+[INFO]: time: 0.035599 sec. perf: 7826.929046 GFLOPS
+[INFO]: Ops: 278.628139 gops
+[INFO]: AVERAGE perf: 7826.679770 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.955405 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5248
+[INFO]: n = 5248
+[INFO]: k = 5248
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.037424 sec. perf: 7724.423469 GFLOPS
+[INFO]: time: 0.037405 sec. perf: 7728.222160 GFLOPS
+[INFO]: time: 0.037408 sec. perf: 7727.561896 GFLOPS
+[INFO]: time: 0.037403 sec. perf: 7728.651929 GFLOPS
+[INFO]: time: 0.037405 sec. perf: 7728.256044 GFLOPS
+[INFO]: time: 0.037410 sec. perf: 7727.165090 GFLOPS
+[INFO]: time: 0.037405 sec. perf: 7728.289102 GFLOPS
+[INFO]: time: 0.037409 sec. perf: 7727.528432 GFLOPS
+[INFO]: time: 0.037408 sec. perf: 7727.628000 GFLOPS
+[INFO]: time: 0.037406 sec. perf: 7727.958330 GFLOPS
+[INFO]: Ops: 289.075626 gops
+[INFO]: AVERAGE perf: 7727.568279 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.943307 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5312
+[INFO]: n = 5312
+[INFO]: k = 5312
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.037889 sec. perf: 7912.115982 GFLOPS
+[INFO]: time: 0.037874 sec. perf: 7915.224718 GFLOPS
+[INFO]: time: 0.037873 sec. perf: 7915.492650 GFLOPS
+[INFO]: time: 0.037872 sec. perf: 7915.726740 GFLOPS
+[INFO]: time: 0.037873 sec. perf: 7915.492441 GFLOPS
+[INFO]: time: 0.037874 sec. perf: 7915.291386 GFLOPS
+[INFO]: time: 0.037876 sec. perf: 7914.823480 GFLOPS
+[INFO]: time: 0.037872 sec. perf: 7915.559113 GFLOPS
+[INFO]: time: 0.037872 sec. perf: 7915.559113 GFLOPS
+[INFO]: time: 0.037872 sec. perf: 7915.692880 GFLOPS
+[INFO]: Ops: 299.781063 gops
+[INFO]: AVERAGE perf: 7915.097718 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.966198 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5376
+[INFO]: n = 5376
+[INFO]: k = 5376
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.039750 sec. perf: 7817.496650 GFLOPS
+[INFO]: time: 0.039735 sec. perf: 7820.487696 GFLOPS
+[INFO]: time: 0.039736 sec. perf: 7820.297773 GFLOPS
+[INFO]: time: 0.039734 sec. perf: 7820.613070 GFLOPS
+[INFO]: time: 0.039735 sec. perf: 7820.581381 GFLOPS
+[INFO]: time: 0.039735 sec. perf: 7820.518596 GFLOPS
+[INFO]: time: 0.039735 sec. perf: 7820.455615 GFLOPS
+[INFO]: time: 0.039738 sec. perf: 7819.919727 GFLOPS
+[INFO]: time: 0.039735 sec. perf: 7820.423535 GFLOPS
+[INFO]: time: 0.039732 sec. perf: 7821.053189 GFLOPS
+[INFO]: Ops: 310.747595 gops
+[INFO]: AVERAGE perf: 7820.184611 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.954612 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5440
+[INFO]: n = 5440
+[INFO]: k = 5440
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.041644 sec. perf: 7731.685756 GFLOPS
+[INFO]: time: 0.041631 sec. perf: 7734.182780 GFLOPS
+[INFO]: time: 0.041624 sec. perf: 7735.371034 GFLOPS
+[INFO]: time: 0.041629 sec. perf: 7734.478741 GFLOPS
+[INFO]: time: 0.041631 sec. perf: 7734.122401 GFLOPS
+[INFO]: time: 0.041621 sec. perf: 7735.906472 GFLOPS
+[INFO]: time: 0.041629 sec. perf: 7734.449385 GFLOPS
+[INFO]: time: 0.041626 sec. perf: 7734.984324 GFLOPS
+[INFO]: time: 0.041626 sec. perf: 7735.073890 GFLOPS
+[INFO]: time: 0.041621 sec. perf: 7735.995502 GFLOPS
+[INFO]: Ops: 321.978368 gops
+[INFO]: AVERAGE perf: 7734.624853 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.944168 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5504
+[INFO]: n = 5504
+[INFO]: k = 5504
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.042145 sec. perf: 7912.668555 GFLOPS
+[INFO]: time: 0.042132 sec. perf: 7915.012373 GFLOPS
+[INFO]: time: 0.042128 sec. perf: 7915.763515 GFLOPS
+[INFO]: time: 0.042130 sec. perf: 7915.342272 GFLOPS
+[INFO]: time: 0.042130 sec. perf: 7915.433205 GFLOPS
+[INFO]: time: 0.042130 sec. perf: 7915.402769 GFLOPS
+[INFO]: time: 0.042127 sec. perf: 7915.943900 GFLOPS
+[INFO]: time: 0.042125 sec. perf: 7916.424780 GFLOPS
+[INFO]: time: 0.042127 sec. perf: 7916.063598 GFLOPS
+[INFO]: time: 0.042131 sec. perf: 7915.282151 GFLOPS
+[INFO]: Ops: 333.476528 gops
+[INFO]: AVERAGE perf: 7915.333592 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.966227 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5568
+[INFO]: n = 5568
+[INFO]: k = 5568
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.044085 sec. perf: 7831.308776 GFLOPS
+[INFO]: time: 0.044069 sec. perf: 7834.265823 GFLOPS
+[INFO]: time: 0.044071 sec. perf: 7833.753156 GFLOPS
+[INFO]: time: 0.044073 sec. perf: 7833.525819 GFLOPS
+[INFO]: time: 0.044075 sec. perf: 7833.156135 GFLOPS
+[INFO]: time: 0.044073 sec. perf: 7833.497380 GFLOPS
+[INFO]: time: 0.044070 sec. perf: 7834.009303 GFLOPS
+[INFO]: time: 0.044073 sec. perf: 7833.469120 GFLOPS
+[INFO]: time: 0.044075 sec. perf: 7833.127877 GFLOPS
+[INFO]: time: 0.044074 sec. perf: 7833.241266 GFLOPS
+[INFO]: Ops: 345.245221 gops
+[INFO]: AVERAGE perf: 7833.335392 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.956218 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5632
+[INFO]: n = 5632
+[INFO]: k = 5632
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.046064 sec. perf: 7756.393460 GFLOPS
+[INFO]: time: 0.046050 sec. perf: 7758.765205 GFLOPS
+[INFO]: time: 0.046049 sec. perf: 7758.846417 GFLOPS
+[INFO]: time: 0.046053 sec. perf: 7758.172343 GFLOPS
+[INFO]: time: 0.046051 sec. perf: 7758.495803 GFLOPS
+[INFO]: time: 0.046049 sec. perf: 7758.845911 GFLOPS
+[INFO]: time: 0.046052 sec. perf: 7758.414767 GFLOPS
+[INFO]: time: 0.046045 sec. perf: 7759.520270 GFLOPS
+[INFO]: time: 0.046053 sec. perf: 7758.226251 GFLOPS
+[INFO]: time: 0.046051 sec. perf: 7758.468510 GFLOPS
+[INFO]: Ops: 357.287592 gops
+[INFO]: AVERAGE perf: 7758.414818 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.947072 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5696
+[INFO]: n = 5696
+[INFO]: k = 5696
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.046647 sec. perf: 7923.543732 GFLOPS
+[INFO]: time: 0.046598 sec. perf: 7931.895691 GFLOPS
+[INFO]: time: 0.046595 sec. perf: 7932.332162 GFLOPS
+[INFO]: time: 0.046582 sec. perf: 7934.538236 GFLOPS
+[INFO]: time: 0.046598 sec. perf: 7931.814326 GFLOPS
+[INFO]: time: 0.046600 sec. perf: 7931.487521 GFLOPS
+[INFO]: time: 0.046600 sec. perf: 7931.459438 GFLOPS
+[INFO]: time: 0.046598 sec. perf: 7931.731941 GFLOPS
+[INFO]: time: 0.046599 sec. perf: 7931.595772 GFLOPS
+[INFO]: time: 0.046598 sec. perf: 7931.759686 GFLOPS
+[INFO]: Ops: 369.606787 gops
+[INFO]: AVERAGE perf: 7931.214932 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.968166 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5760
+[INFO]: n = 5760
+[INFO]: k = 5760
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.048627 sec. perf: 7859.962249 GFLOPS
+[INFO]: time: 0.048612 sec. perf: 7862.342766 GFLOPS
+[INFO]: time: 0.048614 sec. perf: 7862.005885 GFLOPS
+[INFO]: time: 0.048616 sec. perf: 7861.798724 GFLOPS
+[INFO]: time: 0.048612 sec. perf: 7862.367836 GFLOPS
+[INFO]: time: 0.048616 sec. perf: 7861.695067 GFLOPS
+[INFO]: time: 0.048614 sec. perf: 7861.980009 GFLOPS
+[INFO]: time: 0.048615 sec. perf: 7861.928259 GFLOPS
+[INFO]: time: 0.048614 sec. perf: 7862.134618 GFLOPS
+[INFO]: time: 0.048613 sec. perf: 7862.212733 GFLOPS
+[INFO]: Ops: 382.205952 gops
+[INFO]: AVERAGE perf: 7861.842759 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.959698 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5824
+[INFO]: n = 5824
+[INFO]: k = 5824
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.050689 sec. perf: 7794.359313 GFLOPS
+[INFO]: time: 0.050672 sec. perf: 7796.919011 GFLOPS
+[INFO]: time: 0.050677 sec. perf: 7796.253891 GFLOPS
+[INFO]: time: 0.050678 sec. perf: 7796.081898 GFLOPS
+[INFO]: time: 0.050674 sec. perf: 7796.598207 GFLOPS
+[INFO]: time: 0.050676 sec. perf: 7796.377275 GFLOPS
+[INFO]: time: 0.050675 sec. perf: 7796.450969 GFLOPS
+[INFO]: time: 0.050678 sec. perf: 7795.982983 GFLOPS
+[INFO]: time: 0.050675 sec. perf: 7796.524356 GFLOPS
+[INFO]: time: 0.050676 sec. perf: 7796.352352 GFLOPS
+[INFO]: Ops: 395.088232 gops
+[INFO]: AVERAGE perf: 7796.189970 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.951683 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5888
+[INFO]: n = 5888
+[INFO]: k = 5888
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.052776 sec. perf: 7735.627162 GFLOPS
+[INFO]: time: 0.052761 sec. perf: 7737.902663 GFLOPS
+[INFO]: time: 0.052759 sec. perf: 7738.089806 GFLOPS
+[INFO]: time: 0.052759 sec. perf: 7738.207289 GFLOPS
+[INFO]: time: 0.052767 sec. perf: 7737.010777 GFLOPS
+[INFO]: time: 0.052769 sec. perf: 7736.612413 GFLOPS
+[INFO]: time: 0.052768 sec. perf: 7736.776328 GFLOPS
+[INFO]: time: 0.052772 sec. perf: 7736.213357 GFLOPS
+[INFO]: time: 0.052767 sec. perf: 7737.010630 GFLOPS
+[INFO]: time: 0.052757 sec. perf: 7738.371858 GFLOPS
+[INFO]: Ops: 408.256774 gops
+[INFO]: AVERAGE perf: 7737.182129 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.944480 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 5952
+[INFO]: n = 5952
+[INFO]: k = 5952
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.053382 sec. perf: 7899.930220 GFLOPS
+[INFO]: time: 0.053368 sec. perf: 7901.966770 GFLOPS
+[INFO]: time: 0.053371 sec. perf: 7901.564795 GFLOPS
+[INFO]: time: 0.053370 sec. perf: 7901.683088 GFLOPS
+[INFO]: time: 0.053369 sec. perf: 7901.919834 GFLOPS
+[INFO]: time: 0.053372 sec. perf: 7901.492843 GFLOPS
+[INFO]: time: 0.053367 sec. perf: 7902.203681 GFLOPS
+[INFO]: time: 0.053371 sec. perf: 7901.635267 GFLOPS
+[INFO]: time: 0.053369 sec. perf: 7901.871862 GFLOPS
+[INFO]: time: 0.053369 sec. perf: 7901.824778 GFLOPS
+[INFO]: Ops: 421.714723 gops
+[INFO]: AVERAGE perf: 7901.609269 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.964552 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 6016
+[INFO]: n = 6016
+[INFO]: k = 6016
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.055515 sec. perf: 7844.144031 GFLOPS
+[INFO]: time: 0.055504 sec. perf: 7845.703853 GFLOPS
+[INFO]: time: 0.055504 sec. perf: 7845.658761 GFLOPS
+[INFO]: time: 0.055503 sec. perf: 7845.816797 GFLOPS
+[INFO]: time: 0.055504 sec. perf: 7845.612963 GFLOPS
+[INFO]: time: 0.055506 sec. perf: 7845.341577 GFLOPS
+[INFO]: time: 0.055505 sec. perf: 7845.522499 GFLOPS
+[INFO]: time: 0.055505 sec. perf: 7845.567731 GFLOPS
+[INFO]: time: 0.055503 sec. perf: 7845.748804 GFLOPS
+[INFO]: time: 0.055506 sec. perf: 7845.432320 GFLOPS
+[INFO]: Ops: 435.465224 gops
+[INFO]: AVERAGE perf: 7845.454907 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.957697 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 6080
+[INFO]: n = 6080
+[INFO]: k = 6080
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.057690 sec. perf: 7791.775627 GFLOPS
+[INFO]: time: 0.057681 sec. perf: 7793.093917 GFLOPS
+[INFO]: time: 0.057680 sec. perf: 7793.223757 GFLOPS
+[INFO]: time: 0.057677 sec. perf: 7793.656409 GFLOPS
+[INFO]: time: 0.057682 sec. perf: 7792.943005 GFLOPS
+[INFO]: time: 0.057685 sec. perf: 7792.575139 GFLOPS
+[INFO]: time: 0.057680 sec. perf: 7793.245510 GFLOPS
+[INFO]: time: 0.057683 sec. perf: 7792.834519 GFLOPS
+[INFO]: time: 0.057683 sec. perf: 7792.834114 GFLOPS
+[INFO]: time: 0.057680 sec. perf: 7793.201734 GFLOPS
+[INFO]: Ops: 449.511424 gops
+[INFO]: AVERAGE perf: 7792.938344 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.951286 
+[INFO]: implement = rocm
+[INFO]: arch = gfx803
+[INFO]: kernel @ kernel.o
+[INFO]: repeat 10 times
+[INFO]: transA = N
+[INFO]: transB = T
+[INFO]: m = 6144
+[INFO]: n = 6144
+[INFO]: k = 6144
+[INFO]: alpha = 1.000000
+[INFO]: beta = 0.000000
+[INFO]: verify = False
+[INFO]: time: 0.058335 sec. perf: 7951.601793 GFLOPS
+[INFO]: time: 0.058322 sec. perf: 7953.390847 GFLOPS
+[INFO]: time: 0.058315 sec. perf: 7954.328642 GFLOPS
+[INFO]: time: 0.058321 sec. perf: 7953.521219 GFLOPS
+[INFO]: time: 0.058312 sec. perf: 7954.699948 GFLOPS
+[INFO]: time: 0.058313 sec. perf: 7954.547029 GFLOPS
+[INFO]: time: 0.058312 sec. perf: 7954.764610 GFLOPS
+[INFO]: time: 0.058317 sec. perf: 7954.066894 GFLOPS
+[INFO]: time: 0.058311 sec. perf: 7954.917537 GFLOPS
+[INFO]: time: 0.058317 sec. perf: 7954.088581 GFLOPS
+[INFO]: Ops: 463.856468 gops
+[INFO]: AVERAGE perf: 7953.992601 GFLOPS
+[INFO]: AVERAGE perf/theory: 0.970946 
